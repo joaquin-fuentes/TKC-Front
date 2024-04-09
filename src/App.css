@@ -1,0 +1,13 @@
+/* HEADER */
+
+
+.logoMenu{
+  width: 30px;
+}
+.text-header:hover{
+  color: rgb(224, 0, 0)!important;
+  text-decoration: underline!important;
+}
+.icono-header{
+  width: 28px;
+}
