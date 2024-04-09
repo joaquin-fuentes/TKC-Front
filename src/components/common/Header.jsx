@@ -1,15 +1,12 @@
 import React from 'react';
 import {Navbar, Container, Nav} from "react-bootstrap"
 import logoRojo from "../../assets/imagenes/logoRojo.jpg"
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
 import facebook from "../../assets/imagenes/icons8-facebook.svg"
 import whatsapp from "../../assets/imagenes/icons8-whatsapp.svg"
 import instagram from "../../assets/imagenes/icons8-instagram.svg"
 const Header = () => {
     return (
-        <Navbar expand="lg" className="bg-dark navBar header">
+        <Navbar expand="lg" className=" navBar header">
         <Container>
             <Navbar.Brand href="#home" className='text-light fw-bold'> 
             <img src={logoRojo} alt="Logo joaquin fuentes" className='logoMenu rounded-circle me-1' /></Navbar.Brand>

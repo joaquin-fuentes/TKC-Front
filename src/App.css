@@ -1,6 +1,12 @@
 /* HEADER */
+.header{
+  position: absolute; /* Posiciona el encabezado de forma absoluta */
+  top: 0; /* Lo coloca en la parte superior del contenedorPrincipal */
+  left: 0; /* Lo coloca en la parte izquierda del contenedorPrincipal */
+  width: 100%; /* Ocupa todo el ancho del contenedorPrincipal */
+  z-index: 1; /* Hace que el encabezado esté por encima del contenedorPrincipal */
 
-
+}
 .logoMenu{
   width: 30px;
 }
@@ -10,4 +16,15 @@
 }
 .icono-header{
   width: 28px;
+}
+
+/* INICIO */
+.contenedorPrincipal {
+  background-image: linear-gradient(rgba(36, 33, 33, 0.5), rgba(255, 0, 0, 0.5)), url("./assets/imagenes/portada.jpg");
+  background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+  background-position:bottom; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que se repita la imagen */
+  position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
+  height: 100vh;
+  opacity: 0.9; /* Ajusta la opacidad del contenedor */
 }
