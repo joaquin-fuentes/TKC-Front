@@ -1,3 +1,4 @@
+
 /* HEADER */
 .header{
   position: absolute; /* Posiciona el encabezado de forma absoluta */
@@ -29,6 +30,23 @@
   opacity: 0.9; /* Ajusta la opacidad del contenedor */
 }
 
+/* SERVICIOS */
+.imagenServicio{
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 7px 7px 7px;
+  opacity: 0.75;
+}
+.imagenServicio:hover{
+  opacity: 0.9;
+}
+.text-img{
+  z-index: 1;
+  position: absolute;
+  color: white;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px rgb(101, 6, 6);
+}
 /* FOOTER */
 .logotkc-footer{
   width: 70%;
