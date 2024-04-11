@@ -12,13 +12,13 @@ const Header = () => {
             <img src={logoRojo} alt="Logo joaquin fuentes" className='logoMenu rounded-circle me-1' /></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" className='bg-secondary' />
             <Navbar.Collapse id="basic-navbar-nav " >
-                <Nav className="">
-                    <Nav.Link className="text-light text-header" href="#">Inicio</Nav.Link>
+                <Nav className="contenedorEnlacesNav">
+                    <Nav.Link className="text-light text-header text-right text-md-left" href="#">Inicio</Nav.Link>
                     <Nav.Link className="text-light text-header" href="#">Servicios</Nav.Link>
                     <Nav.Link className="text-light text-header" href="#contacto">Contacto</Nav.Link>
                     <Nav.Link className="text-light text-header" href="#">Nosotros</Nav.Link>
                 </Nav>
-                <Nav className="ms-auto d-flex">
+                <Nav className="ms-auto contenedorImgHeader ">
                     <Nav.Link className="text-light me-1 text-header" href="#"><img src={facebook} className='icono-header' alt="facebook" /></Nav.Link>
                     <Nav.Link className="text-light me-1 text-header" href="#"><img src={whatsapp} className='icono-header' alt="whatsapp" /></Nav.Link>
                     <Nav.Link className="text-light me-1 text-header" href="#"><img src={instagram} className='icono-header' alt="instagram" /></Nav.Link>

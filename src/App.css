@@ -15,8 +15,25 @@
   color: rgb(224, 0, 0)!important;
   text-decoration: underline!important;
 }
+
 .icono-header{
   width: 28px;
+}
+/* Media Query para pantallas más pequeñas, como celulares y tablets */
+@media only screen and (max-width: 768px) {
+  .contenedorImgHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+  .icono-header{
+    margin-left:10px ; 
+    margin-right: 0; }
+  .contenedorEnlacesNav{
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+    }
 }
 
 /* INICIO */
