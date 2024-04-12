@@ -38,7 +38,7 @@
 
 /* INICIO */
 .contenedorPrincipal {
-  background-image: linear-gradient(rgba(36, 33, 33, 0.5), rgba(255, 0, 0, 0.5)), url("./assets/imagenes/portada.jpg");
+  background-image: linear-gradient(rgba(19, 19, 19, 0.5), rgba(78, 1, 1, 0.615)), url("./assets/imagenes/portada.jpg");
   background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
   background-position:bottom; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que se repita la imagen */
@@ -50,21 +50,37 @@
   width: 90%;
 }
 /* SERVICIOS */
-.imagenServicio{
-  height: 250px;
-  border-radius: 10px;
-  box-shadow: 7px 7px 7px;
-  opacity: 0.75;
+.card-img{
+  width: 100%; /* Ajustar el ancho del contenedor */
+  height: 100%; /* Ajustar la altura del contenedor */
+  object-fit: cover; /* Escalar la imagen para cubrir completamente el contenedor */
+  opacity: 0.8;
 }
-.imagenServicio:hover{
+.card-img:hover{
   opacity: 0.9;
 }
-.text-img{
-  z-index: 1;
-  position: absolute;
-  color: white;
-  font-weight: 700;
-  text-shadow: 1px 1px 1px rgb(101, 6, 6);
+.card-servicio{
+  width: 300px!important;
+  height: 200px!important;
+  box-shadow: 5px 5px 5px black!important;
+  transition: transform 0.3s ease; /* Transición suave para el cambio de tamaño */
+  margin-bottom: 25px;
+}
+.card-servicio:hover{
+  transform: scale(1.1); /* Escala la tarjeta al 110% de su tamaño original */
+}
+.text-card{
+  font-weight: bold;
+  font-size: 25px;
+  text-shadow: 1px 1px 1px black;
+}
+.btn-card{
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px black;
+}
+.btn-card:hover{
+  color: rgb(83, 2, 2);
 }
 /* FOOTER */
 .logotkc-footer{
