@@ -1,4 +1,6 @@
-
+#root{
+  font-family: "Permanent Marker", cursive;
+}
 /* HEADER */
 .header{
   position: absolute; /* Posiciona el encabezado de forma absoluta */
@@ -6,14 +8,12 @@
   left: 0; /* Lo coloca en la parte izquierda del contenedorPrincipal */
   width: 100%; /* Ocupa todo el ancho del contenedorPrincipal */
   z-index: 1; /* Hace que el encabezado esté por encima del contenedorPrincipal */
-
 }
 .logoMenu{
   width: 50px;
 }
 .text-header:hover{
   color: rgb(224, 0, 0)!important;
-  text-decoration: underline!important;
 }
 
 .icono-header{
@@ -39,7 +39,7 @@
 /* INICIO */
 .contenedorPrincipal {
   background-image: linear-gradient(rgba(19, 19, 19, 0.5), rgba(78, 1, 1, 0.615)), url("./assets/imagenes/portada.jpg");
-  background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+  background-size:cover; /* Ajusta la imagen al tamaño del contenedor */
   background-position:bottom; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que se repita la imagen */
   position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
@@ -62,7 +62,7 @@
 .card-servicio{
   width: 300px!important;
   height: 200px!important;
-  box-shadow: 5px 5px 5px black!important;
+  box-shadow: 5px 5px 5px rgb(45, 45, 45)!important;
   transition: transform 0.3s ease; /* Transición suave para el cambio de tamaño */
   margin-bottom: 25px;
 }
@@ -72,7 +72,8 @@
 .text-card{
   font-weight: bold;
   font-size: 25px;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 2px 2px 2px rgb(22, 22, 22);
+
 }
 .btn-card{
   font-weight: bold;
@@ -81,6 +82,15 @@
 }
 .btn-card:hover{
   color: rgb(83, 2, 2);
+}
+
+/* SOBRE NOSOTROS */
+.iconoKayak{
+  font-size: 80px;
+}
+.imgEquipoTKC{
+  width: 100%;
+  height: 85%;
 }
 /* FOOTER */
 .logotkc-footer{
