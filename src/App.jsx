@@ -6,6 +6,7 @@ import Footer from './components/common/Footer';
 import Inicio from './components/views/Inicio';
 import Servicios from './components/views/Servicios';
 import Nosotros from './components/views/Nosotros';
+import Onda from "./assets/imagenes/wave.svg"
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Header></Header>
       <Inicio></Inicio>
       <Nosotros></Nosotros>
+      <img src={Onda} alt="onda svg" className='bg-danger waveInicio' />
       <Servicios></Servicios>
       <Footer></Footer>
     </div>
