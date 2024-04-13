@@ -42,8 +42,9 @@
   background-size:cover; /* Ajusta la imagen al tamaño del contenedor */
   background-position:bottom; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que se repita la imagen */
+  background-attachment: fixed; /* Hace que la imagen de fondo se quede fija */
   position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
-  height: 100vh;
+  height: 98vh;
   opacity: 0.9; /* Ajusta la opacidad del contenedor */
 }
 .logoTkcInicio{
@@ -90,6 +91,13 @@
   font-size: 80px;
 }
 
+/* CONTACTO */
+.iconoWp, .iconoFb, .iconoInsta{
+  font-size: 50px;
+}
+.textRedSocialContacto{
+  font-size: 20px;
+}
 /* FOOTER */
 .logotkc-footer{
   width: 70%;
