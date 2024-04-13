@@ -13,7 +13,7 @@ const Servicios = () => {
     return (
         <div className='bg-danger'>
             <Container className=''>
-                <div className='d-flex flex-column justify-content-center align-items-center'>
+                <div className='d-flex flex-column justify-content-center align-items-center pt-3'>
                     <TbKayak className='iconoKayak text-light ' />
                     <h3 className='text-light m-0 p-4 text-center '> Nuestros Servicios</h3>
                 </div>
