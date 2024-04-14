@@ -1,6 +1,18 @@
 #root{
   font-family: "Permanent Marker", cursive;
 }
+.bg-rojo{
+  background-color: #d70101;
+  color: white;
+}
+.text-rojo{
+  color: rgb(215, 1, 1);
+}
+.outline-rojo{
+  border: 1px solid rgb(215, 1, 1) !important;
+  color: rgb(215, 1, 1);
+  background-color: white;
+}
 /* HEADER */
 .header{
   position: absolute; /* Posiciona el encabezado de forma absoluta */
