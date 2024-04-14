@@ -6,7 +6,7 @@ import { MdKayaking } from "react-icons/md";
 
 const Nosotros = () => {
     return (
-        <div className='divSobreNosotros'>
+        <div className='divSobreNosotros' id='nosotros'>
             <Container>
                 <article className='d-flex flex-column justify-content-center align-items-center mb-4'>
                     <MdKayaking className='iconoKayak text-rojo mt-3' />

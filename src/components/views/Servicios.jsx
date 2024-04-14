@@ -11,7 +11,7 @@ import { TbKayak } from "react-icons/tb";
 
 const Servicios = () => {
     return (
-        <div className='bg-rojo'>
+        <div className='bg-rojo' id="servicios">
             <Container className=''>
                 <div className='d-flex flex-column justify-content-center align-items-center pt-3'>
                     <TbKayak className='iconoKayak text-light ' />
