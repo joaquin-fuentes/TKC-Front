@@ -39,12 +39,23 @@
 .logoMenu{
   width: 50px;
 }
+.text-header{
+  color: rgb(255, 255, 255)!important;
+}
 .text-header:hover{
   color: rgb(224, 0, 0)!important;
 }
 
 .icono-header{
   width: 28px;
+}
+.navBar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(190, 190, 190, 0.2)
 }
 /* Media Query para pantallas más pequeñas, como celulares y tablets */
 @media only screen and (max-width: 768px) {
