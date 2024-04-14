@@ -13,6 +13,21 @@
   color: rgb(215, 1, 1);
   background-color: white;
 }
+.outline-rojo:hover{
+  border: 1px solid rgb(215, 1, 1) !important;
+  color: white;
+  background-color: rgb(215, 1, 1);
+}
+.btn-rojo{
+  border: 1px solid rgb(215, 1, 1);
+  color: white;
+  background-color: rgb(215, 1, 1);
+}
+.btn-rojo:hover{
+  border: 1px solid rgb(215, 1, 1);
+  color: white;
+  background-color: rgb(193, 0, 0);
+}
 /* HEADER */
 .header{
   position: absolute; /* Posiciona el encabezado de forma absoluta */
@@ -94,7 +109,7 @@
   text-shadow: 1px 1px 1px black;
 }
 .btn-card:hover{
-  color: rgb(83, 2, 2);
+  color: rgb(185, 0, 0);
 }
 
 /* SOBRE NOSOTROS */
