@@ -1,5 +1,8 @@
 #root{
-  font-family: "Permanent Marker", cursive;
+  font-family: "anton", "Permanent Marker", cursive;
+}
+.bg-negro{
+  background-color: #171717;
 }
 .bg-rojo{
   background-color: #d70101;

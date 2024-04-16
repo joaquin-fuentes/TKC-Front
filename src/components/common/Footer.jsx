@@ -8,34 +8,32 @@ import instagram from "../../assets/imagenes/icons8-instagram.svg"
 
 const Footer = () => {
     return (
-        <Container fluid className='bg-dark text-light p-2 d-flex justify-content-around'>
+        <Container fluid className='bg-negro text-light p-2 d-flex justify-content-around'>
             <Row>
                 <Col lg="4">
                     <section className='p-1 d-flex flex-column justify-content-center align-items-center'>
-                        <img src={logoTransparente} alt="logo tkc" className='logotkc-footer' />
-                        <Nav className="">
-                            <Nav.Link className="text-light me-1 text-header" href="#"><img src={facebook} className='icono-header' alt="facebook" /></Nav.Link>
-                            <Nav.Link className="text-light me-1 text-header" href="#"><img src={whatsapp} className='icono-header' alt="whatsapp" /></Nav.Link>
-                            <Nav.Link className="text-light me-1 text-header" href="#"><img src={instagram} className='icono-header' alt="instagram" /></Nav.Link>
+                        <a href="/#inicio" className='text-center'><img src={logoTransparente} alt="logo tkc" className='logotkc-footer' /></a>
+                    </section>
+                </Col>
+                <Col lg="4">
+                    <section className='p-3 d-flex flex-column justify-content-center align-items-center'>
+                        <h4>Navegacion</h4>
+                        <Nav className="d-flex flex-column text-center">
+                            <Nav.Link className="text-light text-header p-1" href="/#inicio">Inicio</Nav.Link>
+                            <Nav.Link className="text-light text-header p-1" href="/#nosotros">Nosotros</Nav.Link>
+                            <Nav.Link className="text-light text-header p-1" href="/#servicios">Servicios</Nav.Link>
+                            <Nav.Link className="text-light text-header p-1" href="/#contacto">Contacto</Nav.Link>
                         </Nav>
                     </section>
                 </Col>
                 <Col lg="4">
                     <section className='p-3 d-flex flex-column justify-content-center align-items-center'>
-                        <h4>Seccion 2</h4>
-                        <a href="">Inicio</a>
-                        <a href="">Servicios</a>
-                        <a href="">Contacto</a>
-                        <a href="">Nosotros</a>
-                    </section>
-                </Col>
-                <Col lg="4">
-                    <section className='p-3 d-flex flex-column justify-content-center align-items-center'>
-                        <h4>Seccion 2</h4>
-                        <a href="">Inicio</a>
-                        <a href="">Servicios</a>
-                        <a href="">Contacto</a>
-                        <a href="">Nosotros</a>
+                        <h4>Contacto</h4>
+                        <Nav className="d-flex flex-column text-center">
+                            <Nav.Link className="text-light me-1 text-header" href="#"><img src={whatsapp} className='icono-header' alt="whatsapp" />3815195817</Nav.Link>
+                            <Nav.Link className="text-light me-1 text-header" href="#"><img src={facebook} className='icono-header' alt="facebook" />Tucumán Kayak Club</Nav.Link>
+                            <Nav.Link className="text-light me-1 text-header" href="#"><img src={instagram} className='icono-header' alt="instagram" />@TucumánKayakClub</Nav.Link>
+                        </Nav>
                     </section>
                 </Col>
             </Row>
