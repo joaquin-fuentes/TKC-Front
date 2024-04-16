@@ -23,7 +23,7 @@ const Servicios = () => {
                             <Card.Img src={excursiones} alt="Card image" className='card-img' />
                             <Card.ImgOverlay className='d-flex flex-column justify-content-center align-items-center'>
                                 <Card.Title className='text-card'>Excursiones</Card.Title>
-                                <NavLink className='w-50  btn-card'>Ver más</NavLink>
+                                <NavLink href='/excursiones' className='w-50  btn-card'>Ver más</NavLink>
                             </Card.ImgOverlay>
                         </Card>
                     </Col>
