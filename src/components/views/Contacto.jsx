@@ -11,7 +11,7 @@ import { FaInstagram } from "react-icons/fa";
 const Contacto = () => {
     return (
         <Container>
-            <div className='d-flex flex-column justify-content-center align-items-center pt-3 text-rojo' id='contacto'>
+            <div data-aos="fade-up" className='d-flex flex-column justify-content-center align-items-center pt-3 text-rojo' id='contacto'>
                 <RiContactsFill className='iconoKayak ' />
                 <h3 className=' m-0 p-4 text-center '> Podes contactarnos por whatsapp o cualquiera de nuestras redes sociales</h3>
                 <Row>

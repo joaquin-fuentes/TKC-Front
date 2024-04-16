@@ -11,13 +11,13 @@ import { TbKayak } from "react-icons/tb";
 
 const Servicios = () => {
     return (
-        <div className='bg-rojo' id="servicios">
-            <Container className=''>
-                <div className='d-flex flex-column justify-content-center align-items-center pt-3'>
+        <div  className='bg-rojo' id="servicios">
+            <Container  className=''>
+                <div data-aos="fade-up" className='d-flex flex-column justify-content-center align-items-center pt-3'>
                     <TbKayak className='iconoKayak text-light ' />
                     <h3 className='text-light m-0 p-4 text-center '> Nuestros Servicios</h3>
                 </div>
-                <Row className='pb-4 d-flex justify-content-center'>
+                <Row data-aos="fade-up" className='pb-4 d-flex justify-content-center'>
                     <Col md="6" lg="4" className='d-flex justify-content-center'>
                         <Card className="bg-dark text-white p-0 card-servicio text-center">
                             <Card.Img src={excursiones} alt="Card image" className='card-img' />
