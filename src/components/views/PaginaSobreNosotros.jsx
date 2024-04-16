@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Row, Col } from "react-bootstrap"
-import equipoTKC from "../../../assets/imagenes/equipotkc.jpg"
-import Header from '../../common/Header';
-import Footer from '../../common/Footer';
+import equipoTKC from "../../assets/imagenes/equipotkc.jpg"
+import Header from '../common/Header';
+import Footer from '../common/Footer';
 
 const PaginaSobreNosotros = () => {
     return (
