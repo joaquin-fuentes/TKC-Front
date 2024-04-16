@@ -9,12 +9,12 @@ const Header = () => {
     return (
         <Navbar expand="lg" className=" navBar header">
             <Container>
-                <Navbar.Brand href="/" className='text-light fw-bold'>
+                <Navbar.Brand href="/#inicio" className='text-light fw-bold'>
                     <img src={logoTransparente} alt="Logo joaquin fuentes" className='logoMenu rounded-circle me-1 bg-rojo' /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" className='bg-secondary' />
                 <Navbar.Collapse id="basic-navbar-nav " >
                     <Nav className="contenedorEnlacesNav">
-                        <Nav.Link className="text-light text-header text-right text-md-left" href="/">Inicio</Nav.Link>
+                        <Nav.Link className="text-light text-header text-right text-md-left" href="/#inicio">Inicio</Nav.Link>
                         <Nav.Link className="text-light text-header" href="/#nosotros">Nosotros</Nav.Link>
                         <Nav.Link className="text-light text-header" href="/#servicios">Servicios</Nav.Link>
                         <Nav.Link className="text-light text-header" href="/#contacto">Contacto</Nav.Link>
