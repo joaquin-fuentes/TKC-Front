@@ -17,6 +17,7 @@
   color: rgb(215, 1, 1);
   background-color: white;
   padding: 8px;
+  width: 20%;
 }
 .outline-rojo:hover{
   border: 1px solid rgb(215, 1, 1) !important;
@@ -33,6 +34,14 @@
   color: white;
   background-color: rgb(193, 0, 0);
 }
+
+/* Media Query para pantallas más pequeñas, como celulares y tablets */
+@media only screen and (max-width: 768px) {
+  .outline-rojo{
+    width: 50%;
+  }
+}
+
 /* HEADER */
 .header{
   position: absolute; /* Posiciona el encabezado de forma absoluta */
