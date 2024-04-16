@@ -17,9 +17,9 @@ const Servicios = () => {
                     <TbKayak className='iconoKayak text-light ' />
                     <h3 className='text-light m-0 p-4 text-center '> Nuestros Servicios</h3>
                 </div>
-                <Row data-aos="fade-up" className='pb-4 d-flex justify-content-center'>
+                <Row  className='pb-4 d-flex justify-content-center'>
                     <Col md="6" lg="4" className='d-flex justify-content-center'>
-                        <Card className="bg-dark text-white p-0 card-servicio text-center">
+                        <Card data-aos="fade-up" className="bg-dark text-white p-0 card-servicio text-center">
                             <Card.Img src={excursiones} alt="Card image" className='card-img' />
                             <Card.ImgOverlay className='d-flex flex-column justify-content-center align-items-center'>
                                 <Card.Title className='text-card'>Excursiones</Card.Title>
@@ -28,7 +28,7 @@ const Servicios = () => {
                         </Card>
                     </Col>
                     <Col md="6" lg="4" className='d-flex justify-content-center'>
-                        <Card className="bg-dark text-white p-0 card-servicio text-center">
+                        <Card data-aos="fade-up" className="bg-dark text-white p-0 card-servicio text-center">
                             <Card.Img src={escuelita} alt="Card image" className='w-100 h-100 card-img' />
                             <Card.ImgOverlay className='d-flex flex-column justify-content-center align-items-center'>
                                 <Card.Title className='text-card'>Escuela de kayak</Card.Title>
@@ -37,7 +37,7 @@ const Servicios = () => {
                         </Card>
                     </Col>
                     <Col md="6" lg="4" className='d-flex justify-content-center'>
-                        <Card className="bg-dark text-white p-0 card-servicio text-center">
+                        <Card data-aos="fade-up" className="bg-dark text-white p-0 card-servicio text-center">
                             <Card.Img src={coaching} alt="Card image" className='w-100 h-100 card-img' />
                             <Card.ImgOverlay className='d-flex flex-column justify-content-center align-items-center'>
                                 <Card.Title className='text-card'>Coaching empresarial</Card.Title>
@@ -46,7 +46,7 @@ const Servicios = () => {
                         </Card>
                     </Col>
                     <Col md="6" lg="4" className='d-flex justify-content-center'>
-                        <Card className="bg-dark text-white p-0 card-servicio text-center">
+                        <Card data-aos="fade-up" className="bg-dark text-white p-0 card-servicio text-center">
                             <Card.Img src={portada2} alt="Card image" className='w-100 h-100 card-img' />
                             <Card.ImgOverlay className='d-flex flex-column justify-content-center align-items-center'>
                                 <Card.Title className='text-card'>Cumpleaños para niños</Card.Title>
@@ -55,7 +55,7 @@ const Servicios = () => {
                         </Card>
                     </Col>
                     <Col md="6" lg="4" className='d-flex justify-content-center'>
-                        <Card className="bg-dark text-white p-0 card-servicio text-center">
+                        <Card data-aos="fade-up" className="bg-dark text-white p-0 card-servicio text-center">
                             <Card.Img src={portada2} alt="Card image" className='w-100 h-100 card-img' />
                             <Card.ImgOverlay className='d-flex flex-column justify-content-center align-items-center'>
                                 <Card.Title className='text-card'>Alquiler de quincho para eventos</Card.Title>
