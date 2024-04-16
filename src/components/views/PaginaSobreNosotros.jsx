@@ -9,16 +9,16 @@ const PaginaSobreNosotros = () => {
         <div className='fondoSobreNosotros text-light'>
             <Header></Header>
             <Container>
-                <h2 className='text-center tituloSobreNosotros mb-4'>Sobre Nosotros</h2>
+                <h2 data-aos="fade-up" className='text-center tituloSobreNosotros mb-4'>Sobre Nosotros</h2>
                 <Row>
                     <Col md={6}>
-                        <article>
+                        <article data-aos="fade-up">
                             {/* <h5>Nuestro equipo</h5> */}
                             <img src={equipoTKC} alt="imagen equipo tkc" className='w-100 rounded p-3' />
                         </article>
                     </Col>
                     <Col md={6}>
-                        <article className='p-3'>
+                        <article data-aos="fade-up" className='p-3'>
                             <p>¡Bienvenidos al Tucumán Kayak Club (TKC), donde convertimos simples momentos en emocionantes aventuras! Con más de 15 años de experiencia en el Turismo Activo y los deportes alternativos, en TKC nos enorgullece ofrecer experiencias seguras y llenas de diversión para todos nuestros clientes. <br />
 
                                 Nuestro equipo está conformado por profesionales con conocimientos especializados y una pasión inigualable por lo que hacemos. Hemos invertido tiempo en capacitaciones tanto a nivel nacional como internacional, obteniendo certificaciones en primeros auxilios, seguridad y rescate, tanto en aguas blancas como en entornos agrestes. Además, nuestra amplia experiencia en el manejo de grupos nos permite garantizar una atención personalizada y adaptada a las necesidades de cada individuo. <br />
