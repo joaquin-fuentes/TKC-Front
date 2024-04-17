@@ -154,6 +154,44 @@
   .tituloSobreNosotros{
     padding-top: 110px;
   }
+  /* PAGINA EXCURSIONES */
+  .fondoExcursiones{
+    background-image: linear-gradient(rgba(19, 19, 19, 0.137), rgba(137, 0, 0, 0.615)), url("./assets/imagenes/fondoRojo.jpg");
+    background-size:cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-repeat: no-repeat; /* Evita que se repita la imagen */
+    position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
+    opacity: 0.9; /* Ajusta la opacidad del contenedor */
+  }
+  .textTitulo{
+    font-weight: bold;
+    color: white;
+    text-decoration: underline;
+  }
+  .textSubtitulo{
+    font-weight: bold;
+    color: white;
+    list-style: none;
+
+  }
+  .textExplicacion{
+    font-weight: 500;
+    color: #ffffff;
+  }
+  .imgExcursion{
+    height: 50vh;
+    width: 100%;
+    border-radius: 10px;
+  }
+  /* CAROUSEL EXCURSIONES */
+  .carouselInicio{
+    height: 50vh;
+  }
+  .imgCarousel{
+    height: 50vh;
+    width: 100%;
+    border-radius: 10px;
+  }
+
 /* CONTACTO */
 .iconoWp, .iconoFb, .iconoInsta{
   font-size: 50px;
