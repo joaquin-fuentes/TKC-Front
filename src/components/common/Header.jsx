@@ -17,6 +17,7 @@ const Header = () => {
                         <Nav.Link className="text-light text-header text-right text-md-left" href="/#inicio">Inicio</Nav.Link>
                         <Nav.Link className="text-light text-header" href="/#nosotros">Nosotros</Nav.Link>
                         <Nav.Link className="text-light text-header" href="/#servicios">Servicios</Nav.Link>
+                        <Nav.Link className="text-light text-header" href="/#dondeencontrarnos">Donde encontrarnos</Nav.Link>
                         <Nav.Link className="text-light text-header" href="/#contacto">Contacto</Nav.Link>
                     </Nav>
                     <Nav className="ms-auto contenedorImgHeader ">
