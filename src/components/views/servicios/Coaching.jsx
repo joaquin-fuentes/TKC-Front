@@ -12,7 +12,6 @@ const Coaching = () => {
             <div className='fondoExcursiones'>
                 <Container>
                     <h2 data-aos="fade-up" className='text-center text-light tituloSobreNosotros mb-4'>Coaching Empresarial</h2>
-                    {/* kAYAK RIO LORO */}
                     <Row className='pt-3 pb-5'>
                         <Col md={6}>
                             <article data-aos="fade-up">
