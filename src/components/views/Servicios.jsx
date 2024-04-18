@@ -32,7 +32,7 @@ const Servicios = () => {
                             <Card.Img src={escuelita} alt="Card image" className='w-100 h-100 card-img' />
                             <Card.ImgOverlay className='d-flex flex-column justify-content-center align-items-center'>
                                 <Card.Title className='text-card'>Escuela de kayak</Card.Title>
-                                <NavLink className='w-50  btn-card'>Ver más</NavLink>
+                                <NavLink href='/escuela' className='w-50  btn-card'>Ver más</NavLink>
                             </Card.ImgOverlay>
                         </Card>
                     </Col>
@@ -41,7 +41,7 @@ const Servicios = () => {
                             <Card.Img src={coaching} alt="Card image" className='w-100 h-100 card-img' />
                             <Card.ImgOverlay className='d-flex flex-column justify-content-center align-items-center'>
                                 <Card.Title className='text-card'>Coaching empresarial</Card.Title>
-                                <NavLink className='w-50  btn-card'>Ver más</NavLink>
+                                <NavLink href='/coaching' className='w-50  btn-card'>Ver más</NavLink>
                             </Card.ImgOverlay>
                         </Card>
                     </Col>
@@ -50,7 +50,7 @@ const Servicios = () => {
                             <Card.Img src={portada2} alt="Card image" className='w-100 h-100 card-img' />
                             <Card.ImgOverlay className='d-flex flex-column justify-content-center align-items-center'>
                                 <Card.Title className='text-card'>Cumpleaños para niños</Card.Title>
-                                <NavLink className='w-50  btn-card'>Ver más</NavLink>
+                                <NavLink  href='/cumpleaños' className='w-50  btn-card'>Ver más</NavLink>
                             </Card.ImgOverlay>
                         </Card>
                     </Col>
@@ -59,7 +59,7 @@ const Servicios = () => {
                             <Card.Img src={portada2} alt="Card image" className='w-100 h-100 card-img' />
                             <Card.ImgOverlay className='d-flex flex-column justify-content-center align-items-center'>
                                 <Card.Title className='text-card'>Alquiler de quincho para eventos</Card.Title>
-                                <NavLink className='w-50  btn-card'>Ver más</NavLink>
+                                <NavLink  href='/alquiler' className='w-50  btn-card'>Ver más</NavLink>
                             </Card.ImgOverlay>
                         </Card>
                     </Col>

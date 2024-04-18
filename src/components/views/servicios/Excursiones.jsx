@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row, Col, Nav } from "react-bootstrap"
 import Header from '../../common/Header';
 import Footer from '../../common/Footer';
 import canyonning from "../../../assets/imagenes/trekking.jpg"
@@ -8,6 +8,7 @@ import kayakdique from "../../../assets/imagenes/remando.jpg"
 import rappeldique from "../../../assets/imagenes/rappel.jpg"
 import rappelaguaschiquitas from "../../../assets/imagenes/rappelac.jpg"
 import viaducto from "../../../assets/imagenes/viaducto2.jpg"
+import whatsapp from "../../../assets/imagenes/icons8-whatsapp.svg"
 
 
 
@@ -37,6 +38,7 @@ const Excursiones = () => {
                                 <li className='textSubtitulo'>Recorrido: <span className='textExplicacion'>5km de río</span></li>
                                 <li className='textSubtitulo'>Duración total: <span className='textExplicacion'>4hs</span></li>
                                 <li className='textSubtitulo'>Precio: <span className='textExplicacion'>$2.800</span></li>
+                                <Nav.Link className="text-light mt-2 fs-5 d-flex justify-content-center align-items-center"target='_blank' href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre la excursion de KAYAK EN EL RIO LORO"><img src={whatsapp} className='icono-header mx-1' alt="whatsapp" />3816097754</Nav.Link>
                             </ul>
                         </article>
                     </Col>
@@ -58,6 +60,7 @@ const Excursiones = () => {
                                 <li className='textSubtitulo'>Recorrido: <span className='textExplicacion'>4km</span></li>
                                 <li className='textSubtitulo'>Duración total: <span className='textExplicacion'>3hs</span></li>
                                 <li className='textSubtitulo'>Precio: <span className='textExplicacion'>$1.400</span></li>
+                                <Nav.Link className="text-light mt-2 fs-5 d-flex justify-content-center align-items-center"target='_blank' href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre la excursion de KAYAK EN EL DIQUE"><img src={whatsapp} className='icono-header mx-1' alt="whatsapp" />3816097754</Nav.Link>
                             </ul>
                         </article>
                     </Col>
@@ -79,6 +82,7 @@ const Excursiones = () => {
                                 <li className='textSubtitulo'>Recorrido: <span className='textExplicacion'>4km</span></li>
                                 <li className='textSubtitulo'>Duración total: <span className='textExplicacion'>4hs</span></li>
                                 <li className='textSubtitulo'>Precio: <span className='textExplicacion'>$2.100</span></li>
+                                <Nav.Link className="text-light mt-2 fs-5 d-flex justify-content-center align-items-center"target='_blank' href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre la excursion de KAYAK EN EL DIQUE + RAPPEL"><img src={whatsapp} className='icono-header mx-1' alt="whatsapp" />3816097754</Nav.Link>
                             </ul>
                         </article>
                     </Col>
@@ -100,6 +104,7 @@ const Excursiones = () => {
                                 <li className='textSubtitulo'>Recorrido: <span className='textExplicacion'>8km en el río</span></li>
                                 <li className='textSubtitulo'>Duración total: <span className='textExplicacion'>6hs</span></li>
                                 <li className='textSubtitulo'>Precio: <span className='textExplicacion'>$2.100</span></li>
+                                <Nav.Link className="text-light mt-2 fs-5 d-flex justify-content-center align-items-center"target='_blank' href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre la excursion de CANYONING EN LA RESERVA AGUAS CHIQUITAS"><img src={whatsapp} className='icono-header mx-1' alt="whatsapp" />3816097754</Nav.Link>
                             </ul>
                         </article>
                     </Col>
@@ -121,6 +126,7 @@ const Excursiones = () => {
                                 <li className='textSubtitulo'>Recorrido: <span className='textExplicacion'>9km</span></li>
                                 <li className='textSubtitulo'>Duración total: <span className='textExplicacion'>7hs</span></li>
                                 <li className='textSubtitulo'>Precio: <span className='textExplicacion'>$3.500</span></li>
+                                <Nav.Link className="text-light mt-2 fs-5 d-flex justify-content-center align-items-center"target='_blank' href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre la excursion de CANYONING AGUAS CHIQUITAS + RAPPEL"><img src={whatsapp} className='icono-header mx-1' alt="whatsapp" />3816097754</Nav.Link>
                             </ul>
                         </article>
                     </Col>
@@ -142,6 +148,7 @@ const Excursiones = () => {
                                 <li className='textSubtitulo'>Recorrido: <span className='textExplicacion'>25 mts. en descenso.</span></li>
                                 <li className='textSubtitulo'>Duración total: <span className='textExplicacion'>2hs</span></li>
                                 <li className='textSubtitulo'>Precio: <span className='textExplicacion'>$1.400</span></li>
+                                <Nav.Link className="text-light mt-2 fs-5 d-flex justify-content-center align-items-center"target='_blank' href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre la excursion de RAPPEL AÉREO EN EL VIADUCTO EL SALADILLO"><img src={whatsapp} className='icono-header mx-1' alt="whatsapp" />3816097754</Nav.Link>
                             </ul>
                         </article>
                     </Col>
