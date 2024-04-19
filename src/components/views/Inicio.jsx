@@ -15,7 +15,7 @@ const Inicio = () => {
         <>
             <Header></Header>
             <Container fluid className="contenedorPrincipal d-flex justify-content-center align-items-center" id='inicio'>
-                <section data-aos="fade-up" className='d-flex justify-content-center align-items-center flex-column mb-4'>
+                <section data-aos="fade-up" className='d-flex justify-content-center align-items-center flex-column mb-1 '>
                     <img src={logoTransparente} alt="Logo de TKC" className='logoTkcInicio' />
                     <Nav.Link href={"/#servicios"} className='w-50 p-1 btn btn-rojo'>Servicios</Nav.Link>
                 </section>

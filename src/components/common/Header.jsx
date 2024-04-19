@@ -9,8 +9,8 @@ const Header = () => {
     return (
         <Navbar expand="lg" className=" navBar header">
             <Container>
-                <Navbar.Brand href="/#inicio" className='text-light fw-bold'>
-                    <img src={logoTransparente} alt="Logo joaquin fuentes" className='logoMenu rounded-circle me-1 bg-rojo' /></Navbar.Brand>
+                <Navbar.Brand href="/#inicio" className='text-light fw-bold p-0'>
+                    <img src={logoTransparente} alt="Logo joaquin fuentes" className='logoMenu rounded-circle me-1 bg-rojo ' /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" className='bg-secondary' />
                 <Navbar.Collapse id="basic-navbar-nav " >
                     <Nav className="contenedorEnlacesNav">
