@@ -1,217 +1,275 @@
-#root{
+#root {
   font-family: "anton", "Permanent Marker", cursive;
   font-style: oblique;
 }
-.bg-negro{
+
+.bg-negro {
   background-color: #171717;
 }
-.bg-rojo{
+
+.bg-rojo {
   background-color: #d70101;
   color: white;
 }
-.text-rojo{
+
+.text-rojo {
   color: rgb(215, 1, 1);
 }
-.outline-rojo{
+
+.outline-rojo {
   border: 1px solid rgb(215, 1, 1) !important;
   color: rgb(215, 1, 1);
   background-color: white;
   padding: 8px;
   width: 20%;
 }
-.outline-rojo:hover{
+
+.outline-rojo:hover {
   border: 1px solid rgb(215, 1, 1) !important;
   color: white;
   background-color: rgb(215, 1, 1);
 }
-.btn-rojo{
+
+.btn-rojo {
   border: 1px solid rgb(215, 1, 1);
-  color: white!important;
+  color: white !important;
   background-color: rgb(215, 1, 1);
 }
-.btn-rojo:hover{
+
+.btn-rojo:hover {
   border: 1px solid rgb(215, 1, 1);
-  color: rgb(255, 0, 0)!important;
+  color: rgb(255, 0, 0) !important;
   background-color: rgb(255, 255, 255);
 }
 
 /* Media Query para pantallas más pequeñas, como celulares y tablets */
 @media only screen and (max-width: 768px) {
-  .outline-rojo{
+  .outline-rojo {
     width: 50%;
   }
 }
 
 /* HEADER */
-.header{
+.header {
   position: absolute; /* Posiciona el encabezado de forma absoluta */
   top: 0; /* Lo coloca en la parte superior del contenedorPrincipal */
   left: 0; /* Lo coloca en la parte izquierda del contenedorPrincipal */
   width: 100%; /* Ocupa todo el ancho del contenedorPrincipal */
   z-index: 1; /* Hace que el encabezado esté por encima del contenedorPrincipal */
 }
-.logoMenu{
+
+.logoMenu {
   width: 85px;
   background-color: #85858500;
 }
-.text-header{
-  color: rgb(255, 255, 255)!important;
-}
-.text-header:hover{
-  color: rgb(224, 0, 0)!important;
+
+.text-header {
+  color: rgb(255, 255, 255) !important;
 }
 
-.icono-header{
+.text-header:hover {
+  color: rgb(224, 0, 0) !important;
+}
+
+.icono-header {
   width: 28px;
 }
-.navBar{
+
+.navBar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  background-color: rgba(190, 190, 190, 0.2)
+  width: 100vw;
+  background-color: rgba(190, 190, 190, 0.2);
 }
+
 /* Media Query para pantallas más pequeñas, como celulares y tablets */
 @media only screen and (max-width: 768px) {
-  .contenedorImgHeader{
+  .contenedorImgHeader {
     display: flex;
     flex-direction: row;
     justify-content: end;
   }
-  .icono-header{
-    margin-left:10px ; 
-    margin-right: 0; }
-  .contenedorEnlacesNav{
-      display: flex;
-      flex-direction: column;
-      align-items: end;
-    }
+
+  .icono-header {
+    margin-left: 10px;
+    margin-right: 0;
+  }
+
+  .contenedorEnlacesNav {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
 }
 
 /* INICIO */
 .contenedorPrincipal {
-  background-image: linear-gradient(rgba(19, 19, 19, 0.5), rgba(78, 1, 1, 0.615)), url("./assets/imagenes/portada.jpg");
-  background-size:cover; /* Ajusta la imagen al tamaño del contenedor */
-  background-position:bottom; /* Centra la imagen */
+  background-image: linear-gradient(
+      rgba(19, 19, 19, 0.5),
+      rgba(78, 1, 1, 0.615)
+    ),
+    url("./assets/imagenes/portada.jpg");
+  background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+  background-position: bottom; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que se repita la imagen */
   background-attachment: fixed; /* Hace que la imagen de fondo se quede fija */
   position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
   height: 100vh;
   opacity: 0.9; /* Ajusta la opacidad del contenedor */
 }
-.logoTkcInicio{
+
+.logoTkcInicio {
   width: 90%;
 }
+
 /* SERVICIOS */
-.card-img{
+.card-img {
   width: 100%; /* Ajustar el ancho del contenedor */
   height: 100%; /* Ajustar la altura del contenedor */
   object-fit: cover; /* Escalar la imagen para cubrir completamente el contenedor */
-  opacity: 0.8;
+  opacity: 0.8 !important;
 }
-.card-img:hover{
-  opacity: 0.9;
+
+.card-img:hover {
+  opacity: 0.99 !important;
 }
-.card-servicio{
-  width: 300px!important;
-  height: 200px!important;
-  box-shadow: 5px 5px 5px rgb(45, 45, 45)!important;
-  transition: transform 0.3s ease; /* Transición suave para el cambio de tamaño */
+
+.card-servicio {
+  width: 300px !important;
+  height: 200px !important;
+  box-shadow: 6px 6px 6px rgba(42, 41, 41, 0.695) !important;
+  transition: transform 0.3s ease !important; /* Transición suave para el cambio de tamaño */
   margin-bottom: 25px;
+  opacity: 0.95 !important;
 }
-.card-servicio:hover{
-  transform: scale(1.1); /* Escala la tarjeta al 110% de su tamaño original */
+
+.card-servicio:hover {
+  transform: scale(
+    1.1
+  ) !important; /* Escala la tarjeta al 110% de su tamaño original */
 }
-.text-card{
+
+.text-card {
   font-weight: bold;
   font-size: 25px;
   text-shadow: 2px 2px 2px rgb(22, 22, 22);
-
 }
-.btn-card{
+
+.btn-card {
   font-weight: bold;
   font-size: 20px;
   text-shadow: 1px 1px 1px black;
 }
-.btn-card:hover{
+
+.btn-card:hover {
   color: rgb(185, 0, 0);
 }
 
 /* SOBRE NOSOTROS */
-
-.iconoKayak{
+.iconoKayak {
   font-size: 80px;
 }
 
-  /* PAGINA SOBRE NOSOTROS */
-  .fondoSobreNosotros{
-    background-image: linear-gradient(rgba(19, 19, 19, 0.137), rgba(137, 0, 0, 0.615)), url("./assets/imagenes/fondoRojo.jpg");
-    background-size:cover; /* Ajusta la imagen al tamaño del contenedor */
-    background-repeat: no-repeat; /* Evita que se repita la imagen */
-    position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
-    opacity: 0.9; /* Ajusta la opacidad del contenedor */
-  }
-  .tituloSobreNosotros{
-    padding-top: 110px;
-  }
-  /* PAGINA EXCURSIONES */
-  .fondoExcursiones{
-    background-image: linear-gradient(rgba(19, 19, 19, 0.137), rgba(137, 0, 0, 0.615)), url("./assets/imagenes/fondoRojo.jpg");
-    background-size:cover; /* Ajusta la imagen al tamaño del contenedor */
-    background-repeat: no-repeat; /* Evita que se repita la imagen */
-    position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
-    opacity: 0.9; /* Ajusta la opacidad del contenedor */
-  }
-  .textTitulo{
-    font-weight: bold;
-    color: white;
-    text-decoration: underline;
-  }
-  .textSubtitulo{
-    font-weight: bold;
-    color: white;
-    list-style: none;
+/* PAGINA SOBRE NOSOTROS */
+.fondoSobreNosotros {
+  background-image: linear-gradient(
+      rgba(19, 19, 19, 0.137),
+      rgba(137, 0, 0, 0.615)
+    ),
+    url("./assets/imagenes/fondoRojo.jpg");
+  background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+  background-repeat: no-repeat; /* Evita que se repita la imagen */
+  position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
+  opacity: 0.9; /* Ajusta la opacidad del contenedor */
+}
 
+.tituloSobreNosotros {
+  padding-top: 110px;
+}
+
+/* PAGINA EXCURSIONES */
+.fondoExcursiones {
+  background-image: linear-gradient(
+      rgba(19, 19, 19, 0.137),
+      rgba(137, 0, 0, 0.615)
+    ),
+    url("./assets/imagenes/fondoRojo.jpg");
+  background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+  background-repeat: no-repeat; /* Evita que se repita la imagen */
+  position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
+  opacity: 0.9; /* Ajusta la opacidad del contenedor */
+}
+
+.textTitulo {
+  font-weight: bold;
+  color: white;
+  text-decoration: underline;
+}
+
+.textSubtitulo {
+  font-weight: bold;
+  color: white;
+  list-style: none;
+}
+/* Media Query para pantallas más pequeñas, como celulares y tablets */
+@media only screen and (max-width: 768px) {
+  .imgExcursion {
+    height: 250px!important;
   }
-  .textExplicacion{
-    font-weight: 500;
-    color: #ffffff;
-  }
-  .imgExcursion{
-    height: 50vh;
-    width: 100%;
-    border-radius: 10px;
-  }
-  /* CAROUSEL EXCURSIONES */
-  .carouselInicio{
-    height: 50vh;
-  }
-  .imgCarousel{
-    height: 50vh;
-    width: 100%;
-    border-radius: 10px;
-  }
+}
+
+.textExplicacion {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.imgExcursion {
+  height: 50vh;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* CAROUSEL EXCURSIONES */
+.carouselInicio {
+  height: 50vh;
+}
+
+.imgCarousel {
+  height: 50vh;
+  width: 100%;
+  border-radius: 10px;
+}
+
 /* DONDE ENCONTRARNOS */
-.ubicacion{
+.ubicacion {
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
+
 /* CONTACTO */
-.iconoWp, .iconoFb, .iconoInsta{
+.iconoWp,
+.iconoFb,
+.iconoInsta {
   font-size: 50px;
 }
-.iconoContacto{
+
+.iconoContacto {
   transition: transform 0.3s ease; /* Transición suave para el cambio de tamaño */
 }
-.iconoContacto:hover{
+
+.iconoContacto:hover {
   transform: scale(1.1);
 }
-.textRedSocialContacto{
+
+.textRedSocialContacto {
   font-size: 20px;
 }
+
 /* FOOTER */
-.logotkc-footer{
+.logotkc-footer {
   width: 70%;
 }
