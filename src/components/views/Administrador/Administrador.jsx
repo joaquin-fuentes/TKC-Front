@@ -15,11 +15,12 @@ const Administrador = () => {
                         Panel de administrador
                     </h2>
                     <hr data-aos="fade-up" className="m-0 text-light mb-4" />
-                    <Button className="mb-3 me-3" variant="outline-primary">Comentarios</Button>
-                    <Button className="mb-3 me-3" variant="outline-success">Usuarios</Button>
-                    <Button className="mb-3 me-3" variant="outline-warning">Servicios</Button>
-                    <Button className="mb-3 me-3" variant="outline-secondary">Novedades</Button>
+                    <Button data-aos="fade-up" className="mb-3 me-3" variant="outline-primary">Comentarios</Button>
+                    <Button data-aos="fade-up" className="mb-3 me-3" variant="outline-success">Usuarios</Button>
+                    <Button data-aos="fade-up" className="mb-3 me-3" variant="outline-warning">Servicios</Button>
+                    <Button data-aos="fade-up" className="mb-3 me-3" variant="outline-secondary">Novedades</Button>
                     <Table
+                        data-aos="fade-up"
                         striped
                         bordered
                         hover
