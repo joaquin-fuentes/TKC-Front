@@ -84,7 +84,14 @@
   width: 100vw;
   background-color: rgba(190, 190, 190, 0.2);
 }
+.narbarToggle{
+  border: none!important;
+}
 
+.menuHamburguesa{
+  font-size: 40px!important;
+  color: #d70101;
+}
 /* Media Query para pantallas más pequeñas, como celulares y tablets */
 @media only screen and (max-width: 768px) {
   .contenedorImgHeader {

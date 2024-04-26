@@ -4,6 +4,8 @@ import logoTransparente from "../../assets/imagenes/logoTransparente.png"
 import facebook from "../../assets/imagenes/icons8-facebook.svg"
 import whatsapp from "../../assets/imagenes/icons8-whatsapp.svg"
 import instagram from "../../assets/imagenes/icons8-instagram.svg"
+import { CgMenuRound } from "react-icons/cg";
+
 
 const Header = () => {
     return (
@@ -11,7 +13,9 @@ const Header = () => {
             <Container>
                 <Navbar.Brand href="/#inicio" className='text-light fw-bold p-1'>
                     <img src={logoTransparente} alt="Logo joaquin fuentes" className='logoMenu me-1 bg-rojo ' /></Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" className='bg-secondary' />
+                <Navbar.Toggle aria-controls="basic-navbar-nav" className='narbarToggle' >
+                    <CgMenuRound className='menuHamburguesa'/>
+                </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav " >
                     <Nav className="contenedorEnlacesNav">
                         <Nav.Link className="text-light text-header text-right text-md-left" href="/#inicio">Inicio</Nav.Link>
