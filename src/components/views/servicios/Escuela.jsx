@@ -26,7 +26,7 @@ const Escuela = () => {
                                     <li className='textSubtitulo'>Días de entrenamiento: <br /><span className='textExplicacion'>Miercoles de 16 a 18hs <br /> Sábados de 11 a 13hs y de 16 a 18hs</span></li>
                                     <li className='textSubtitulo'>Precio 4 clases mensuales: <span className='textExplicacion'>$8.000</span></li>
                                     <li className='textSubtitulo'>Precio 8 clases mensuales: <span className='textExplicacion'>$11.000</span></li>
-                                    <Nav.Link className="text-light mt-2 fs-5 d-flex justify-content-center align-items-center"target='_blank' href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre la escuela de kayak de TKC"><img src={whatsapp} className='icono-header mx-1' alt="whatsapp" />3816097754</Nav.Link>
+                                    <Nav.Link className="text-light mt-2 fs-5 d-flex justify-content-center align-items-center"target='_blank' href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre la escuela de kayak de TKC"><img src={whatsapp} className='icono-header mx-1' alt="whatsapp" />Enviar Mensaje</Nav.Link>
                                 </ul>
                             </article>
                         </Col>

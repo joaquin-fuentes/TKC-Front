@@ -23,7 +23,7 @@ const Alquiler = () => {
                                 <h5 className='textTitulo'>Alquiler de quincho para eventos</h5>
                                 <ul className='p-0 m-0'>
                                     <li className='textSubtitulo'>Descripcion: <br /><span className='textExplicacion'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum vero praesentium consequuntur in voluptas reiciendis pariatur optio nemo, voluptates error?</span></li>
-                                    <Nav.Link className="text-light mt-2 fs-5 d-flex justify-content-center align-items-center"target='_blank' href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre ALQUILER DE QUINCHO PARA EVENTOS"><img src={whatsapp} className='icono-header mx-1' alt="whatsapp" />3816097754</Nav.Link>
+                                    <Nav.Link className="text-light mt-2 fs-5 d-flex justify-content-center align-items-center" target='_blank' href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre ALQUILER DE QUINCHO PARA EVENTOS"><img src={whatsapp} className='icono-header mx-1' alt="whatsapp" />Enviar Mensaje</Nav.Link>
                                 </ul>
                             </article>
                         </Col>
