@@ -183,14 +183,16 @@
 /* PAGINA SOBRE NOSOTROS */
 .fondoSobreNosotros {
   background-image: linear-gradient(
-      rgba(19, 19, 19, 0.137),
-      rgba(137, 0, 0, 0.615)
+      rgba(19, 19, 19, 0.80),
+      rgba(137, 0, 0, 0.80)
     ),
-    url("./assets/imagenes/fondoRojo.jpg");
+    url("./assets/imagenes/fondoRojoYBlanco.jpg");
   background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
   background-repeat: no-repeat; /* Evita que se repita la imagen */
   position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
   opacity: 0.9; /* Ajusta la opacidad del contenedor */
+  background-attachment: fixed; /* Hace que la imagen de fondo se quede fija */
+
 }
 
 .tituloSobreNosotros {
@@ -201,14 +203,16 @@
 
 .fondoExcursiones {
   background-image: linear-gradient(
-      rgba(19, 19, 19, 0.137),
-      rgba(137, 0, 0, 0.615)
+      rgba(19, 19, 19, 0.80),
+      rgba(137, 0, 0, 0.80)
     ),
-    url("./assets/imagenes/fondoRojo.jpg");
+    url("./assets/imagenes/fondoRojoYBlanco.jpg");
   background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
   background-repeat: no-repeat; /* Evita que se repita la imagen */
   position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
   opacity: 0.9; /* Ajusta la opacidad del contenedor */
+  background-attachment: fixed; /* Hace que la imagen de fondo se quede fija */
+
 }
 
 .textTitulo {
