@@ -269,6 +269,15 @@
 .textRedSocialContacto {
   font-size: 20px;
 }
+.btn-enviar{
+  background-color: #ffffff;
+  border: 1px solid #d70101;
+  color: rgb(56, 56, 56);
+}
+.btn-enviar:hover{
+  background-color:#d70101;
+  border: 1px solid white;
+}
 
 /* FOOTER */
 .logotkc-footer {
