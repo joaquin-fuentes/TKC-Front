@@ -23,6 +23,7 @@ const Administrador = () => {
                         striped
                         bordered
                         hover
+                        responsive
                         size="sm"
                         variant="dark"
                         className="m-0"
