@@ -189,36 +189,9 @@
 .tituloSobreNosotros {
   padding-top: 110px;
 }
-/* PAGINA ESCUELA DE KAYAK */
-.contenedorPortadaEscuela {
-  background-image: linear-gradient(
-      rgba(19, 19, 19, 0.5),
-      rgba(78, 1, 1, 0.615)
-    ),
-    url("./assets/imagenes/escuelita.jpg");
-  background-size:cover; /* Ajusta la imagen al tamaño del contenedor */
-  background-position: bottom; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que se repita la imagen */
-  background-attachment: fixed; /* Hace que la imagen de fondo se quede fija */
-  position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
-  height: 50vh;
-  opacity: 0.9; /* Ajusta la opacidad del contenedor */
-}
+
 /* PAGINA EXCURSIONES */
-.contenedorPortadaExcursiones {
-  background-image: linear-gradient(
-      rgba(19, 19, 19, 0.5),
-      rgba(78, 1, 1, 0.615)
-    ),
-    url("./assets/imagenes/alquilerkayak.jpg");
-  background-size:cover; /* Ajusta la imagen al tamaño del contenedor */
-  background-position: bottom; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que se repita la imagen */
-  background-attachment: fixed; /* Hace que la imagen de fondo se quede fija */
-  position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
-  height: 50vh;
-  opacity: 0.9; /* Ajusta la opacidad del contenedor */
-}
+
 .fondoExcursiones {
   background-image: linear-gradient(
       rgba(19, 19, 19, 0.137),

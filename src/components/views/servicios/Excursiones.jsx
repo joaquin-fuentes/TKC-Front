@@ -18,11 +18,10 @@ const Excursiones = () => {
     return (
         <div>
             <Header></Header>
-            <Container fluid className="contenedorPortadaExcursiones d-flex justify-content-center align-items-center text-light ">
-                <h2 className='fs-1'>Excursiones</h2>
-            </Container>
-            <div className='fondoExcursiones pt-4'>
-                <Container className='pt-3'>
+            <div className='fondoExcursiones'>
+                <Container>
+                    <h2 data-aos="fade-up" className='text-center text-light tituloSobreNosotros mb-4'>Excursiones</h2>
+
                     {/* kAYAK RIO LORO */}
                     <Row>
                         <Col md={6}>

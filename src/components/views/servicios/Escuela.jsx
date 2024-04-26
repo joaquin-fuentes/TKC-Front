@@ -9,11 +9,9 @@ const Escuela = () => {
     return (
         <div>
             <Header></Header>
-            <Container fluid className="contenedorPortadaEscuela d-flex justify-content-center align-items-center text-light ">
-               <h2 className='fs-1'>Escuela de Kayak</h2>
-            </Container>
-            <div className='fondoExcursiones pt-4'>
+            <div className='fondoExcursiones'>
                 <Container>
+                    <h2 data-aos="fade-up" className='text-center text-light tituloSobreNosotros mb-4'>Escuela de kayak</h2>
                     <Row className='pt-3 pb-5'>
                         <Col md={6}>
                             <article data-aos="fade-up">
