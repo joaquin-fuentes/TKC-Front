@@ -84,12 +84,12 @@
   width: 100vw;
   background-color: rgba(190, 190, 190, 0.2);
 }
-.narbarToggle{
-  border: none!important;
+.narbarToggle {
+  border: none !important;
 }
 
-.menuHamburguesa{
-  font-size: 40px!important;
+.menuHamburguesa {
+  font-size: 40px !important;
   color: #d70101;
 }
 /* Media Query para pantallas más pequeñas, como celulares y tablets */
@@ -182,17 +182,13 @@
 
 /* PAGINA SOBRE NOSOTROS */
 .fondoSobreNosotros {
-  background-image: linear-gradient(
-      rgba(19, 19, 19, 0.80),
-      rgba(137, 0, 0, 0.80)
-    ),
+  background-image: linear-gradient(rgba(19, 19, 19, 0.8), rgba(137, 0, 0, 0.8)),
     url("./assets/imagenes/fondoRojoYBlanco.jpg");
   background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
   background-repeat: no-repeat; /* Evita que se repita la imagen */
   position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
   opacity: 0.9; /* Ajusta la opacidad del contenedor */
   background-attachment: fixed; /* Hace que la imagen de fondo se quede fija */
-
 }
 
 .tituloSobreNosotros {
@@ -202,17 +198,13 @@
 /* PAGINA EXCURSIONES */
 
 .fondoExcursiones {
-  background-image: linear-gradient(
-      rgba(19, 19, 19, 0.80),
-      rgba(137, 0, 0, 0.80)
-    ),
+  background-image: linear-gradient(rgba(19, 19, 19, 0.8), rgba(137, 0, 0, 0.8)),
     url("./assets/imagenes/fondoRojoYBlanco.jpg");
   background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
   background-repeat: no-repeat; /* Evita que se repita la imagen */
   position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
   opacity: 0.9; /* Ajusta la opacidad del contenedor */
   background-attachment: fixed; /* Hace que la imagen de fondo se quede fija */
-
 }
 
 .textTitulo {
@@ -280,16 +272,26 @@
 .textRedSocialContacto {
   font-size: 20px;
 }
-.btn-enviar{
+.btn-enviar {
   background-color: #ffffff;
   border: 1px solid #d70101;
   color: rgb(56, 56, 56);
 }
-.btn-enviar:hover{
-  background-color:#d70101;
+.btn-enviar:hover {
+  background-color: #d70101;
   border: 1px solid white;
 }
 
+/* PANEL ADMINISTRACION  */
+.fondoAdmin {
+  background-image: linear-gradient(rgba(19, 19, 19, 0.8), rgba(137, 0, 0, 0.8)),
+    url("./assets/imagenes/fondoRojoYBlanco.jpg");
+  background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+  background-repeat: no-repeat; /* Evita que se repita la imagen */
+  position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
+  opacity: 0.9; /* Ajusta la opacidad del contenedor */
+  background-attachment: fixed; /* Hace que la imagen de fondo se quede fija */
+}
 /* FOOTER */
 .logotkc-footer {
   width: 70%;

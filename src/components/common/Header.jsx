@@ -23,6 +23,7 @@ const Header = () => {
                         <Nav.Link className="text-light text-header" href="/#servicios">Servicios</Nav.Link>
                         <Nav.Link className="text-light text-header" href="/#dondeencontrarnos">Donde encontrarnos</Nav.Link>
                         <Nav.Link className="text-light text-header" href="/#contacto">Contacto</Nav.Link>
+                        <Nav.Link className="text-light text-header" href="/administrador">Administrador</Nav.Link>
                     </Nav>
                     <Nav className="ms-auto contenedorImgHeader ">
                         <Nav.Link className="text-light me-1 text-header" target='_blank' href="https://www.facebook.com/tkcturismoaventura/"><img src={facebook} className='icono-header' alt="facebook" /></Nav.Link>

@@ -9,6 +9,7 @@ import Escuela from './components/views/servicios/Escuela';
 import Coaching from './components/views/servicios/Coaching';
 import Cumpleanios from './components/views/servicios/Cumpleanios';
 import Alquiler from './components/views/servicios/Alquiler';
+import Administrador from './components/views/Administrador/Administrador';
 
 const App = () => {
   return (
@@ -28,6 +29,8 @@ const App = () => {
            <Route exact path="/cumpleaños" element={<Cumpleanios></Cumpleanios>
           }></Route>
            <Route exact path="/alquiler" element={<Alquiler></Alquiler>
+          }></Route>
+           <Route exact path="/administrador" element={<Administrador></Administrador>
           }></Route>
         </Routes>
       </div>
