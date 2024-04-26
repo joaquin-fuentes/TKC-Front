@@ -44,6 +44,7 @@ const Excursiones = () => {
                             </article>
                         </Col>
                     </Row>
+                    <hr data-aos="fade-up" className="m-0 text-light mb-4" />
                     {/* KAYAK DIQUE */}
                     <Row className='py-4 d-flex flex-row-reverse'>
                         <Col md={6}>
@@ -66,6 +67,7 @@ const Excursiones = () => {
                             </article>
                         </Col>
                     </Row>
+                    <hr data-aos="fade-up" className="m-0 text-light mb-4" />
                     {/* KAYAK EN EL DIQUE + RAPPEL */}
                     <Row className='py-4 '>
                         <Col md={6}>
@@ -88,6 +90,7 @@ const Excursiones = () => {
                             </article>
                         </Col>
                     </Row>
+                    <hr data-aos="fade-up" className="m-0 text-light mb-4" />
                     {/* Canyoning en la Reserva Aguas Chiquitas*/}
                     <Row className='py-4 d-flex flex-row-reverse'>
                         <Col md={6}>
@@ -110,6 +113,7 @@ const Excursiones = () => {
                             </article>
                         </Col>
                     </Row>
+                    <hr data-aos="fade-up" className="m-0 text-light mb-4" />
                     {/* Canyoning Aguas Chiquitas + Rappel */}
                     <Row className='py-4 '>
                         <Col md={6}>
@@ -132,6 +136,7 @@ const Excursiones = () => {
                             </article>
                         </Col>
                     </Row>
+                    <hr data-aos="fade-up" className="m-0 text-light mb-4" />
                     {/*Rappel aéreo en el Viaducto El Saladillo*/}
                     <Row className='py-4 d-flex flex-row-reverse'>
                         <Col md={6}>
