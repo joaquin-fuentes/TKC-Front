@@ -1,14 +1,11 @@
 import React from 'react';
 import { Container, Row, Col, Nav } from "react-bootstrap"
-import Header from '../../common/Header';
-import Footer from '../../common/Footer';
 import imgCumpleanios from "../../../assets/imagenes/portada2.jpg"
 import whatsapp from "../../../assets/imagenes/icons8-whatsapp.svg"
 
 const Cumpleanios = () => {
     return (
         <div>
-            <Header></Header>
             <div className='fondoExcursiones'>
                 <Container>
                     <h2 data-aos="fade-up" className='text-center text-light tituloSobreNosotros mb-4'>Cumpleaños infantiles</h2>
@@ -31,7 +28,6 @@ const Cumpleanios = () => {
                     </Row>
                 </Container>
             </div>
-            <Footer></Footer>
         </div>
     );
 };

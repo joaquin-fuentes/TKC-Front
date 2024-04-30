@@ -1,13 +1,10 @@
 import React from 'react';
 import { Container, Row, Col } from "react-bootstrap"
 import equipoTKC from "../../assets/imagenes/equipotkc.jpg"
-import Header from '../common/Header';
-import Footer from '../common/Footer';
 
 const PaginaSobreNosotros = () => {
     return (
         <div className='fondoSobreNosotros text-light'>
-            <Header></Header>
             <Container>
                 <h2 data-aos="fade-up" className='text-center tituloSobreNosotros mb-4'>Sobre Nosotros</h2>
                 <hr data-aos="fade-up" className="m-0 text-light my-4" />
@@ -33,7 +30,6 @@ const PaginaSobreNosotros = () => {
                     </Col>
                 </Row>
             </Container>
-            <Footer></Footer>
         </div>
     );
 };

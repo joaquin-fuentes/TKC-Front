@@ -1,14 +1,11 @@
 import React from 'react';
 import { Container, Row, Col, Nav } from "react-bootstrap"
-import Header from '../../common/Header';
-import Footer from '../../common/Footer';
 import imgEscuela from "../../../assets/imagenes/portada2.jpg"
 import whatsapp from "../../../assets/imagenes/icons8-whatsapp.svg"
 
 const Escuela = () => {
     return (
         <div>
-            <Header></Header>
             <div className='fondoExcursiones'>
                 <Container>
                     <h2 data-aos="fade-up" className='text-center text-light tituloSobreNosotros mb-4'>Escuela de kayak</h2>
@@ -34,7 +31,6 @@ const Escuela = () => {
                     </Row>
                 </Container>
             </div>
-            <Footer></Footer>
         </div>
     );
 };

@@ -1,7 +1,5 @@
 import React from 'react';
 import { Container, Row, Col, Nav } from "react-bootstrap"
-import Header from '../../common/Header';
-import Footer from '../../common/Footer';
 import canyonning from "../../../assets/imagenes/trekking.jpg"
 import kayakrio from "../../../assets/imagenes/fondoKayak2.jpg"
 import kayakdique from "../../../assets/imagenes/remando.jpg"
@@ -17,7 +15,6 @@ import whatsapp from "../../../assets/imagenes/icons8-whatsapp.svg"
 const Excursiones = () => {
     return (
         <div>
-            <Header></Header>
             <div className='fondoExcursiones'>
                 <Container>
                     <h2 data-aos="fade-up" className='text-center text-light tituloSobreNosotros mb-4'>Excursiones</h2>
@@ -162,7 +159,6 @@ const Excursiones = () => {
 
                 </Container>
             </div>
-            <Footer></Footer>
         </div>
     );
 };

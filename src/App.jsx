@@ -10,11 +10,15 @@ import Coaching from './components/views/servicios/Coaching';
 import Cumpleanios from './components/views/servicios/Cumpleanios';
 import Alquiler from './components/views/servicios/Alquiler';
 import Administrador from './components/views/Administrador/Administrador';
+import Error404 from './components/views/Error404';
+import Header from './components/common/Header';
+import Footer from './components/common/Footer';
 
 const App = () => {
   return (
     <BrowserRouter>
       <div>
+      <Header></Header>
         <Routes>
           <Route exact path="/" element={<Inicio></Inicio>
           }></Route>
@@ -32,7 +36,10 @@ const App = () => {
           }></Route>
            <Route exact path="/administrador" element={<Administrador></Administrador>
           }></Route>
+             <Route exact path="/error" element={<Error404></Error404>
+          }></Route>
         </Routes>
+        <Footer></Footer>
       </div>
     </BrowserRouter>
   );

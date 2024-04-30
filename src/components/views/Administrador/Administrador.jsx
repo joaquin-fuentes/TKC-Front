@@ -1,11 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Button, Nav, Table } from "react-bootstrap";
-import Header from "../../common/Header";
-import Footer from "../../common/Footer";
 const Administrador = () => {
     return (
         <div>
-            <Header></Header>
             <div className="fondoAdmin">
                 <Container className="pb-4">
                     <h2
@@ -95,7 +92,6 @@ const Administrador = () => {
                     </Table>
                 </Container>
             </div>
-            <Footer></Footer>
         </div>
     );
 };
