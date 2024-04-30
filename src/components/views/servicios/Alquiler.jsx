@@ -12,7 +12,7 @@ const Alquiler = () => {
             <div className='fondoExcursiones'>
                 <Container>
                     <h2 data-aos="fade-up" className='text-center text-light tituloSobreNosotros mb-4'>Alquiler de quincho</h2>
-                    <hr data-aos="fade-up" className="m-0 text-light mb-4" />
+                    <hr data-aos="fade-up" className="m-0 text-light my-4" />
                     <Row className='pt-3 pb-5'>
                         <Col md={6}>
                             <article data-aos="fade-up">

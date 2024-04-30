@@ -10,7 +10,7 @@ const PaginaSobreNosotros = () => {
             <Header></Header>
             <Container>
                 <h2 data-aos="fade-up" className='text-center tituloSobreNosotros mb-4'>Sobre Nosotros</h2>
-                <hr data-aos="fade-up" className="m-0 text-light mb-4" />
+                <hr data-aos="fade-up" className="m-0 text-light my-4" />
                 <Row>
                     <Col md={6}>
                         <article data-aos="fade-up">
