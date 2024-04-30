@@ -82,7 +82,7 @@
   right: 0;
   z-index: 100;
   width: 100vw;
-  background-color: rgba(190, 190, 190, 0.2);
+  background-color: rgba(17, 10, 10, 0.2);
 }
 .narbarToggle {
   border: none !important;
@@ -151,6 +151,7 @@
   transition: transform 0.3s ease !important; /* Transición suave para el cambio de tamaño */
   margin-bottom: 25px;
   opacity: 0.95 !important;
+  border: 3px outset rgba(110, 39, 39, 0.826);
 }
 
 .card-servicio:hover {

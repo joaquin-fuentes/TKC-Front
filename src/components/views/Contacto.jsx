@@ -31,15 +31,16 @@ const Contacto = () => {
                                 <p className='textRedSocialContacto'>Tucuman kayak club</p>
                             </Nav.Link>
                         </Col>
-                        <Col md={4}>
+                        <Col md={4} className='mb-4'>
                             <Nav.Link data-aos="fade-up" target='_blank' href="https://www.instagram.com/tucumankayakclub/?hl=es" className='d-flex flex-column justify-content-center align-items-center p-3 text-center'>
                                 <FaInstagram className='iconoFb iconoContacto' />
                                 <p className='textRedSocialContacto'>@TucumankayakClub</p>
                             </Nav.Link>
                         </Col>
+
                         <h3 data-aos="fade-up" className='text-center my-4  '>¡Dejanos tu mensaje!</h3>
                         <Form data-aos="fade-up" className='d-flex  flex-column'>
-                            <div className='d-flex'>
+                            <div className='d-md-flex'>
                                 <Col md={6}>
                                     <Form.Group className="mb-3 px-3" controlId="">
                                         <Form.Label>Nombre Completo</Form.Label>
