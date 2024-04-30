@@ -112,12 +112,8 @@
   }
 }
 /* ERROR 404 */
-.contenedorPrincipalError{
-
-  background-image: linear-gradient(
-      rgba(19, 19, 19, 0.8),
-      rgba(78, 1, 1, 0.3)
-    ),
+.contenedorPrincipalError {
+  background-image: linear-gradient(rgba(19, 19, 19, 0.8), rgba(78, 1, 1, 0.3)),
     url("./assets/imagenes/fondoError.jpg");
   background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
   background-position: bottom; /* Centra la imagen */
@@ -128,11 +124,8 @@
   opacity: 0.9; /* Ajusta la opacidad del contenedor */
 }
 /* LOGIN */
-.contenedorPrincipalLogin{
-  background-image: linear-gradient(
-      rgba(19, 19, 19, 0.8),
-      rgba(78, 1, 1, 0.3)
-    ),
+.contenedorPrincipalLogin {
+  background-image: linear-gradient(rgba(19, 19, 19, 0.8), rgba(78, 1, 1, 0.3)),
     url("./assets/imagenes/fondoError.jpg");
   background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
   background-position: bottom; /* Centra la imagen */
@@ -149,8 +142,8 @@
 
 /* Media Query para pantallas más pequeñas, como celulares y tablets */
 @media only screen and (max-width: 768px) {
-  .formLogin{
-    width: 80%!important;
+  .formLogin {
+    width: 80% !important;
   }
 }
 /* INICIO */
@@ -334,6 +327,21 @@
   opacity: 0.9; /* Ajusta la opacidad del contenedor */
   background-attachment: fixed; /* Hace que la imagen de fondo se quede fija */
 }
+.email-col {
+  
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.mensaje-col {
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
 /* FOOTER */
 .logotkc-footer {
   width: 70%;

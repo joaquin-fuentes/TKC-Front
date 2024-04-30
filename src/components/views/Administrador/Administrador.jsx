@@ -29,10 +29,10 @@ const Administrador = () => {
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Nombre</th>
-                                <th>Email</th>
-                                <th>Mensaje</th>
-                                <th>Fecha</th>
+                                <th className="email-col">Nombre</th>
+                                <th className="email-col">Email</th>
+                                <th className="mensaje-col">Mensaje</th>
+                                <th className="fecha-col">Fecha</th>
                                 <th>Opciones</th>
                             </tr>
                         </thead>
@@ -40,13 +40,9 @@ const Administrador = () => {
                             <tr>
                                 <td>1</td>
                                 <td>Joaquin Fuentes</td>
-                                <td>joaquin.fuentes1327@gmail.com</td>
-                                <td>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
-                                    facilis et culpa harum nobis ipsa deserunt illum voluptatibus
-                                    illo optio amet necessitatibus officiis ipsum sint temporibus,
-                                    rerum odio dolorem corrupti. Nostrum ex vel accusantium,
-                                    blanditiis nihil in repellendus! Adipisci, corporis.
+                                <td className="email-col">joaquin.fuentes1327@gmail.com</td>
+                                <td className="mensaje-col">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis et culpa harum nobis ipsa deserunt illum voluptatibus.
                                 </td>
                                 <td>26/04/2024</td>
                                 <td>
@@ -57,13 +53,9 @@ const Administrador = () => {
                             <tr>
                                 <td>1</td>
                                 <td>Joaquin Fuentes</td>
-                                <td>joaquin.fuentes1327@gmail.com</td>
-                                <td>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
-                                    facilis et culpa harum nobis ipsa deserunt illum voluptatibus
-                                    illo optio amet necessitatibus officiis ipsum sint temporibus,
-                                    rerum odio dolorem corrupti. Nostrum ex vel accusantium,
-                                    blanditiis nihil in repellendus! Adipisci, corporis.
+                                <td className="email-col">joaquin.fuentes1327@gmail.com</td>
+                                <td className="mensaje-col">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis et culpa harum nobis ipsa deserunt illum voluptatibus.
                                 </td>
                                 <td>26/04/2024</td>
                                 <td>
@@ -74,13 +66,9 @@ const Administrador = () => {
                             <tr>
                                 <td>1</td>
                                 <td>Joaquin Fuentes</td>
-                                <td>joaquin.fuentes1327@gmail.com</td>
-                                <td>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
-                                    facilis et culpa harum nobis ipsa deserunt illum voluptatibus
-                                    illo optio amet necessitatibus officiis ipsum sint temporibus,
-                                    rerum odio dolorem corrupti. Nostrum ex vel accusantium,
-                                    blanditiis nihil in repellendus! Adipisci, corporis.
+                                <td className="email-col">joaquin.fuentes1327@gmail.com</td>
+                                <td className="mensaje-col">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis et culpa harum nobis ipsa deserunt illum voluptatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis et culpa harum nobis ipsa deserunt illum voluptatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis et culpa harum nobis ipsa deserunt illum voluptatibus.
                                 </td>
                                 <td>26/04/2024</td>
                                 <td>
