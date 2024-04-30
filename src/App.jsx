@@ -13,6 +13,7 @@ import Administrador from './components/views/Administrador/Administrador';
 import Error404 from './components/views/Error404';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
+import Login from './components/views/Administrador/Login';
 
 const App = () => {
   return (
@@ -36,7 +37,9 @@ const App = () => {
           }></Route>
            <Route exact path="/administrador" element={<Administrador></Administrador>
           }></Route>
-             <Route exact path="/error" element={<Error404></Error404>
+           <Route exact path="/login" element={<Login></Login>
+          }></Route>
+             <Route path="*" element={<Error404></Error404>
           }></Route>
         </Routes>
         <Footer></Footer>
