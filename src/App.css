@@ -327,21 +327,28 @@
   opacity: 0.9; /* Ajusta la opacidad del contenedor */
   background-attachment: fixed; /* Hace que la imagen de fondo se quede fija */
 }
-.email-col {
-  
+.col-email {
+  max-width: 150px;
   white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
-  overflow: hidden;
 }
 
-.mensaje-col {
-  width: 100%;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+.col-mensaje {
+  max-width: 300px;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+.col-nombre,
+.col-fecha {
+  max-width: 100px;
+}
+.textMensajeModal{
+  white-space: normal; /* Permite que el texto salte de línea automáticamente */
+  word-wrap: break-word; /* Divide palabras largas si es necesario */
+}
 /* FOOTER */
 .logotkc-footer {
   width: 70%;

@@ -29,10 +29,10 @@ const DetalleMensaje = ({ mensaje, borrarMensaje }) => {
                 </Modal.Header>
 
                 <Modal.Body>
-                    <p>Nombre: <span>{mensaje.nombre}</span></p>
-                    <p>Email: <span>{mensaje.email}</span></p>
-                    <p>Mensaje: <span>{mensaje.comentario}</span></p>
-                    <p>Fecha: <span>{mensaje.fecha}</span></p>
+                    <p className="fw-bold">Nombre: <span className="fw-normal">{mensaje.nombre}</span></p>
+                    <p className="fw-bold">Email: <span className="fw-normal">{mensaje.email}</span></p>
+                    <p className="fw-bold">Mensaje: <span className="textMensajeModal fw-normal">{mensaje.comentario}</span></p>
+                    <p className="fw-bold">Fecha: <span className="fw-normal">{mensaje.fecha}</span></p>
                 </Modal.Body>
 
                 <Modal.Footer>

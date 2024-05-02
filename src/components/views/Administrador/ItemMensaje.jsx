@@ -50,14 +50,14 @@ const ItemMensaje = ({ mensaje, setMensajes }) => {
     }
     return (
         <tr >
-            <td>{mensaje.id}</td>
-            <td>{mensaje.nombre}</td>
-            <td >{mensaje.email}</td>
-            <td >
+            <td className="col-id">{mensaje.id}</td>
+            <td className="col-nombre">{mensaje.nombre}</td>
+            <td className="col-email">{mensaje.email}</td>
+            <td className="col-mensaje">
                 {mensaje.comentario}
             </td>
-            <td>{mensaje.fecha}</td>
-            <td>
+            <td className="col-fecha">{mensaje.fecha}</td>
+            <td >
                 <Button variant="danger" onClick={borrarMensaje} className=" m-1 d-flex justify-content-center align-items-center flex-column"><FaTrashAlt />
                 </Button>
                 <DetalleMensaje mensaje={mensaje} borrarMensaje={borrarMensaje}></DetalleMensaje>
