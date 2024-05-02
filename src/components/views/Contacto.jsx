@@ -5,6 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import CrearMensaje from './CrearMensaje';
 
 
 
@@ -38,32 +39,7 @@ const Contacto = () => {
                             </Nav.Link>
                         </Col>
 
-                        <h3 data-aos="fade-up" className='text-center my-4  '>¡Dejanos tu mensaje!</h3>
-                        <Form data-aos="fade-up" className='d-flex  flex-column'>
-                            <div className='d-md-flex'>
-                                <Col md={6}>
-                                    <Form.Group className="mb-3 px-3" controlId="">
-                                        <Form.Label>Nombre Completo</Form.Label>
-                                        <Form.Control type="text" placeholder="Ingrese su nombre completo aquí" />
-                                    </Form.Group>
-                                </Col>
-                                <Col md={6}>
-                                    <Form.Group className="mb-3 px-3" controlId="">
-                                        <Form.Label>Email</Form.Label>
-                                        <Form.Control type="email" placeholder="nombre@ejemplo.com" />
-                                    </Form.Group>
-                                </Col>
-                            </div>
-                            <Col md={12}>
-                                <Form.Group className="mb-3 px-3" controlId="">
-                                    <Form.Label>Mensaje</Form.Label>
-                                    <Form.Control as="textarea" rows={3} placeholder='Ingrese aquí su mensaje' />
-                                </Form.Group>
-                                <div className="text-center w-100">
-                                    <Button className='btn btn-enviar  mx-3 mt-3 w-25'>Enviar</Button>
-                                </div>
-                            </Col>
-                        </Form>
+                        <CrearMensaje></CrearMensaje>
                     </Row>
                 </div>
             </Container>

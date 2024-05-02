@@ -1,5 +1,7 @@
 // llamar a la variable de entorno
 const URL_USUARIO = import.meta.env.VITE_API_USUARIO
+const URL_MENSAJE= import.meta.env.VITE_API_MENSAJE
+
 
 
 export const login = async (usuario)=>{
@@ -68,22 +70,22 @@ export const login = async (usuario)=>{
 //     }
 // }
 
-// export const consultaCrearProducto = async (producto)=>{
-//     try {
-//         const respuesta = await fetch(URL_PRODUCTO, {
-//             method: "POST",
-//             headers: {
-//                 "Content-Type":"application/json"
-//             },
-//             body: JSON.stringify(producto)
-//         });
-//         return respuesta
+ export const consultaCrearMensaje = async (mensaje)=>{
+     try {
+         const respuesta = await fetch(URL_MENSAJE, {
+             method: "POST",
+             headers: {
+                 "Content-Type":"application/json"
+             },
+             body: JSON.stringify(mensaje)
+         });
+         return respuesta
 
-//     } catch (error) {
-//         console.log(error)
-//         return null
-//     }
-// }
+     } catch (error) {
+         console.log(error)
+         return null
+     }
+ }
 
 // export const consultaEditarProducto = async (producto, id)=>{
 //     try {
