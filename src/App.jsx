@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -14,32 +14,41 @@ import Error404 from './components/views/Error404';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 import Login from './components/views/Administrador/Login';
+import RutasProtegidas from "./components/routes/RutasProtegidas";
+import RutasAdministrador from "./components/routes/RutasAdministrador";
 
 const App = () => {
+
+  const usuarioDelSessionStorage = JSON.parse(sessionStorage.getItem("usuarioLogueado")) || {}
+  const [usuarioLogueado, setUsuarioLogueado] = useState(usuarioDelSessionStorage)
+
   return (
     <BrowserRouter>
       <div>
-      <Header></Header>
+        <Header usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}></Header>
         <Routes>
           <Route exact path="/" element={<Inicio></Inicio>
           }></Route>
           <Route exact path="/sobrenosotros" element={<PaginaSobreNosotros></PaginaSobreNosotros>
           }></Route>
-            <Route exact path="/excursiones" element={<Excursiones></Excursiones>
+          <Route exact path="/excursiones" element={<Excursiones></Excursiones>
           }></Route>
-           <Route exact path="/escuela" element={<Escuela></Escuela>
+          <Route exact path="/escuela" element={<Escuela></Escuela>
           }></Route>
-           <Route exact path="/coaching" element={<Coaching></Coaching>
+          <Route exact path="/coaching" element={<Coaching></Coaching>
           }></Route>
-           <Route exact path="/cumpleaños" element={<Cumpleanios></Cumpleanios>
+          <Route exact path="/cumpleaños" element={<Cumpleanios></Cumpleanios>
           }></Route>
-           <Route exact path="/alquiler" element={<Alquiler></Alquiler>
+          <Route exact path="/alquiler" element={<Alquiler></Alquiler>
           }></Route>
-           <Route exact path="/administrador" element={<Administrador></Administrador>
+          <Route exact path="/login" element={<Login  setUsuarioLogueado={setUsuarioLogueado}></Login>
           }></Route>
-           <Route exact path="/login" element={<Login></Login>
+          <Route path="/administrador/*" element={
+            <RutasProtegidas>
+              <RutasAdministrador></RutasAdministrador>
+            </RutasProtegidas>
           }></Route>
-             <Route path="*" element={<Error404></Error404>
+          <Route path="*" element={<Error404></Error404>
           }></Route>
         </Routes>
         <Footer></Footer>

@@ -1,0 +1,15 @@
+{
+    "usuarios": [
+        {
+            "id": 1,
+            "nombreUsuario": "admin",
+            "nombre":" Joaquin Alberto",
+            "apellido":"Fuentes",
+            "rol":"administrador",
+            "estado":"activo",
+            "email":"joaquin.fuentes1327@gmail.com",
+            "fechaNacimiento":"13/01/1994",
+            "password": "123456"
+        }
+    ]
+}
