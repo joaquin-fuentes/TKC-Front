@@ -1,6 +1,24 @@
-import React from "react";
 import { Container, Row, Col, Button, Nav, Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { obtenerMensajes } from "../../helpers/queries";
+import Swal from "sweetalert2"
+import { useEffect, useState } from 'react';
+import ItemMensaje from "./ItemMensaje";
+
+
 const Administrador = () => {
+    const [mensajes, setMensajes] = useState([])
+
+    useEffect(() => {
+        obtenerMensajes().then((respuesta) => {
+            if (respuesta != null) {
+                setMensajes(respuesta)
+            } else {
+                Swal.fire("Error", "No se pudo obtener los datos de la API", "error")
+            }
+        })
+    }, [])
+
     return (
         <div>
             <div className="fondoAdmin">
@@ -37,45 +55,14 @@ const Administrador = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Joaquin Fuentes</td>
-                                <td className="email-col">joaquin.fuentes1327@gmail.com</td>
-                                <td className="mensaje-col">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis et culpa harum nobis ipsa deserunt illum voluptatibus.
-                                </td>
-                                <td>26/04/2024</td>
-                                <td>
-                                    <Button variant="danger">x</Button>
-                                    <Button variant="primary">x</Button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Joaquin Fuentes</td>
-                                <td className="email-col">joaquin.fuentes1327@gmail.com</td>
-                                <td className="mensaje-col">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis et culpa harum nobis ipsa deserunt illum voluptatibus.
-                                </td>
-                                <td>26/04/2024</td>
-                                <td>
-                                    <Button variant="danger">x</Button>
-                                    <Button variant="primary">x</Button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Joaquin Fuentes</td>
-                                <td className="email-col">joaquin.fuentes1327@gmail.com</td>
-                                <td className="mensaje-col">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis et culpa harum nobis ipsa deserunt illum voluptatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis et culpa harum nobis ipsa deserunt illum voluptatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis et culpa harum nobis ipsa deserunt illum voluptatibus.
-                                </td>
-                                <td>26/04/2024</td>
-                                <td>
-                                    <Button variant="danger">x</Button>
-                                    <Button variant="primary">x</Button>
-                                </td>
-                            </tr>
+                            
+                            {
+                                mensajes.map((mensaje) => {
+                                    return <ItemMensaje mensaje={mensaje} setMensajes={setMensajes} key={mensaje.id}></ItemMensaje>
+                                })
+                            }
+                           
+                           
                         </tbody>
                     </Table>
                 </Container>

@@ -33,42 +33,42 @@ export const login = async (usuario)=>{
     }
 }
 
-// export const obtenerProductos = async ()=>{
-//     try {
-//         const respuesta = await fetch(URL_PRODUCTO)
-//         const listaProductos = await respuesta.json()
-//         return listaProductos
+ export const obtenerMensajes = async ()=>{
+     try {
+         const respuesta = await fetch(URL_MENSAJE)
+         const listaMensajes = await respuesta.json()
+         return listaMensajes
 
-//     } catch (error) {
-//         console.log(error)
-//         return null
-//     }
-// }
-// export const obtenerProducto = async (id)=>{
-//     try {
-//         const respuesta = await fetch(`${URL_PRODUCTO}/${id}`)
-//         const productoEditar = await respuesta.json()
-//         return productoEditar
+     } catch (error) {
+         console.log(error)
+         return null
+     }
+ }
+ export const obtenerMensaje = async (id)=>{
+     try {
+         const respuesta = await fetch(`${URL_MENSAJE}/${id}`)
+         const mensajeEditar = await respuesta.json()
+         return mensajeEditar
 
-//     } catch (error) {
-//         console.log(error)
-//         return null
-//     }
-// }
+     } catch (error) {
+         console.log(error)
+         return null
+     }
+ }
 
-// export const consultaBorrarProducto = async (id)=>{
-//     try {
-//         const respuesta = await fetch(`${URL_PRODUCTO}/${id}` , {
-//             method:"DELETE"
-//         });
-//         // const listaProductos = await respuesta.json()
-//         return respuesta
+ export const consultaBorrarMensaje = async (id)=>{
+     try {
+         const respuesta = await fetch(`${URL_MENSAJE}/${id}` , {
+             method:"DELETE"
+         });
+        //  const listaMensajes = await respuesta.json()
+         return respuesta
 
-//     } catch (error) {
-//         console.log(error)
-//         return null
-//     }
-// }
+     } catch (error) {
+         console.log(error)
+         return null
+     }
+ }
 
  export const consultaCrearMensaje = async (mensaje)=>{
      try {
