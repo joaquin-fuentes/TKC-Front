@@ -36,7 +36,7 @@ const DetalleMensaje = ({ mensaje, borrarMensaje }) => {
                 </Modal.Body>
 
                 <Modal.Footer>
-                    <Button variant="secondary">Cerrar</Button>
+                    <Button variant="secondary" onClick={handleClose}>Cerrar</Button>
                     <Button variant="danger" onClick={borrarMensaje} ><FaTrashAlt />
                     </Button>
                 </Modal.Footer>

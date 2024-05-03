@@ -30,7 +30,7 @@ const Administrador = () => {
                         Panel de administrador
                     </h2>
                     <hr data-aos="fade-up" className="m-0 text-light mb-4" />
-                    <Button data-aos="fade-up" className="mb-3 me-3" variant="outline-primary">Comentarios</Button>
+                    <Button data-aos="fade-up" className="mb-3 me-3" variant="primary">Comentarios</Button>
                     <Button data-aos="fade-up" className="mb-3 me-3" variant="outline-success">Usuarios</Button>
                     <Button data-aos="fade-up" className="mb-3 me-3" variant="outline-warning">Servicios</Button>
                     <Button data-aos="fade-up" className="mb-3 me-3" variant="outline-secondary">Novedades</Button>

@@ -57,7 +57,7 @@ const ItemMensaje = ({ mensaje, setMensajes }) => {
                 {mensaje.comentario}
             </td>
             <td className="col-fecha">{mensaje.fecha}</td>
-            <td >
+            <td className="d-flex justify-content-center">
                 <Button variant="danger" onClick={borrarMensaje} className=" m-1 d-flex justify-content-center align-items-center flex-column"><FaTrashAlt />
                 </Button>
                 <DetalleMensaje mensaje={mensaje} borrarMensaje={borrarMensaje}></DetalleMensaje>
