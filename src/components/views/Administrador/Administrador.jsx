@@ -58,7 +58,7 @@ const Administrador = () => {
                             
                             {
                                 mensajes.map((mensaje) => {
-                                    return <ItemMensaje mensaje={mensaje} setMensajes={setMensajes} key={mensaje.id}></ItemMensaje>
+                                    return <ItemMensaje mensaje={mensaje} setMensajes={setMensajes} key={mensaje._id}></ItemMensaje>
                                 })
                             }
                            

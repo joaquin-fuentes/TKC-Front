@@ -30,7 +30,7 @@ const ItemMensaje = ({ mensaje, setMensajes }) => {
                     )
                 } else {
                     // aqui tengo que hacer la peticion DELETE 
-                    consultaBorrarMensaje(mensaje.id).then((respuesta) => {
+                    consultaBorrarMensaje(mensaje._id).then((respuesta) => {
                         if (respuesta.status === 200) {
                             Swal.fire(
                                 'Eliminado!',
@@ -50,7 +50,7 @@ const ItemMensaje = ({ mensaje, setMensajes }) => {
     }
     return (
         <tr >
-            <td className="col-id">{mensaje.id}</td>
+            <td className="col-id">{mensaje._id}</td>
             <td className="col-nombre">{mensaje.nombre}</td>
             <td className="col-email">{mensaje.email}</td>
             <td className="col-mensaje">

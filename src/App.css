@@ -1,6 +1,10 @@
 #root {
   font-family: "anton", "Permanent Marker", cursive;
   font-style: oblique;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
 
 .bg-negro {
