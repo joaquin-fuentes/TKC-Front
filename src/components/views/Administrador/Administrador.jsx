@@ -46,7 +46,7 @@ const Administrador = () => {
                     >
                         <thead>
                             <tr>
-                                <th>#</th>
+                                {/* <th>#</th> */}
                                 <th className="email-col">Nombre</th>
                                 <th className="email-col">Email</th>
                                 <th className="mensaje-col">Mensaje</th>
@@ -55,14 +55,21 @@ const Administrador = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            
-                            {
-                                mensajes.map((mensaje) => {
-                                    return <ItemMensaje mensaje={mensaje} setMensajes={setMensajes} key={mensaje._id}></ItemMensaje>
-                                })
-                            }
-                           
-                           
+                            {mensajes.length === 0 ? (
+                                <tr>
+                                    <td colSpan="6" className="text-center">
+                                        Aún no hay mensajes disponibles.
+                                    </td>
+                                </tr>
+                            ) : (
+                                mensajes.map((mensaje) => (
+                                    <ItemMensaje
+                                        mensaje={mensaje}
+                                        setMensajes={setMensajes}
+                                        key={mensaje._id}
+                                    />
+                                ))
+                            )}
                         </tbody>
                     </Table>
                 </Container>

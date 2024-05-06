@@ -50,7 +50,7 @@ const ItemMensaje = ({ mensaje, setMensajes }) => {
     }
     return (
         <tr >
-            <td className="col-id"></td>
+            {/* <td className="col-id"></td> */}
             <td className="col-nombre">{mensaje.nombre}</td>
             <td className="col-email">{mensaje.email}</td>
             <td className="col-mensaje">
