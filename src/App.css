@@ -6,8 +6,9 @@
   flex-direction: column;
   margin: 0;
 }
-.main{
+.main {
   flex-grow: 1;
+  overflow: hidden;
 }
 
 .bg-negro {
@@ -333,6 +334,7 @@
   position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
   opacity: 0.9; /* Ajusta la opacidad del contenedor */
   background-attachment: fixed; /* Hace que la imagen de fondo se quede fija */
+  min-height: 90vh;
 }
 .col-email {
   max-width: 150px;
@@ -352,7 +354,7 @@
 .col-fecha {
   max-width: 100px;
 }
-.textMensajeModal{
+.textMensajeModal {
   white-space: normal; /* Permite que el texto salte de línea automáticamente */
   word-wrap: break-word; /* Divide palabras largas si es necesario */
 }

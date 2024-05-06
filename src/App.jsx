@@ -1,6 +1,5 @@
 import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Inicio from './components/views/Inicio';
 import PaginaSobreNosotros from "./components/views/PaginaSobreNosotros"
@@ -26,31 +25,34 @@ const App = () => {
     <BrowserRouter>
       <div>
         <Header usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}></Header>
-        <Routes>
-          <Route exact path="/" element={<Inicio></Inicio>
-          }></Route>
-          <Route exact path="/sobrenosotros" element={<PaginaSobreNosotros></PaginaSobreNosotros>
-          }></Route>
-          <Route exact path="/excursiones" element={<Excursiones></Excursiones>
-          }></Route>
-          <Route exact path="/escuela" element={<Escuela></Escuela>
-          }></Route>
-          <Route exact path="/coaching" element={<Coaching></Coaching>
-          }></Route>
-          <Route exact path="/cumpleaños" element={<Cumpleanios></Cumpleanios>
-          }></Route>
-          <Route exact path="/alquiler" element={<Alquiler></Alquiler>
-          }></Route>
-          <Route exact path="/login" element={<Login  setUsuarioLogueado={setUsuarioLogueado}></Login>
-          }></Route>
-          <Route path="/administrador/*" element={
-            <RutasProtegidas>
-              <RutasAdministrador></RutasAdministrador>
-            </RutasProtegidas>
-          }></Route>
-          <Route path="*" element={<Error404></Error404>
-          }></Route>
-        </Routes>
+        <div className="main">
+          <Routes>
+            <Route exact path="/" element={<Inicio></Inicio>
+            }></Route>
+            <Route exact path="/sobrenosotros" element={<PaginaSobreNosotros></PaginaSobreNosotros>
+            }></Route>
+            <Route exact path="/excursiones" element={<Excursiones></Excursiones>
+            }></Route>
+            <Route exact path="/escuela" element={<Escuela></Escuela>
+            }></Route>
+            <Route exact path="/coaching" element={<Coaching></Coaching>
+            }></Route>
+            <Route exact path="/cumpleaños" element={<Cumpleanios></Cumpleanios>
+            }></Route>
+            <Route exact path="/alquiler" element={<Alquiler></Alquiler>
+            }></Route>
+            <Route exact path="/login" element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>
+            }></Route>
+            <Route path="/administrador/*" element={
+              <RutasProtegidas>
+                <RutasAdministrador></RutasAdministrador>
+              </RutasProtegidas>
+            }></Route>
+            <Route path="*" element={<Error404></Error404>
+            }></Route>
+          </Routes>
+        </div>
+
         <Footer></Footer>
       </div>
     </BrowserRouter>
