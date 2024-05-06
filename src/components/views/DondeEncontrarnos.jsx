@@ -10,7 +10,9 @@ const DondeEncontrarnos = () => {
         <div className='mb-3'>
             <Container >
                 <div className='d-flex flex-column justify-content-center align-items-center pt-3 text-rojo' id='dondeencontrarnos'>
-                    <FaMapMarkerAlt data-aos="fade-up" className='iconoKayak ' />
+                    <div data-aos="fade-up">
+                        <FaMapMarkerAlt  className='iconoKayak ' />
+                    </div>
                     <h3 data-aos="fade-up" className=' m-0 p-4 text-center '> Donde encontrarnos</h3>
                     <Row data-aos="fade-up">
                         <Col md={6}>
