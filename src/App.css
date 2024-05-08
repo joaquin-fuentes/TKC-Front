@@ -16,36 +16,36 @@
 }
 
 .bg-rojo {
-  background-color: #d70101;
+  background-color: #b00b0b;
   color: white;
 }
 
 .text-rojo {
-  color: rgb(215, 1, 1);
+  color: #b00b0b;
 }
 
 .outline-rojo {
-  border: 1px solid rgb(215, 1, 1) !important;
-  color: rgb(215, 1, 1);
+  border: 1px solid #b00b0b !important;
+  color: #b00b0b;
   background-color: white;
   padding: 8px;
   width: 20%;
 }
 
 .outline-rojo:hover {
-  border: 1px solid rgb(215, 1, 1) !important;
+  border: 1px solid #b00b0b !important;
   color: white;
-  background-color: rgb(215, 1, 1);
+  background-color: #b00b0b;
 }
 
 .btn-rojo {
-  border: 1px solid rgb(215, 1, 1);
+  border: 1px solid #b00b0b;
   color: white !important;
-  background-color: rgb(215, 1, 1);
+  background-color: #b00b0b;
 }
 
 .btn-rojo:hover {
-  border: 1px solid rgb(215, 1, 1);
+  border: 1px solid #b00b0b;
   color: rgb(255, 0, 0) !important;
   background-color: rgb(255, 255, 255);
 }
@@ -76,7 +76,7 @@
 }
 
 .text-header:hover {
-  color: rgb(224, 0, 0) !important;
+  color: #c00d0d !important;
 }
 
 .icono-header {
