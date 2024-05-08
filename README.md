@@ -1,8 +1,7 @@
-# React + Vite
+# Tucuman Kayak CLub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En este repositorio se encuentra el frontend del proyecto para la empresa "Tucuman Kayak CLub"
+Es una pagina web donde muestran sus servicios con informacion detallada y tienen secciones con informacion de la empresa, y tambien cuenta con una seccion para dejar mensajes.
+Ademas cuenta con links a las redes sociales.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Para ver la version de prueba de la pagina web puede ingresar al siguiente link: https://tucumankayakclub.netlify.app/
