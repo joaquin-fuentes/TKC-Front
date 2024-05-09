@@ -252,7 +252,7 @@
   /* top: 30%; */
   text-align: center;
   color: white;
-  font-size: 1.5em;
+  font-size: 1.3em;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.451);
   margin-bottom: 7px;
 }
@@ -278,56 +278,6 @@
 
 .articleCard:hover .btnCard {
   opacity: 1; /* El botón se vuelve visible al hacer hover */
-}
-
-.card-img {
-  width: 100%; /* Ajustar el ancho del contenedor */
-  height: 100%; /* Ajustar la altura del contenedor */
-  object-fit: cover; /* Escalar la imagen para cubrir completamente el contenedor */
-  opacity: 0.8 !important;
-}
-
-.card-img:hover {
-  opacity: 0.99 !important;
-}
-
-.card-servicio {
-  width: 300px !important;
-  height: 200px !important;
-  box-shadow: 6px 6px 6px rgba(42, 41, 41, 0.695) !important;
-  transition: transform 0.3s ease !important; /* Transición suave para el cambio de tamaño */
-  margin-bottom: 25px;
-  opacity: 0.95 !important;
-  border: 3px outset rgba(110, 39, 39, 0.826);
-}
-
-.card-servicio:hover {
-  transform: scale(
-    1.1
-  ) !important; /* Escala la tarjeta al 110% de su tamaño original */
-}
-
-.text-card {
-  font-weight: bold;
-  font-size: 25px;
-  text-shadow: 2px 2px 2px rgb(22, 22, 22);
-}
-
-.btn-card {
-  font-weight: bold;
-  font-size: 20px;
-  text-shadow: 1px 1px 1px black;
-}
-
-.btn-card:hover {
-  color: rgb(185, 0, 0);
-}
-.iconoCard {
-  width: 40px;
-  border-radius: 50%;
-  position: absolute;
-  top: 10px;
-  left: 10px;
 }
 
 /* SOBRE NOSOTROS */
