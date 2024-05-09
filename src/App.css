@@ -11,6 +11,22 @@
   overflow: hidden;
 }
 
+.fondoPaginaCarga {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #b00b0b;
+}
+.logoPaginaCarga {
+  background-color: #b00b0b;
+}
+.iconoPaginaCarga {
+  width: 200px;
+}
+
+
 .bg-negro {
   background-color: #171717;
 }

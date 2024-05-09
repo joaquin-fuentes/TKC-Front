@@ -20,6 +20,7 @@
     "react-icons": "^4.10.1",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.17.0",
+    "react-spinners": "^0.13.8",
     "sweetalert2": "^11.7.16",
     "swiper": "^11.0.0"
   },
