@@ -21,7 +21,15 @@
 }
 .logoPaginaCarga {
   background-color: #b00b0b;
+  width: 30%;
 }
+/* Media Query para pantallas más pequeñas, como celulares y tablets */
+@media only screen and (max-width: 768px) {
+  .logoPaginaCarga {
+    width: 80%;
+  }
+}
+
 .iconoPaginaCarga {
   width: 200px;
 }
