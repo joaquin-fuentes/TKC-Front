@@ -55,22 +55,22 @@ const App = () => {
 
     <BrowserRouter>
       <div>
-        {isLoading ? <></> : <Header usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado} />}
+        <Header usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado} />
         <div className="main">
           <Routes>
-            <Route exact path="/" element={isLoading ? <Loading /> : <Inicio />} />
+            <Route exact path="/" element={<Inicio />} />
             <Route exact path="/sobrenosotros" element={<PaginaSobreNosotros />} />
             <Route exact path="/excursiones" element={<Excursiones />} />
             <Route exact path="/escuela" element={<Escuela />} />
             <Route exact path="/coaching" element={<Coaching />} />
             <Route exact path="/cumpleaños" element={<Cumpleanios />} />
             <Route exact path="/alquiler" element={<Alquiler />} />
-            <Route exact path="/login" element={isLoading ? <Loading /> : <Login setUsuarioLogueado={setUsuarioLogueado} />} />
+            <Route exact path="/login" element={<Login setUsuarioLogueado={setUsuarioLogueado} />} />
             <Route path="/administrador/*" element={<RutasProtegidas><RutasAdministrador /></RutasProtegidas>} />
             <Route path="*" element={<Error404 />} />
           </Routes>
         </div>
-        {isLoading ? <></> : <Footer />}
+         <Footer />
       </div>
     </BrowserRouter>
   );
