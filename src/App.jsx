@@ -35,7 +35,7 @@ const App = () => {
     };
 
     // Temporizador para el tiempo de carga inicial
-    const initialLoadTimer = setTimeout(mainPageLoadHandler, 6000); // Tiempo para cargar página inicial
+    const initialLoadTimer = setTimeout(mainPageLoadHandler, 3000); // Tiempo para cargar página inicial
 
     // Escuchar el evento onload
     window.onload = () => {
