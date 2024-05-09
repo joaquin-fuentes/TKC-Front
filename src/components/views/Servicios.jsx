@@ -6,62 +6,89 @@ import escuelita from "../../assets/imagenes/escuelita.jpg"
 import trekking from "../../assets/imagenes/trekking.jpg"
 import portada2 from "../../assets/imagenes/portada2.jpg"
 import { TbKayak } from "react-icons/tb";
+import excursion2 from "../../assets/iconos/rafting.svg"
 
 
 
 const Servicios = () => {
     return (
-        <div  className='bg-rojo' id="servicios">
-            <Container  className=''>
+        <div className='bg-rojo' id="servicios">
+            <Container className=''>
                 <div data-aos="fade-up" className='d-flex flex-column justify-content-center align-items-center pt-3'>
                     <TbKayak className='iconoKayak text-light ' />
                     <h3 className='text-light m-0 p-4 text-center '> Nuestros Servicios</h3>
                 </div>
-                <Row  className='pb-4 d-flex justify-content-center'>
+                <Row className='pb-4 d-flex justify-content-center'>
                     <Col md="6" lg="4" className='d-flex justify-content-center'>
-                        <Card data-aos="fade-up" className="bg-dark text-white p-0 card-servicio text-center">
-                            <Card.Img src={excursiones} alt="Card image" className='card-img' />
-                            <Card.ImgOverlay className='d-flex flex-column justify-content-center align-items-center'>
-                                <Card.Title className='text-card'>Excursiones</Card.Title>
-                                <NavLink href='/excursiones' className='w-50  btn-card'>Ver más</NavLink>
-                            </Card.ImgOverlay>
-                        </Card>
+
+                        <article data-aos="fade-up" class="articleCard mx-1 my-3">
+                            <div class="imgCard">
+                                <img src={excursiones} alt="imagen de excursiones" className='imgCard' />
+                            </div>
+                            <div class="overlay"></div>
+                            <div class="textCard">
+                                <h5 className='textCard'>Excursiones</h5>
+                            </div>
+                            <div class="btnCard">
+                                <NavLink href='/excursiones' className='btnCard'>Ver más</NavLink>
+                            </div>
+                        </article>
                     </Col>
                     <Col md="6" lg="4" className='d-flex justify-content-center'>
-                        <Card data-aos="fade-up" className="bg-dark text-white p-0 card-servicio text-center">
-                            <Card.Img src={escuelita} alt="Card image" className='w-100 h-100 card-img' />
-                            <Card.ImgOverlay className='d-flex flex-column justify-content-center align-items-center'>
-                                <Card.Title className='text-card'>Escuela de kayak</Card.Title>
-                                <NavLink href='/escuela' className='w-50  btn-card'>Ver más</NavLink>
-                            </Card.ImgOverlay>
-                        </Card>
+                    <article data-aos="fade-up" class="articleCard mx-1 my-3">
+                            <div class="imgCard">
+                                <img src={coaching} alt="imagen de coaching" className='imgCard' />
+                            </div>
+                            <div class="overlay"></div>
+                            <div class="textCard">
+                                <h5 className='textCard'>Coaching empresarial</h5>
+                            </div>
+                            <div class="btnCard">
+                                <NavLink href='/coaching' className='btnCard'>Ver más</NavLink>
+                            </div>
+                        </article>
                     </Col>
                     <Col md="6" lg="4" className='d-flex justify-content-center'>
-                        <Card data-aos="fade-up" className="bg-dark text-white p-0 card-servicio text-center">
-                            <Card.Img src={coaching} alt="Card image" className='w-100 h-100 card-img' />
-                            <Card.ImgOverlay className='d-flex flex-column justify-content-center align-items-center'>
-                                <Card.Title className='text-card'>Coaching empresarial</Card.Title>
-                                <NavLink href='/coaching' className='w-50  btn-card'>Ver más</NavLink>
-                            </Card.ImgOverlay>
-                        </Card>
+                    <article data-aos="fade-up" class="articleCard mx-1 my-3">
+                            <div class="imgCard">
+                                <img src={escuelita} alt="imagen de escuelita" className='imgCard' />
+                            </div>
+                            <div class="overlay"></div>
+                            <div class="textCard">
+                                <h5 className='textCard'>Escuea de kayaks</h5>
+                            </div>
+                            <div class="btnCard">
+                                <NavLink href='/escuela' className='btnCard'>Ver más</NavLink>
+                            </div>
+                        </article>
                     </Col>
                     <Col md="6" lg="4" className='d-flex justify-content-center'>
-                        <Card data-aos="fade-up" className="bg-dark text-white p-0 card-servicio text-center">
-                            <Card.Img src={portada2} alt="Card image" className='w-100 h-100 card-img' />
-                            <Card.ImgOverlay className='d-flex flex-column justify-content-center align-items-center'>
-                                <Card.Title className='text-card'>Cumpleaños para niños</Card.Title>
-                                <NavLink  href='/cumpleaños' className='w-50  btn-card'>Ver más</NavLink>
-                            </Card.ImgOverlay>
-                        </Card>
+                    <article data-aos="fade-up" class="articleCard mx-1 my-3">
+                            <div class="imgCard">
+                                <img src={portada2} alt="imagen de cumpleaños" className='imgCard' />
+                            </div>
+                            <div class="overlay"></div>
+                            <div class="textCard">
+                                <h5 className='textCard'>Cumpleaños infantiles </h5>
+                            </div>
+                            <div class="btnCard">
+                                <NavLink href='/cumpleaños' className='btnCard'>Ver más</NavLink>
+                            </div>
+                        </article>
                     </Col>
                     <Col md="6" lg="4" className='d-flex justify-content-center'>
-                        <Card data-aos="fade-up" className="bg-dark text-white p-0 card-servicio text-center">
-                            <Card.Img src={portada2} alt="Card image" className='w-100 h-100 card-img' />
-                            <Card.ImgOverlay className='d-flex flex-column justify-content-center align-items-center'>
-                                <Card.Title className='text-card'>Alquiler de quincho para eventos</Card.Title>
-                                <NavLink  href='/alquiler' className='w-50  btn-card'>Ver más</NavLink>
-                            </Card.ImgOverlay>
-                        </Card>
+                    <article data-aos="fade-up" class="articleCard mx-1 my-3">
+                            <div class="imgCard">
+                                <img src={excursiones} alt="imagen de alquiler quincho para eventos" className='imgCard' />
+                            </div>
+                            <div class="overlay"></div>
+                            <div class="textCard">
+                                <h5 className='textCard'>Quincho para eventos</h5>
+                            </div>
+                            <div class="btnCard">
+                                <NavLink href='/alquiler' className='btnCard'>Ver más</NavLink>
+                            </div>
+                        </article>
                     </Col>
 
                 </Row>
