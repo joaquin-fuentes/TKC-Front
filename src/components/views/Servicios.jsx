@@ -35,7 +35,7 @@ const Servicios = () => {
                         </article>
                     </Col>
                     <Col md="6" lg="4" className='d-flex justify-content-center'>
-                    <article data-aos="fade-up" class="articleCard mx-1 my-3">
+                        <article data-aos="fade-up" class="articleCard mx-1 my-3">
                             <div class="imgCard">
                                 <img src={coaching} alt="imagen de coaching" className='imgCard' />
                             </div>
@@ -49,7 +49,7 @@ const Servicios = () => {
                         </article>
                     </Col>
                     <Col md="6" lg="4" className='d-flex justify-content-center'>
-                    <article data-aos="fade-up" class="articleCard mx-1 my-3">
+                        <article data-aos="fade-up" class="articleCard mx-1 my-3">
                             <div class="imgCard">
                                 <img src={escuelita} alt="imagen de escuelita" className='imgCard' />
                             </div>
@@ -63,7 +63,7 @@ const Servicios = () => {
                         </article>
                     </Col>
                     <Col md="6" lg="4" className='d-flex justify-content-center'>
-                    <article data-aos="fade-up" class="articleCard mx-1 my-3">
+                        <article data-aos="fade-up" class="articleCard mx-1 my-3">
                             <div class="imgCard">
                                 <img src={portada2} alt="imagen de cumpleaños" className='imgCard' />
                             </div>
@@ -77,13 +77,27 @@ const Servicios = () => {
                         </article>
                     </Col>
                     <Col md="6" lg="4" className='d-flex justify-content-center'>
-                    <article data-aos="fade-up" class="articleCard mx-1 my-3">
+                        <article data-aos="fade-up" class="articleCard mx-1 my-3">
                             <div class="imgCard">
                                 <img src={excursiones} alt="imagen de alquiler quincho para eventos" className='imgCard' />
                             </div>
                             <div class="overlay"></div>
                             <div class="textCard">
                                 <h5 className='textCard'>Quincho para eventos</h5>
+                            </div>
+                            <div class="btnCard">
+                                <NavLink href='/alquiler' className='btnCard'>Ver más</NavLink>
+                            </div>
+                        </article>
+                    </Col>
+                    <Col md="6" lg="4" className='d-flex justify-content-center'>
+                        <article data-aos="fade-up" class="articleCard mx-1 my-3">
+                            <div class="imgCard">
+                                <img src={escuelita} alt="imagen de guarderia de kayak" className='imgCard' />
+                            </div>
+                            <div class="overlay"></div>
+                            <div class="textCard">
+                                <h5 className='textCard'>Guarderia de Kayaks</h5>
                             </div>
                             <div class="btnCard">
                                 <NavLink href='/alquiler' className='btnCard'>Ver más</NavLink>
