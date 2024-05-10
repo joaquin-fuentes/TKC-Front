@@ -1,13 +1,16 @@
 import React from 'react';
 import { Container, Row, Col } from "react-bootstrap"
 import equipoTKC from "../../assets/imagenes/equipotkc.jpg"
+import carpaTkc from "../../assets/imagenes/carpatkc.png"
+import logoTkc from "../../assets/logos/logoTransparente.png"
 
 const PaginaSobreNosotros = () => {
     return (
         <div className='fondoSobreNosotros text-light'>
+            <div className='fondoHeaderOscuro'> </div>
             <Container>
-                <h2 data-aos="fade-up" className='text-center tituloSobreNosotros mb-4'>Sobre Nosotros</h2>
-                <hr data-aos="fade-up" className="m-0 text-light my-4" />
+                 <h2 data-aos="fade-up" className='text-center tituloSobreNosotros mb-4'>Sobre Nosotros</h2>
+                <hr data-aos="fade-up" className="m-0 text-light my-4" /> 
                 <Row>
                     <Col md={6}>
                         <article data-aos="fade-up">

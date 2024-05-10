@@ -81,6 +81,11 @@
 }
 
 /* HEADER */
+.fondoHeaderOscuro{
+  height: 68.7px;
+  width: 100vw;
+  background-color: #171717;
+}
 .header {
   position: fixed;
   top: 0;
@@ -88,11 +93,11 @@
   right: 0;
   z-index: 100;
   width: 100vw;
-  background-color: rgba(17, 10, 10, 0.211);
+  background-color: rgba(17, 10, 10, 0.01);
   transition: background-color 0.3s; /* transición suave */
 }
 .header.scrolled {
-  background-color: rgba(17, 10, 10, 0.8); /* más oscuro al hacer scroll */
+  background-color: rgba(17, 10, 10, 0.7); /* más oscuro al hacer scroll */
 }
 .logoMenu {
   width: 85px;
@@ -118,7 +123,6 @@
 .transitionMenu {
   transition: all 0.8s ease-in-out; /* Transición suave de 0.3 segundos */
   filter: drop-shadow(0.5px 0.5px white);
-
 }
 .menuHamburguesaCerrado {
   font-size: 35px !important;
@@ -130,7 +134,6 @@
   color: #b00b0b;
   opacity: 1; /* Comienza completamente visible */
 }
-
 
 /* Media Query para pantallas más pequeñas, como celulares y tablets */
 @media only screen and (max-width: 768px) {
@@ -266,7 +269,7 @@
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.451);
   margin-bottom: 7px;
 }
-.iconoCard{
+.iconoCard {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -320,7 +323,7 @@
 }
 
 .tituloSobreNosotros {
-  padding-top: 110px;
+  padding-top: 30px;
 }
 
 /* PAGINA EXCURSIONES */

@@ -7,6 +7,8 @@ const Coaching = () => {
     return (
         <div>
             <div className='fondoExcursiones'>
+            <div className='fondoHeaderOscuro'> </div>
+
                 <Container>
                     <h2 data-aos="fade-up" className='text-center text-light tituloSobreNosotros mb-4'>Coaching Empresarial</h2>
                     <hr data-aos="fade-up" className="m-0 text-light my-4" />
