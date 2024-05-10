@@ -2,6 +2,11 @@ import { Button, Form, Container, Row, Col, InputGroup } from "react-bootstrap"
 import { useForm } from "react-hook-form";
 import { consultaCrearMensaje } from "../helpers/queries";
 import Swal from "sweetalert2";
+import { IoMdMail } from "react-icons/io";
+import { RiContactsFill } from "react-icons/ri";
+import { IoIosText } from "react-icons/io";
+
+
 
 const CrearMensaje = () => {
 
@@ -17,14 +22,14 @@ const CrearMensaje = () => {
         const dia = String(hoy.getDate()).padStart(2, '0'); // Día con dos dígitos
         const mes = String(hoy.getMonth() + 1).padStart(2, '0'); // Mes con dos dígitos (enero es 0)
         const anio = String(hoy.getFullYear()).slice(-2); // Últimos dos dígitos del año
-      
+
         const fechaFormateada = `${dia}/${mes}/${anio}`; // Formato dd/mm/aa
         return fechaFormateada;
-      }
+    }
 
     const onSubmit = (mensajeNuevo) => {
         console.log(mensajeNuevo)
-        const mensajeNuevoNuevo = { ...mensajeNuevo, fecha:obtenerFechaHoy() }
+        const mensajeNuevoNuevo = { ...mensajeNuevo, fecha: obtenerFechaHoy() }
         // realizar la peticion que agrega mensaje a la api
         consultaCrearMensaje(mensajeNuevoNuevo).then((respuesta) => {
             if (respuesta.status === 201) {
@@ -43,16 +48,16 @@ const CrearMensaje = () => {
             }
         })
     }
-    
+
 
     return (
         <>
             <h3 data-aos="fade-up" className='text-center my-4  '>¡Dejanos tu mensaje!</h3>
-            <Form  onSubmit={handleSubmit(onSubmit)} data-aos="fade-up" className='d-flex  flex-column'>
+            <Form onSubmit={handleSubmit(onSubmit)} data-aos="fade-up" className='d-flex  flex-column'>
                 <div className='d-md-flex'>
                     <Col md={6}>
                         <Form.Group className="mb-3 px-3" controlId="">
-                            <Form.Label>Nombre Completo</Form.Label>
+                            <Form.Label> <RiContactsFill className="fs-4 me-1" /> Nombre Completo</Form.Label>
                             <Form.Control type="text" placeholder="Ingrese su nombre completo aqui" maxLength={40}
                                 {...register("nombre", {
                                     required: "El nombre es obligatorio",
@@ -76,7 +81,7 @@ const CrearMensaje = () => {
                     </Col>
                     <Col md={6}>
                         <Form.Group className="mb-3 px-3" controlId="">
-                            <Form.Label>Email</Form.Label>
+                            <Form.Label><IoMdMail className="fs-4  me-1" /> Email</Form.Label>
                             <Form.Control type="email" placeholder="Ingrese un email" maxLength={50} minLength={3} {
                                 ...register('email', {
                                     //validaciones
@@ -95,7 +100,7 @@ const CrearMensaje = () => {
                 </div>
                 <Col md={12}>
                     <Form.Group className="mb-3 px-3" controlId="">
-                        <Form.Label>Mensaje</Form.Label>
+                        <Form.Label> <IoIosText className="fs-4 me-1" />Mensaje</Form.Label>
                         <Form.Control as="textarea" rows={3} placeholder='Ingrese aquí su mensaje' {
                             ...register('comentario', {
                                 //validaciones
@@ -107,8 +112,8 @@ const CrearMensaje = () => {
                             })
                         } />
                         <Form.Text className="text-dark">
-                                {errors.comentario?.message}
-                            </Form.Text>
+                            {errors.comentario?.message}
+                        </Form.Text>
                     </Form.Group>
                     <div className="text-center w-100">
                         <Button type="submit" className='btn btn-enviar  mx-3 mt-3 w-25'>Enviar</Button>

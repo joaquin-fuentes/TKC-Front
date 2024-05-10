@@ -96,7 +96,7 @@
 }
 .logoMenu {
   width: 85px;
-  filter: drop-shadow(1px 1px white);
+  filter: drop-shadow(1px 1px #b00b0b);
 }
 
 .text-header {
@@ -266,20 +266,33 @@
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.451);
   margin-bottom: 7px;
 }
-
+.iconoCard{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 2;
+  width: 50px;
+  opacity: 0.9;
+}
 .btnCard {
   position: absolute;
   bottom: 30%;
   z-index: 2;
-  width: 100%;
+  width: 50%;
   text-align: center;
   opacity: 0; /* Invisible por defecto */
   transition: all 0.3s ease; /* Transición suave para el hover */
-  font-size: 25px;
+  font-size: 20px;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.451);
+  background-color: #b00b0b;
+  padding: 3px;
+  border-radius: 10px;
 }
 .btnCard:hover {
-  color: #b00b0b;
+  color: #c0b8b8fc;
 }
 
 .articleCard:hover .overlay {
