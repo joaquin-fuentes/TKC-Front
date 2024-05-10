@@ -93,11 +93,16 @@
   right: 0;
   z-index: 100;
   width: 100vw;
-  background-color: rgba(17, 10, 10, 0.25);
   transition: background-color 0.3s; /* transición suave */
 }
 .header.scrolled {
   background-color: rgba(17, 10, 10, 0.7); /* más oscuro al hacer scroll */
+}
+.homeBackground{
+  background-color: rgba(17, 10, 10, 0.1);
+}
+.defaultBackground{
+  background-color: rgba(17, 10, 10, 0.9);
 }
 .logoMenu {
   width: 85px;
@@ -323,7 +328,7 @@
 }
 
 .tituloSobreNosotros {
-  padding-top: 30px;
+  padding-top: 110px;
 }
 
 /* PAGINA EXCURSIONES */

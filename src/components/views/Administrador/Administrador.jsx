@@ -22,8 +22,6 @@ const Administrador = () => {
     return (
         <div>
             <div className="fondoAdmin">
-                <div className='fondoHeaderOscuro'> </div>
-
                 <Container className="pb-4">
                     <h2
                         data-aos="fade-up"

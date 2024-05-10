@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Container, Nav } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation  } from "react-router-dom";
 import Swal from "sweetalert2";
 import logoTransparente from "../../assets/logos/logoTransparente.png";
 import facebook from "../../assets/imagenes/icons8-facebook.svg";
@@ -15,6 +15,8 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation(); // Obtiene la ruta actual
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -55,8 +57,10 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
         });
     };
 
+    const isHome = location.pathname === "/" || location.pathname === "/#inicio";
+
     return (
-        <Navbar expand="lg" className={`header ${isScrolled ? 'scrolled' : ''}`}>
+        <Navbar expand="lg" className={`header ${isScrolled ? 'scrolled' : ''} ${isHome ? 'homeBackground' : 'defaultBackground'}`}>
             <Container>
                 <Navbar.Brand href="/#inicio" className='text-light fw-bold p-1'>
                     <img src={logoTransparente} alt="Logo" className='logoMenu me-1' />

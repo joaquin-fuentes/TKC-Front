@@ -7,7 +7,6 @@ import logoTkc from "../../assets/logos/logoTransparente.png"
 const PaginaSobreNosotros = () => {
     return (
         <div className='fondoSobreNosotros text-light'>
-            <div className='fondoHeaderOscuro'> </div>
             <Container>
                  <h2 data-aos="fade-up" className='text-center tituloSobreNosotros mb-4'>Sobre Nosotros</h2>
                 <hr data-aos="fade-up" className="m-0 text-light my-4" /> 
