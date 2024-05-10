@@ -12,6 +12,11 @@
 }
 
 .fondoPaginaCarga {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,8 +25,11 @@
   background-color: #b00b0b;
 }
 .logoPaginaCarga {
-  background-color: #b00b0b;
   width: 30%;
+  filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.781));
+}
+.textPaginaCarga{
+  filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.781));
 }
 /* Media Query para pantallas más pequeñas, como celulares y tablets */
 @media only screen and (max-width: 768px) {
