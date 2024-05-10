@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Nav } from "react-bootstrap"
-import logoTransparente from "../../assets/imagenes/logoTransparente.png"
+import logoTransparente from "../../assets/logos/logoTransparente.png"
 import Nosotros from "./Nosotros"
 import Servicios from "./Servicios"
 import Contacto from "./Contacto"

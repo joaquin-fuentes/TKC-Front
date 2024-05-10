@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Nav } from "react-bootstrap"
-import logoTransparente from "../../assets/imagenes/logoTransparente.png"
+import logoTransparente from "../../assets/logos/logoTransparente.png"
 import facebook from "../../assets/imagenes/icons8-facebook.svg"
 import whatsapp from "../../assets/imagenes/icons8-whatsapp.svg"
 import instagram from "../../assets/imagenes/icons8-instagram.svg"

@@ -1,7 +1,7 @@
 // Loading.js
 import React from 'react';
 import cargando from "../../assets/imagenes/cargando-blanco.gif"
-import logoTransparente from "../../assets/imagenes/logoTransparente.png"
+import logoTransparente from "../../assets/logos/logoTransparente.png"
 import { Spinner } from 'react-bootstrap';
 
 

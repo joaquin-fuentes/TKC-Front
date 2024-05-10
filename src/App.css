@@ -82,16 +82,21 @@
 
 /* HEADER */
 .header {
-  position: absolute; /* Posiciona el encabezado de forma absoluta */
-  top: 0; /* Lo coloca en la parte superior del contenedorPrincipal */
-  left: 0; /* Lo coloca en la parte izquierda del contenedorPrincipal */
-  width: 100%; /* Ocupa todo el ancho del contenedorPrincipal */
-  z-index: 1; /* Hace que el encabezado esté por encima del contenedorPrincipal */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  width: 100vw;
+  background-color: rgba(17, 10, 10, 0.025);
+  transition: background-color 0.3s; /* transición suave */
 }
-
+.header.scrolled {
+  background-color: rgba(17, 10, 10, 0.8); /* más oscuro al hacer scroll */
+}
 .logoMenu {
   width: 85px;
-  background-color: #85858500;
+  filter: drop-shadow(1px 1px white);
 }
 
 .text-header {
@@ -99,29 +104,21 @@
 }
 
 .text-header:hover {
-  color: #c00d0d !important;
+  color: #b00b0b !important;
 }
 
 .icono-header {
   width: 28px;
 }
 
-.navBar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  width: 100vw;
-  background-color: rgba(17, 10, 10, 0.2);
-}
+
 .narbarToggle {
   border: none !important;
 }
 
 .menuHamburguesa {
   font-size: 40px !important;
-  color: #d70101;
+  color: #b00b0b;
 }
 /* Media Query para pantallas más pequeñas, como celulares y tablets */
 @media only screen and (max-width: 768px) {
@@ -180,8 +177,8 @@
 /* INICIO */
 .contenedorPrincipal {
   background-image: linear-gradient(
-      rgba(19, 19, 19, 0.5),
-      rgba(78, 1, 1, 0.615)
+      rgba(22, 17, 17, 0.67),
+      rgba(182, 3, 3, 0.311)
     ),
     url("./assets/imagenes/portada.jpg");
   background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
