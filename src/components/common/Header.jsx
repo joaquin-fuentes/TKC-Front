@@ -6,28 +6,31 @@ import logoTransparente from "../../assets/logos/logoLetraRoja.png";
 import facebook from "../../assets/imagenes/icons8-facebook.svg";
 import whatsapp from "../../assets/imagenes/icons8-whatsapp.svg";
 import instagram from "../../assets/imagenes/icons8-instagram.svg";
-import { CgMenuRound } from "react-icons/cg";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoClose } from "react-icons/io5";
+
+
 
 const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 50) { // Umbral para considerar que el navbar está scrolled
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
+            setIsScrolled(window.scrollY > 50);
         };
 
         window.addEventListener('scroll', handleScroll);
 
         return () => {
-            window.removeEventListener('scroll', handleScroll); // Cleanup cuando se desmonta el componente
+            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen); // Cambia el estado para abrir/cerrar el menú
+    };
     const logout = () => {
         Swal.fire({
             title: '¿Estás seguro?',
@@ -58,8 +61,13 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
                 <Navbar.Brand href="/#inicio" className='text-light fw-bold p-1'>
                     <img src={logoTransparente} alt="Logo" className='logoMenu me-1' />
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" className='narbarToggle'>
-                    <CgMenuRound className='menuHamburguesa' />
+                <Navbar.Toggle
+                    aria-controls="basic-navbar-nav"
+                    className='narbarToggle'
+                    onClick={toggleMenu} // Maneja el clic para abrir/cerrar el menú
+                    style={{ border: "none" }} // Evita el borde negro
+                >
+                    {menuOpen ? <IoClose className='menuHamburguesaAbierto transitionMenu' /> : <GiHamburgerMenu className='menuHamburguesaCerrado transitionMenu' />}
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="contenedorEnlacesNav">

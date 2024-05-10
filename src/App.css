@@ -88,7 +88,7 @@
   right: 0;
   z-index: 100;
   width: 100vw;
-  background-color: rgba(17, 10, 10, 0.025);
+  background-color: rgba(17, 10, 10, 0.211);
   transition: background-color 0.3s; /* transición suave */
 }
 .header.scrolled {
@@ -111,15 +111,27 @@
   width: 28px;
 }
 
-
 .narbarToggle {
   border: none !important;
+  box-shadow: none !important; /* Elimina la sombra */
+}
+.transitionMenu {
+  transition: all 0.8s ease-in-out; /* Transición suave de 0.3 segundos */
+  filter: drop-shadow(0.5px 0.5px white);
+
+}
+.menuHamburguesaCerrado {
+  font-size: 35px !important;
+  color: #b00b0b;
+  opacity: 1; /* Comienza completamente visible */
+}
+.menuHamburguesaAbierto {
+  font-size: 35px !important;
+  color: #b00b0b;
+  opacity: 1; /* Comienza completamente visible */
 }
 
-.menuHamburguesa {
-  font-size: 40px !important;
-  color: #b00b0b;
-}
+
 /* Media Query para pantallas más pequeñas, como celulares y tablets */
 @media only screen and (max-width: 768px) {
   .contenedorImgHeader {
