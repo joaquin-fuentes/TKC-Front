@@ -6,6 +6,7 @@ import PaginaSobreNosotros from "./components/views/PaginaSobreNosotros";
 import Excursiones from './components/views/servicios/Excursiones';
 import Escuela from './components/views/servicios/Escuela';
 import Coaching from './components/views/servicios/Coaching';
+import Guarderia from "./components/views/servicios/Guarderia";
 import Cumpleanios from './components/views/servicios/Cumpleanios';
 import Alquiler from './components/views/servicios/Alquiler';
 import Administrador from './components/views/Administrador/Administrador';
@@ -64,6 +65,7 @@ const App = () => {
             <Route exact path="/escuela" element={<Escuela />} />
             <Route exact path="/coaching" element={<Coaching />} />
             <Route exact path="/cumpleaños" element={<Cumpleanios />} />
+            <Route exact path="/guarderia" element={<Guarderia />} />
             <Route exact path="/alquiler" element={<Alquiler />} />
             <Route exact path="/login" element={<Login setUsuarioLogueado={setUsuarioLogueado} />} />
             <Route path="/administrador/*" element={<RutasProtegidas><RutasAdministrador /></RutasProtegidas>} />

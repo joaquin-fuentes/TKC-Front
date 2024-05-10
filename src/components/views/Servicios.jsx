@@ -100,7 +100,7 @@ const Servicios = () => {
                                 <h5 className='textCard'>Guarderia de Kayaks</h5>
                             </div>
                             <div class="btnCard">
-                                <NavLink href='/alquiler' className='btnCard'>Ver más</NavLink>
+                                <NavLink href='/guarderia' className='btnCard'>Ver más</NavLink>
                             </div>
                         </article>
                     </Col>
