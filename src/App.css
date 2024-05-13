@@ -1,6 +1,5 @@
 #root {
-  font-family: "anton", "Permanent Marker", cursive;
-  font-style: oblique;
+  font-family: "anton", "Permanent Marker", "cursive";
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,7 +27,7 @@
   width: 30%;
   filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.781));
 }
-.textPaginaCarga{
+.textPaginaCarga {
   filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.781));
 }
 /* Media Query para pantallas más pequeñas, como celulares y tablets */
@@ -89,7 +88,7 @@
 }
 
 /* HEADER */
-.fondoHeaderOscuro{
+.fondoHeaderOscuro {
   height: 68.7px;
   width: 100vw;
   background-color: #171717;
@@ -106,10 +105,10 @@
 .header.scrolled {
   background-color: rgba(17, 10, 10, 0.7); /* más oscuro al hacer scroll */
 }
-.homeBackground{
+.homeBackground {
   background-color: rgba(17, 10, 10, 0.1);
 }
-.defaultBackground{
+.defaultBackground {
   background-color: rgba(17, 10, 10, 0.9);
 }
 .logoMenu {
@@ -334,6 +333,9 @@
   opacity: 0.9; /* Ajusta la opacidad del contenedor */
   background-attachment: fixed; /* Hace que la imagen de fondo se quede fija */
 }
+.textSobreNosotros{
+  letter-spacing: .5px; /* Ajusta el valor según lo necesites */
+}
 
 .tituloSobreNosotros {
   padding-top: 110px;
@@ -352,15 +354,14 @@
 }
 
 .textTitulo {
-  font-weight: bold;
-  color: white;
+  color: rgba(247, 227, 8, 0.889);
   text-decoration: underline;
 }
 
 .textSubtitulo {
-  font-weight: bold;
-  color: white;
+  color: rgba(247, 227, 8, 0.889);
   list-style: none;
+  letter-spacing: .5px;
 }
 /* Media Query para pantallas más pequeñas, como celulares y tablets */
 @media only screen and (max-width: 768px) {
@@ -370,8 +371,8 @@
 }
 
 .textExplicacion {
-  font-weight: 500;
   color: #ffffff;
+  letter-spacing: .5px;
 }
 
 .imgExcursion {
