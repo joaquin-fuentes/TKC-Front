@@ -118,6 +118,7 @@
 
 .text-header {
   color: rgb(255, 255, 255) !important;
+  
 }
 
 .text-header:hover {
@@ -374,6 +375,19 @@
   color: rgba(247, 227, 8, 0.889);
   list-style: none;
   letter-spacing: 0.5px;
+}
+.contenedorImagenLogo{
+  position: relative;
+}
+.imgExcursionConLogo{
+  position: relative;
+  z-index: 1;
+}
+.logoTkcImg{
+  position: absolute;
+  z-index: 2;
+  bottom: 15px;
+  left: 15px;
 }
 /* Media Query para pantallas más pequeñas, como celulares y tablets */
 @media only screen and (max-width: 768px) {
