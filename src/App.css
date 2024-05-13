@@ -405,12 +405,33 @@
 }
 
 /* DONDE ENCONTRARNOS */
-.ubicacion, .carpaTkc {
+.ubicacion,
+.carpaTkc {
   width: 100%;
   height: 100%;
   border-radius: 10px;
   box-shadow: 6px 6px 6px rgba(78, 78, 78, 0.632);
-  
+}
+.contenedorCarpaLogo{
+  position: relative;
+}
+.carpaTkc {
+  position: relative;
+  z-index: 1;
+}
+.logoTkcImg {
+  position: absolute; /* Establece posición absoluta para que el logo se pueda posicionar de forma independiente */
+  bottom: 15px; /* Distancia desde el borde inferior */
+  left: 15px; /* Distancia desde el borde izquierdo */
+  width: 70px; /* Ajusta según tus necesidades */
+  height: auto; /* Permite que la altura se ajuste automáticamente según el ancho definido */
+  z-index: 2;
+}
+@media only screen and (max-width: 768px) {
+  .ubicacion,
+  .carpaTkc {
+    height: 230px;
+  }
 }
 
 /* CONTACTO */

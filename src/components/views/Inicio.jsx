@@ -15,7 +15,7 @@ const Inicio = () => { // Estado para controlar si se muestra el componente de c
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false); // Después de 3 segundos, cambia el estado para dejar de mostrar el componente de carga
-        }, 1800); // 3000 ms = 3 segundos
+        }, 1200); // 3000 ms = 3 segundos
 
         // Función de limpieza para asegurarse de que el temporizador se cancela si el componente se desmonta antes
         return () => clearTimeout(timer);
