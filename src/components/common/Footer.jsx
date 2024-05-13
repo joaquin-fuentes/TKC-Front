@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Row, Col, Nav } from "react-bootstrap"
 import logoTransparente from "../../assets/logos/logoTransparente.png"
-import facebook from "../../assets/imagenes/icons8-facebook.svg"
-import whatsapp from "../../assets/imagenes/icons8-whatsapp.svg"
-import instagram from "../../assets/imagenes/icons8-instagram.svg"
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 
 const Footer = () => {
@@ -30,9 +30,9 @@ const Footer = () => {
                     <section className='p-3 d-flex flex-column justify-content-center align-items-center'>
                         <h4>Contacto</h4>
                         <Nav className="d-flex flex-column text-center">
-                            <Nav.Link className="text-light me-1 text-header"target='_blank' href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre los servicios de Tucuman Kayak Club"><img src={whatsapp} className='icono-header' alt="whatsapp" />3816097754</Nav.Link>
-                            <Nav.Link className="text-light me-1 text-header"  target='_blank' href="https://www.facebook.com/tkcturismoaventura/"><img src={facebook} className='icono-header' alt="facebook" />Tucumán Kayak Club</Nav.Link>
-                            <Nav.Link className="text-light me-1 text-header"  target='_blank' href="https://www.instagram.com/tucumankayakclub/?hl=es"><img src={instagram} className='icono-header' alt="instagram" />@TucumánKayakClub</Nav.Link>
+                            <Nav.Link className="text-light me-1 text-header"target='_blank' href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre los servicios de Tucuman Kayak Club"><FaWhatsapp className='me-1 fs-4' />3816097754</Nav.Link>
+                            <Nav.Link className="text-light me-1 text-header"  target='_blank' href="https://www.facebook.com/tkcturismoaventura/"><FaFacebookSquare className='me-1 fs-4'/>Tucumán Kayak Club</Nav.Link>
+                            <Nav.Link className="text-light me-1 text-header"  target='_blank' href="https://www.instagram.com/tucumankayakclub/?hl=es"><FaInstagram className='me-1 fs-4' />@TucumánKayakClub</Nav.Link>
                         </Nav>
                     </section>
                 </Col>
