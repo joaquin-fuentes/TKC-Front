@@ -7,7 +7,6 @@ import rappeldique from "../../../assets/imagenes/rappel.jpg"
 import rappelaguaschiquitas from "../../../assets/imagenes/rappelac.jpg"
 import viaducto from "../../../assets/imagenes/viaducto2.jpg"
 import whatsapp from "../../../assets/imagenes/icons8-whatsapp.svg"
-import logoTkc from "../../../assets/logos/logoTransparente.png"
 
 
 
@@ -24,10 +23,7 @@ const Excursiones = () => {
                     <Row>
                         <Col md={6}>
                             <article data-aos="fade-up">
-                                <div className='contenedorImagenLogo'>
-                                    <img src={kayakrio} alt="imagen de kayak en rio" className='imgExcursion imgExcursionConLogo' />
-                                    <img src={logoTkc} alt="logo de tkc" className='logoTkcImg' />
-                                </div>
+                                <img src={kayakrio} alt="imagen de kayak en rio" className='imgExcursion' />
                             </article>
                         </Col>
                         <Col md={6}>
@@ -142,10 +138,7 @@ const Excursiones = () => {
                     <Row className='py-4 d-flex flex-row-reverse'>
                         <Col md={6}>
                             <article data-aos="fade-up">
-                                <div className='contenedorImagenLogo'>
-                                    <img src={viaducto} alt="imagen de rappel en el viaducto" className='imgExcursion imgExcursionConLogo' />
-                                    <img src={logoTkc} alt="logo de tkc" className='logoTkcImg' />
-                                </div>
+                                <img src={viaducto} alt="imagen de rappel en el viaducto" className='imgExcursion' />
                             </article>
                         </Col>
                         <Col md={6}>
