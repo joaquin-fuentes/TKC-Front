@@ -66,7 +66,7 @@ const Servicios = () => {
                             <img src={escuelita} alt="imagen de escuelita" className='imgCard' />
                             <div class="overlay"></div>
                             <img src={iconoEscuela} alt="icono de escuela de kayak" className='iconoCard p-1' />
-                            <h5 className='textCard'>Escuea de kayaks</h5>
+                            <h5 className='textCard'>Escuela de kayaks</h5>
                             <NavLink href='/escuela' className='btnCard'>Ver más</NavLink>
                         </article>
                     </Col>
