@@ -7,6 +7,11 @@ import imgGaleria2 from "../../../assets/imagenes/quincho.png"
 import imgGaleria3 from "../../../assets/imagenes/quincho4.png"
 import imgGaleria4 from "../../../assets/imagenes/quincho5.png"
 import imgGaleria5 from "../../../assets/imagenes/quincho6.png"
+import imgGaleria6 from "../../../assets/imagenes/baño1.png"
+import imgGaleria7 from "../../../assets/imagenes/baño2.png"
+import imgGaleria8 from "../../../assets/imagenes/baño3.png"
+import imgGaleria9 from "../../../assets/imagenes/base.png"
+import imgGaleria10 from "../../../assets/imagenes/base2.png"
 
 import whatsapp from "../../../assets/imagenes/icons8-whatsapp.svg"
 
@@ -79,6 +84,21 @@ const Alquiler = () => {
                         </div>
                         <div className="image-container">
                             <img src={imgGaleria5} alt="imagen de quincho" className="img-galeria" />
+                        </div>
+                        <div className="image-container">
+                            <img src={imgGaleria6} alt="imagen de quincho" className="img-galeria" />
+                        </div>
+                        <div className="image-container">
+                            <img src={imgGaleria7} alt="imagen de quincho" className="img-galeria" />
+                        </div>
+                        <div className="image-container">
+                            <img src={imgGaleria8} alt="imagen de quincho" className="img-galeria" />
+                        </div>
+                        <div className="image-container">
+                            <img src={imgGaleria9} alt="imagen de quincho" className="img-galeria" />
+                        </div>
+                        <div className="image-container">
+                            <img src={imgGaleria10} alt="imagen de quincho" className="img-galeria" />
                         </div>
                     </Slider>
                 </Container>
