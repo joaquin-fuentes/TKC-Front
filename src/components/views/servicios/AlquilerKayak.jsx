@@ -1,9 +1,46 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Nav } from "react-bootstrap"
 import imgAlquilerKayak from "../../../assets/imagenes/carpatkc.png"
+import img1 from "../../../assets/imagenes/remando.jpg"
+import img2 from "../../../assets/imagenes/grupo2.png"
+import img3 from "../../../assets/imagenes/grupo3.png"
+import img4 from "../../../assets/imagenes/grupo4.png"
+import img5 from "../../../assets/imagenes/carpatkc.png"
 import whatsapp from "../../../assets/imagenes/icons8-whatsapp.svg"
 
+
+import Slider from "react-slick";
+
 const AlquilerKayak = () => {
+
+    const [slidesToShow, setSlidesToShow] = useState(3);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 768) {
+                setSlidesToShow(2);
+            } else {
+                setSlidesToShow(3);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Para ajustar inicialmente al tamaño de la ventana
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: slidesToShow,
+        slidesToScroll: 1,
+    };
+
+
     return (
         <div>
             <div className='fondoExcursiones'>
@@ -26,6 +63,24 @@ const AlquilerKayak = () => {
                             </article>
                         </Col>
                     </Row>
+                    <Slider {...settings}>
+
+                        <div className="image-container">
+                            <img src={img1} alt="imagen de alquiler" className="img-galeria" />
+                        </div>
+                        <div className="image-container">
+                            <img src={img2} alt="imagen de alquiler" className="img-galeria" />
+                        </div>
+                        <div className="image-container">
+                            <img src={img3} alt="imagen de alquiler" className="img-galeria" />
+                        </div>
+                        <div className="image-container">
+                            <img src={img4} alt="imagen de alquiler" className="img-galeria" />
+                        </div>
+                        <div className="image-container">
+                            <img src={img5} alt="imagen de alquiler" className="img-galeria" />
+                        </div>
+                    </Slider>
                 </Container>
             </div>
         </div>
