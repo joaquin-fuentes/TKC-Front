@@ -256,7 +256,7 @@
   height: 100%;
   z-index: 1;
   border-radius: 10%;
-  opacity: 0.98;
+  background-color: black;
 }
 
 .overlay {
@@ -276,7 +276,7 @@
     0.5
   ); /* Fondo oscuro por defecto, transparente en hover */
   z-index: 1; /* Misma capa que imgCard, ya que se oscurece como fondo */
-  opacity: 0; /* Invisible por defecto */
+  opacity: 0.3; /* Invisible por defecto */
   transition: all 0.1s ease; /* Transición suave */
 }
 
