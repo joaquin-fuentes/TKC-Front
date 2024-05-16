@@ -8,6 +8,7 @@ import cumple from "../../assets/imagenes/grupo5.png"
 import quincho from "../../assets/imagenes/quincho6.png"
 import guarderia from "../../assets/imagenes/guarderia2.png"
 import alquiler from "../../assets/imagenes/grupo2.png"
+import estudiantiles from "../../assets/imagenes/portada3.png"
 
 
 import logo from "../../assets/logos/logoTransparente.png"
@@ -15,11 +16,13 @@ import logo from "../../assets/logos/logoTransparente.png"
 import { TbKayak } from "react-icons/tb";
 import iconoAlquiler from "../../assets/iconos/kayakRojo.png"
 import iconoExcursion from "../../assets/iconos/kayakRojo3.png"
-import iconoCoaching from "../../assets/iconos/grupoRojo.png"
+import iconoCoaching from "../../assets/iconos/trekkingRojo2.png"
 import iconoEscuela from "../../assets/iconos/kayakRojo2.png"
 import iconoCumple from "../../assets/iconos/globosRojo.png"
 import iconoAsador from "../../assets/iconos/asadorRojo2.png"
 import iconoGuarderia from "../../assets/iconos/kayakRojo4.png"
+import iconoEstudiantiles from "../../assets/iconos/grupoRojo.png"
+
 
 
 const Servicios = () => {
@@ -53,8 +56,8 @@ const Servicios = () => {
                         <article data-aos="fade-up" class="articleCard mx-1 my-3">
                             <img src={coaching} alt="imagen de coaching" className='imgCard' />
                             <div class="overlay"></div>
-                            <img src={iconoCoaching} alt="icono de coaching" className='iconoCard p-2' />
-                            <h5 className='textCard'>Coaching empresarial</h5>
+                            <img src={iconoCoaching} alt="icono de coaching" className='iconoCard p-1' />
+                            <h5 className='textCard'>Team Building</h5>
                             <NavLink href='/coaching' className='btnCard'>Ver más</NavLink>
                         </article>
                     </Col>
@@ -92,6 +95,15 @@ const Servicios = () => {
                             <img src={iconoGuarderia} alt="icono de guarderia de kayak" className='iconoCard p-1' />
                             <h5 className='textCard'>Guarderia de Kayaks</h5>
                             <NavLink href='/guarderia' className='btnCard'>Ver más</NavLink>
+                        </article>
+                    </Col>
+                    <Col md="6" lg="4" className='d-flex justify-content-center'>
+                        <article data-aos="fade-up" class="articleCard mx-1 my-3">
+                            <img src={estudiantiles} alt="imagen de Estudiantiles" className='imgCard' />
+                            <div class="overlay"></div>
+                            <img src={iconoEstudiantiles} alt="icono de Estudiantiles" className='iconoCard p-1' />
+                            <h5 className='textCard'>Estudiantiles</h5>
+                            <NavLink href='/estudiantiles' className='btnCard'>Ver más</NavLink>
                         </article>
                     </Col>
 

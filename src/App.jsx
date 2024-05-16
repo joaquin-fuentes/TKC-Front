@@ -17,6 +17,7 @@ import Footer from './components/common/Footer';
 import Login from './components/views/Administrador/Login';
 import RutasProtegidas from "./components/routes/RutasProtegidas";
 import RutasAdministrador from "./components/routes/RutasAdministrador";
+import Estudiantiles from "./components/views/servicios/Estudiantiles";
 
 const App = () => {
   const usuarioDelSessionStorage = JSON.parse(sessionStorage.getItem("usuarioLogueado")) || {};
@@ -37,6 +38,7 @@ const App = () => {
             <Route exact path="/coaching" element={<Coaching />} />
             <Route exact path="/cumpleaños" element={<Cumpleanios />} />
             <Route exact path="/guarderia" element={<Guarderia />} />
+            <Route exact path="/estudiantiles" element={<Estudiantiles />} />
             <Route exact path="/alquilerquincho" element={<Alquiler />} />
             <Route exact path="/alquilerkayak" element={<AlquilerKayak />} />
             <Route exact path="/login" element={<Login setUsuarioLogueado={setUsuarioLogueado} />} />
