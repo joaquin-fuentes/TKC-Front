@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Nav } from "react-bootstrap"
-import imgCumpleanios from "../../../assets/imagenes/portada2.jpg"
+import imgCumpleanios from "../../../assets/imagenes/grupo3.png"
 import whatsapp from "../../../assets/imagenes/icons8-whatsapp.svg"
 
 const Cumpleanios = () => {
@@ -20,8 +20,8 @@ const Cumpleanios = () => {
                             <article data-aos="fade-up" className='p-3 text-center'>
                                 <h5 className='textTitulo'>Cumpleaños infantiles</h5>
                                 <ul className='p-0 m-0'>
-                                    <li className='textSubtitulo'>Descripcion: <br /><span className='textExplicacion'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum vero praesentium consequuntur in voluptas reiciendis pariatur optio nemo, voluptates error?</span></li>
-                                    <Nav.Link className="text-light mt-2 fs-5 d-flex justify-content-center align-items-center"target='_blank' href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre CUMPLEAÑOS INFANTILES"><img src={whatsapp} className='icono-header mx-1' alt="whatsapp" />Enaviar Mensaje</Nav.Link>
+                                    <li className='textSubtitulo'><span className='textExplicacion'>¿Quieres celebrar el cumpleaños de tu hijo/a de una manera única y emocionante? ¡Te ofrecemos una experiencia inolvidable con una excursión en kayak por el dique, guiada por nuestros expertos, seguida de una deliciosa comida en nuestro quincho! Después de explorar el agua en nuestras embarcaciones, podrán disfrutar de una hamburguesada o del menú que prefieras. Además, contamos con un amplio espacio equipado con todo lo necesario para juegos y diversión. ¡No te pierdas esta oportunidad de hacer que su cumpleaños sea memorable!</span></li>
+                                    <Nav.Link className="text-light mt-2 fs-5 d-flex justify-content-center align-items-center"target='_blank' href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre CUMPLEAÑOS INFANTILES"><img src={whatsapp} className='icono-header mx-1' alt="whatsapp" />Enviar Mensaje</Nav.Link>
                                 </ul>
                             </article>
                         </Col>
