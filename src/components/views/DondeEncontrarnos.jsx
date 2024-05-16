@@ -1,8 +1,7 @@
 import React from 'react';
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { Container, Row, Col } from "react-bootstrap"
-import carpatkc from "../../assets/imagenes/carpatkc.png"
-import logoTkc from "../../assets/logos/logoTransparente.png"
+import carpatkc from "../../assets/imagenes/base.png"
 
 
 
@@ -16,9 +15,9 @@ const DondeEncontrarnos = () => {
                     </div>
                     <h3 data-aos="fade-up" className=' m-0 p-4 text-center '> Donde encontrarnos</h3>
                     <Row data-aos="fade-up">
-                        <p className='p-2 text-center'>Estamos ubicados en El Cadillal (20km al norte de San Miguel de Tucumán), más precisamente en el dique Celestino Gelsi, en el sector de playa, justo debajo del bar La Isla, a simple vista podras ubicar nuestra carpa roja de TKC</p>
+                        <p className='p-2 text-center'>Nuestra ubicación se encuentra en El Cadillal, a tan solo 20 km al norte de San Miguel de Tucumán, específicamente en el dique Celestino Gelsi. Para llegar, desde la rotonda del Cadillal, deben tomar el primer desvío a la izquierda y luego, a 50 metros, girar a la derecha, por la calle que bordea un amplio espacio verde y una cancha de rugby. Al final de esta calle, encontrarán las playas del dique Celestino Gelsi y nuestra base operativa. ¡Los esperamos con ansias para vivir una experiencia inolvidable! <br /></p>
                         <Col md={6}>
-                            <img src={carpatkc} alt="carpa tkc" className=' carpaTkc ' />
+                            <img src={carpatkc} alt="carpa tkc" className='carpaTkc ' />
                         </Col>
                         <Col md={6}>
                             <div className='mb-3 w-100 h-100 '>
