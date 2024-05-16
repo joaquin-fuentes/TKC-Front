@@ -1,12 +1,19 @@
 import React from 'react';
 import { Container, Row, Col, Button, Card, NavLink } from "react-bootstrap"
-import excursiones from "../../assets/imagenes/alquilerkayak.jpg"
-import coaching from "../../assets/imagenes/coaching.jpg"
+
+import excursiones from "../../assets/imagenes/alquilerkayak.png"
+import coaching from "../../assets/imagenes/coaching.png"
 import escuelita from "../../assets/imagenes/escuelita.jpg"
-import trekking from "../../assets/imagenes/trekking.jpg"
-import portada2 from "../../assets/imagenes/portada2.jpg"
+import cumple from "../../assets/imagenes/grupo5.png"
+import quincho from "../../assets/imagenes/quincho6.png"
+import guarderia from "../../assets/imagenes/guarderia2.png"
+import alquiler from "../../assets/imagenes/grupo2.png"
+
+
+import logo from "../../assets/logos/logoTransparente.png"
+
 import { TbKayak } from "react-icons/tb";
-import excursion2 from "../../assets/iconos/rafting.svg"
+import iconoAlquiler from "../../assets/iconos/kayakRojo.png"
 import iconoExcursion from "../../assets/iconos/kayakRojo3.png"
 import iconoCoaching from "../../assets/iconos/grupoRojo.png"
 import iconoEscuela from "../../assets/iconos/kayakRojo2.png"
@@ -24,8 +31,16 @@ const Servicios = () => {
                     <h3 className='text-light m-0 p-4 text-center '> Nuestros Servicios</h3>
                 </div>
                 <Row className='pb-4 d-flex justify-content-center'>
+                <Col md="6" lg="4" className='d-flex justify-content-center'>
+                        <article data-aos="fade-up" class="articleCard mx-1 my-3">
+                            <img src={alquiler} alt="imagen de alquiler de kayaks" className='imgCard' />
+                            <div class="overlay"></div>
+                            <img src={iconoAlquiler} alt="icono de excursiones" className='iconoCard' />
+                            <h5 className='textCard'>Alquiler de kayaks</h5>
+                            <NavLink href='/alquilerkayak' className='btnCard'>Ver más</NavLink>
+                        </article>
+                    </Col>
                     <Col md="6" lg="4" className='d-flex justify-content-center'>
-
                         <article data-aos="fade-up" class="articleCard mx-1 my-3">
                             <img src={excursiones} alt="imagen de excursiones" className='imgCard' />
                             <div class="overlay"></div>
@@ -54,7 +69,7 @@ const Servicios = () => {
                     </Col>
                     <Col md="6" lg="4" className='d-flex justify-content-center'>
                         <article data-aos="fade-up" class="articleCard mx-1 my-3">
-                            <img src={portada2} alt="imagen de cumpleaños" className='imgCard' />
+                            <img src={cumple} alt="imagen de cumpleaños" className='imgCard' />
                             <div class="overlay"></div>
                             <img src={iconoCumple} alt="icono de cumpleaños" className='iconoCard p-1' />
                             <h5 className='textCard'>Cumpleaños infantiles </h5>
@@ -63,16 +78,16 @@ const Servicios = () => {
                     </Col>
                     <Col md="6" lg="4" className='d-flex justify-content-center'>
                         <article data-aos="fade-up" class="articleCard mx-1 my-3">
-                            <img src={excursiones} alt="imagen de alquiler quincho para eventos" className='imgCard' />
+                            <img src={quincho} alt="imagen de alquiler quincho para eventos" className='imgCard' />
                             <div class="overlay"></div>
                             <h5 className='textCard'>Quincho para eventos</h5>
                             <img src={iconoAsador} alt="icono de asador" className='iconoCard' />
-                            <NavLink href='/alquiler' className='btnCard'>Ver más</NavLink>
+                            <NavLink href='/alquilerquincho' className='btnCard'>Ver más</NavLink>
                         </article>
                     </Col>
                     <Col md="6" lg="4" className='d-flex justify-content-center'>
                         <article data-aos="fade-up" class="articleCard mx-1 my-3">
-                            <img src={escuelita} alt="imagen de guarderia de kayak" className='imgCard' />
+                            <img src={guarderia} alt="imagen de guarderia de kayak" className='imgCard' />
                             <div class="overlay"></div>
                             <img src={iconoGuarderia} alt="icono de guarderia de kayak" className='iconoCard p-1' />
                             <h5 className='textCard'>Guarderia de Kayaks</h5>

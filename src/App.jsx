@@ -9,6 +9,7 @@ import Coaching from './components/views/servicios/Coaching';
 import Guarderia from "./components/views/servicios/Guarderia";
 import Cumpleanios from './components/views/servicios/Cumpleanios';
 import Alquiler from './components/views/servicios/Alquiler';
+import AlquilerKayak from './components/views/servicios/AlquilerKayak';
 import Administrador from './components/views/Administrador/Administrador';
 import Error404 from './components/views/Error404';
 import Header from './components/common/Header';
@@ -36,7 +37,8 @@ const App = () => {
             <Route exact path="/coaching" element={<Coaching />} />
             <Route exact path="/cumpleaños" element={<Cumpleanios />} />
             <Route exact path="/guarderia" element={<Guarderia />} />
-            <Route exact path="/alquiler" element={<Alquiler />} />
+            <Route exact path="/alquilerquincho" element={<Alquiler />} />
+            <Route exact path="/alquilerkayak" element={<AlquilerKayak />} />
             <Route exact path="/login" element={<Login setUsuarioLogueado={setUsuarioLogueado} />} />
             <Route path="/administrador/*" element={<RutasProtegidas><RutasAdministrador /></RutasProtegidas>} />
             <Route path="*" element={<Error404 />} />

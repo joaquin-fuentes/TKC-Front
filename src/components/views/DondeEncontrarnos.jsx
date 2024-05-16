@@ -18,10 +18,7 @@ const DondeEncontrarnos = () => {
                     <Row data-aos="fade-up">
                         <p className='p-2 text-center'>Estamos ubicados en El Cadillal (20km al norte de San Miguel de Tucumán), más precisamente en el dique Celestino Gelsi, en el sector de playa, justo debajo del bar La Isla, a simple vista podras ubicar nuestra carpa roja de TKC</p>
                         <Col md={6}>
-                            <div className='mb-3 w-100 h-100 contenedorCarpaLogo '>
-                                <img src={carpatkc} alt="carpa tkc" className=' carpaTkc ' />
-                                <img src={logoTkc} alt="logo de tkc" className='logoTkcImg' />
-                            </div>
+                            <img src={carpatkc} alt="carpa tkc" className=' carpaTkc ' />
                         </Col>
                         <Col md={6}>
                             <div className='mb-3 w-100 h-100 '>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Nav } from "react-bootstrap"
-import imgCoaching from "../../../assets/imagenes/coaching.jpg"
+import imgCoaching from "../../../assets/imagenes/coaching.png"
 import whatsapp from "../../../assets/imagenes/icons8-whatsapp.svg"
 
 const Coaching = () => {

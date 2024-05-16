@@ -40,7 +40,6 @@
 .iconoPaginaCarga {
   width: 200px;
 }
-
 .bg-negro {
   background-color: #171717;
 }
@@ -49,11 +48,9 @@
   background-color: #b00b0b;
   color: white;
 }
-
 .text-rojo {
   color: #b00b0b;
 }
-
 .outline-rojo {
   border: 1px solid #b00b0b !important;
   color: #b00b0b;
@@ -61,19 +58,16 @@
   padding: 8px;
   width: 20%;
 }
-
 .outline-rojo:hover {
   border: 1px solid #b00b0b !important;
   color: white;
   background-color: #b00b0b;
 }
-
 .btn-rojo {
   border: 1px solid #b00b0b;
   color: white !important;
   background-color: #b00b0b;
 }
-
 .btn-rojo:hover {
   border: 1px solid #b00b0b;
   color: rgb(255, 0, 0) !important;
@@ -115,20 +109,16 @@
   width: 85px;
   filter: drop-shadow(1px 1px #b00b0b);
 }
-
 .text-header {
   color: rgb(255, 255, 255) !important;
   
 }
-
 .text-header:hover {
   color: #b00b0b !important;
 }
-
 .icono-header {
   width: 28px;
 }
-
 .narbarToggle {
   border: none !important;
   box-shadow: none !important; /* Elimina la sombra */

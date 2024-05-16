@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, Row, Col, Nav } from "react-bootstrap"
 import canyonning from "../../../assets/imagenes/trekking.jpg"
-import kayakrio from "../../../assets/imagenes/fondoKayak2.jpg"
+import kayakrio from "../../../assets/imagenes/fondokayak2.png"
 import kayakdique from "../../../assets/imagenes/remando.jpg"
 import rappeldique from "../../../assets/imagenes/rappel.jpg"
 import rappelaguaschiquitas from "../../../assets/imagenes/rappelac.jpg"
-import viaducto from "../../../assets/imagenes/viaducto2.jpg"
+import viaducto from "../../../assets/imagenes/viaducto2.png"
 import whatsapp from "../../../assets/imagenes/icons8-whatsapp.svg"
 
 
