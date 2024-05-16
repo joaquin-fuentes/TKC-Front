@@ -19,6 +19,9 @@ import RutasProtegidas from "./components/routes/RutasProtegidas";
 import RutasAdministrador from "./components/routes/RutasAdministrador";
 import Estudiantiles from "./components/views/servicios/Estudiantiles";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const App = () => {
   const usuarioDelSessionStorage = JSON.parse(sessionStorage.getItem("usuarioLogueado")) || {};
   const [usuarioLogueado, setUsuarioLogueado] = useState(usuarioDelSessionStorage);

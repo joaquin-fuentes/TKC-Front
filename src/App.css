@@ -111,7 +111,6 @@
 }
 .text-header {
   color: rgb(255, 255, 255) !important;
-  
 }
 .text-header:hover {
   color: #b00b0b !important;
@@ -155,6 +154,22 @@
     display: flex;
     flex-direction: column;
     align-items: end;
+  }
+}
+/* GALERIA DE IMAGENES */
+.image-container {
+  border: 1px solid;
+  padding: 10px;
+  border: none;
+  margin-bottom: 10px;
+}
+.img-galeria {
+  width: 100%;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .slick-slide:nth-child(3) {
+    display: none;
   }
 }
 /* ERROR 404 */
@@ -366,14 +381,14 @@
   list-style: none;
   letter-spacing: 0.5px;
 }
-.contenedorImagenLogo{
+.contenedorImagenLogo {
   position: relative;
 }
-.imgExcursionConLogo{
+.imgExcursionConLogo {
   position: relative;
   z-index: 1;
 }
-.logoTkcImg{
+.logoTkcImg {
   position: absolute;
   z-index: 2;
   bottom: 15px;
@@ -416,7 +431,7 @@
   border-radius: 10px;
   box-shadow: 6px 6px 6px rgba(78, 78, 78, 0.632);
 }
-.contenedorCarpaLogo{
+.contenedorCarpaLogo {
   position: relative;
 }
 .carpaTkc {

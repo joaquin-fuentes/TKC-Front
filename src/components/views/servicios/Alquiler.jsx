@@ -1,9 +1,46 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 import { Container, Row, Col, Nav } from "react-bootstrap"
 import imgAlquiler from "../../../assets/imagenes/quincho3.png"
+import imgGaleria from "../../../assets/imagenes/quincho2.png"
+import imgGaleria2 from "../../../assets/imagenes/quincho.png"
+import imgGaleria3 from "../../../assets/imagenes/quincho4.png"
+import imgGaleria4 from "../../../assets/imagenes/quincho5.png"
+import imgGaleria5 from "../../../assets/imagenes/quincho6.png"
+
 import whatsapp from "../../../assets/imagenes/icons8-whatsapp.svg"
 
+import Slider from "react-slick";
+
+
 const Alquiler = () => {
+    const [slidesToShow, setSlidesToShow] = useState(3);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 768) {
+                setSlidesToShow(2);
+            } else {
+                setSlidesToShow(3);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Para ajustar inicialmente al tamaño de la ventana
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: slidesToShow,
+        slidesToScroll: 1,
+    };
+
     return (
         <div>
             <div className='fondoExcursiones'>
@@ -26,6 +63,24 @@ const Alquiler = () => {
                             </article>
                         </Col>
                     </Row>
+                    <Slider {...settings}>
+
+                        <div className="image-container">
+                            <img src={imgGaleria} alt="imagen de quincho" className="img-galeria" />
+                        </div>
+                        <div className="image-container">
+                            <img src={imgGaleria2} alt="imagen de quincho" className="img-galeria" />
+                        </div>
+                        <div className="image-container">
+                            <img src={imgGaleria3} alt="imagen de quincho" className="img-galeria" />
+                        </div>
+                        <div className="image-container">
+                            <img src={imgGaleria4} alt="imagen de quincho" className="img-galeria" />
+                        </div>
+                        <div className="image-container">
+                            <img src={imgGaleria5} alt="imagen de quincho" className="img-galeria" />
+                        </div>
+                    </Slider>
                 </Container>
             </div>
         </div>
