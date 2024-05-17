@@ -3,7 +3,7 @@
 Bienvenido al repositorio del Tucumán Kayak Club, un proyecto diseñado para centralizar la información sobre las actividades de turismo aventura que ofrecemos. A través de esta página web, los visitantes pueden explorar en detalle los servicios disponibles y dejar reseñas sobre sus experiencias.
 
 **Página web:** https://tucumankayakclub.netlify.app/
-![Logo de Tucumán Kayak Club](./src/assets/logos/logoRojo.png)
+![Logo de Tucumán Kayak Club](/src/assets/logos/logoRojo.jpg)
 
 ## Tabla de contenidos
 - Descripcion general
