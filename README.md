@@ -75,6 +75,7 @@ Para acceder al panel de administrador:
 1- Escribir el nombre de la pagina seguido de "/administrador" o "/login" en la barra de busqueda del navegador web.
 2- Ingresar las credenciales de administrador.
 3- Gestionar los comentarios y reseñas desde el panel.
+
 ###Diagrama de flujo para el Login
 
 ```flow
@@ -89,6 +90,7 @@ cond(no)->op
 ```
 ```
 ```
+
 #### Estructura del proyecto
 
 tucumankayakclub/
