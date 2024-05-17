@@ -70,34 +70,34 @@ const Alquiler = () => {
                     </Row>
                     <Slider {...settings}>
 
-                        <div className="image-container">
+                        <div data-aos="fade-up" className="image-container">
                             <img src={imgGaleria} alt="imagen de quincho" className="img-galeria" />
                         </div>
-                        <div className="image-container">
+                        <div data-aos="fade-up" className="image-container">
                             <img src={imgGaleria2} alt="imagen de quincho" className="img-galeria" />
                         </div>
-                        <div className="image-container">
+                        <div data-aos="fade-up" className="image-container">
                             <img src={imgGaleria3} alt="imagen de quincho" className="img-galeria" />
                         </div>
-                        <div className="image-container">
+                        <div data-aos="fade-up" className="image-container">
                             <img src={imgGaleria4} alt="imagen de quincho" className="img-galeria" />
                         </div>
-                        <div className="image-container">
+                        <div data-aos="fade-up" className="image-container">
                             <img src={imgGaleria5} alt="imagen de quincho" className="img-galeria" />
                         </div>
-                        <div className="image-container">
+                        <div data-aos="fade-up" className="image-container">
                             <img src={imgGaleria6} alt="imagen de quincho" className="img-galeria" />
                         </div>
-                        <div className="image-container">
+                        <div data-aos="fade-up" className="image-container">
                             <img src={imgGaleria7} alt="imagen de quincho" className="img-galeria" />
                         </div>
-                        <div className="image-container">
+                        <div data-aos="fade-up" className="image-container">
                             <img src={imgGaleria8} alt="imagen de quincho" className="img-galeria" />
                         </div>
-                        <div className="image-container">
+                        <div data-aos="fade-up" className="image-container">
                             <img src={imgGaleria9} alt="imagen de quincho" className="img-galeria" />
                         </div>
-                        <div className="image-container">
+                        <div data-aos="fade-up" className="image-container">
                             <img src={imgGaleria10} alt="imagen de quincho" className="img-galeria" />
                         </div>
                     </Slider>

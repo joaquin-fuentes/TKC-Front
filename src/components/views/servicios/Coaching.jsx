@@ -69,19 +69,19 @@ const Coaching = () => {
                     </Row>
                     <Slider {...settings}>
 
-                        <div className="image-container">
+                        <div data-aos="fade-up" className="image-container">
                             <img src={img1} alt="imagen de alquiler" className="img-galeria" />
                         </div>
-                        <div className="image-container">
+                        <div data-aos="fade-up" className="image-container">
                             <img src={img2} alt="imagen de alquiler" className="img-galeria" />
                         </div>
-                        <div className="image-container">
+                        <div data-aos="fade-up" className="image-container">
                             <img src={img3} alt="imagen de alquiler" className="img-galeria" />
                         </div>
-                        <div className="image-container">
+                        <div data-aos="fade-up" className="image-container">
                             <img src={img4} alt="imagen de alquiler" className="img-galeria" />
                         </div>
-                        <div className="image-container">
+                        <div data-aos="fade-up" className="image-container">
                             <img src={img5} alt="imagen de alquiler" className="img-galeria" />
                         </div>
                     </Slider>
