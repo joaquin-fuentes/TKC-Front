@@ -3,8 +3,7 @@
 Bienvenido al repositorio del Tucumán Kayak Club, un proyecto diseñado para centralizar la información sobre las actividades de turismo aventura que ofrecemos. A través de esta página web, los visitantes pueden explorar en detalle los servicios disponibles y dejar reseñas sobre sus experiencias.
 
 **Página web:** https://tucumankayakclub.netlify.app/
-
-![Logo de Tucumán Kayak Club](./src/assets/logos/logoRojo.jpg)
+![Logo de Tucumán Kayak Club](/src/assets/logos/logoRojo.jpg)
 
 ## Tabla de contenidos
 - Descripcion general
@@ -132,9 +131,3 @@ Para más informacion o consultas, puedes contactarnos en:
 -  **Correo electrónico:** joaquin.fuentes1327@gmail.com
 - **Teléfono:** 3816097754
 - **Dirección**: Calle España 2456, San Miguel de Tucuman, Tucuman, Argentina.
-
-
-
-
-.
-

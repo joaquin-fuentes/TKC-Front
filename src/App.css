@@ -1,0 +1,525 @@
+#root {
+  font-family: "anton", "Permanent Marker", "cursive";
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.main {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.fondoPaginaCarga {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #b00b0b;
+}
+.logoPaginaCarga {
+  width: 30%;
+  filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.781));
+}
+.textPaginaCarga {
+  filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.781));
+}
+/* Media Query para pantallas más pequeñas, como celulares y tablets */
+@media only screen and (max-width: 768px) {
+  .logoPaginaCarga {
+    width: 80%;
+  }
+}
+
+.iconoPaginaCarga {
+  width: 200px;
+}
+.bg-negro {
+  background-color: #171717;
+}
+
+.bg-rojo {
+  background-color: #b00b0b;
+  color: white;
+}
+.text-rojo {
+  color: #b00b0b;
+}
+.outline-rojo {
+  border: 1px solid #b00b0b !important;
+  color: #b00b0b;
+  background-color: white;
+  padding: 8px;
+  width: 20%;
+}
+.outline-rojo:hover {
+  border: 1px solid #b00b0b !important;
+  color: white;
+  background-color: #b00b0b;
+}
+.btn-rojo {
+  border: 1px solid #b00b0b;
+  color: white !important;
+  background-color: #b00b0b;
+}
+.btn-rojo:hover {
+  border: 1px solid #b00b0b;
+  color: rgb(255, 0, 0) !important;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Media Query para pantallas más pequeñas, como celulares y tablets */
+@media only screen and (max-width: 768px) {
+  .outline-rojo {
+    width: 50%;
+  }
+}
+
+/* HEADER */
+.fondoHeaderOscuro {
+  height: 68.7px;
+  width: 100vw;
+  background-color: #171717;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  width: 100vw;
+  transition: background-color 0.3s; /* transición suave */
+}
+.header.scrolled {
+  background-color: rgba(17, 10, 10, 0.7); /* más oscuro al hacer scroll */
+}
+.homeBackground {
+  background-color: rgba(17, 10, 10, 0.1);
+}
+.defaultBackground {
+  background-color: rgba(17, 10, 10, 0.9);
+}
+.logoMenu {
+  width: 85px;
+  filter: drop-shadow(1px 1px #b00b0b);
+}
+.text-header {
+  color: rgb(255, 255, 255) !important;
+}
+.text-header:hover {
+  color: #b00b0b !important;
+}
+.icono-header {
+  width: 28px;
+}
+.narbarToggle {
+  border: none !important;
+  box-shadow: none !important; /* Elimina la sombra */
+}
+.transitionMenu {
+  transition: all 0.8s ease-in-out; /* Transición suave de 0.3 segundos */
+  filter: drop-shadow(0.5px 0.5px white);
+}
+.menuHamburguesaCerrado {
+  font-size: 35px !important;
+  color: #b00b0b;
+  opacity: 1; /* Comienza completamente visible */
+}
+.menuHamburguesaAbierto {
+  font-size: 35px !important;
+  color: #b00b0b;
+  opacity: 1; /* Comienza completamente visible */
+}
+
+/* Media Query para pantallas más pequeñas, como celulares y tablets */
+@media only screen and (max-width: 768px) {
+  .contenedorImgHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+
+  .icono-header {
+    margin-left: 10px;
+    margin-right: 0;
+  }
+
+  .contenedorEnlacesNav {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+}
+/* GALERIA DE IMAGENES */
+.image-container {
+  border: 1px solid;
+  padding: 10px;
+  border: none;
+  margin-bottom: 10px;
+}
+.img-galeria {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .slick-slide:nth-child(3) {
+    display: none;
+  }
+  .img-galeria{
+    height: 175px;
+  }
+}
+/* ERROR 404 */
+.contenedorPrincipalError {
+  background-image: linear-gradient(rgba(19, 19, 19, 0.8), rgba(78, 1, 1, 0.3)),
+    url("./assets/imagenes/fondoError.jpg");
+  background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+  background-position: bottom; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que se repita la imagen */
+  background-attachment: fixed; /* Hace que la imagen de fondo se quede fija */
+  position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
+  height: 100vh;
+  opacity: 0.9; /* Ajusta la opacidad del contenedor */
+}
+/* LOGIN */
+.contenedorPrincipalLogin {
+  background-image: linear-gradient(rgba(19, 19, 19, 0.8), rgba(78, 1, 1, 0.3)),
+    url("./assets/imagenes/fondoError.jpg");
+  background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+  background-position: bottom; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que se repita la imagen */
+  background-attachment: fixed; /* Hace que la imagen de fondo se quede fija */
+  position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
+  height: 100vh;
+  opacity: 0.9; /* Ajusta la opacidad del contenedor */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Media Query para pantallas más pequeñas, como celulares y tablets */
+@media only screen and (max-width: 768px) {
+  .formLogin {
+    width: 80% !important;
+  }
+}
+/* INICIO */
+.contenedorPrincipal {
+  background-image: linear-gradient(
+      rgba(22, 17, 17, 0.67),
+      rgba(182, 3, 3, 0.311)
+    ),
+    url("./assets/imagenes/portada.jpg");
+  background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+  background-position: bottom; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que se repita la imagen */
+  background-attachment: fixed; /* Hace que la imagen de fondo se quede fija */
+  position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
+  height: 100vh;
+  opacity: 0.9; /* Ajusta la opacidad del contenedor */
+}
+
+.logoTkcInicio {
+  width: 90%;
+  filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.781));
+}
+
+/* SERVICIOS */
+.articleCard {
+  position: relative;
+  width: 100%; /* Ajusta según tus necesidades */
+  height: 300px; /* Ajusta según tus necesidades */
+  overflow: hidden;
+  border-radius: 10%; /* Ajusta según tus necesidades */
+  transition: all 0.3s ease; /* Transición suave para el hover */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+}
+
+.imgCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 10%;
+  background-color: black;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Fondo oscuro por defecto, transparente en hover */
+  z-index: 1; /* Misma capa que imgCard, ya que se oscurece como fondo */
+  opacity: 0.3; /* Invisible por defecto */
+  transition: all 0.1s ease; /* Transición suave */
+}
+
+.textCard {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  color: rgb(234, 234, 234);
+  font-size: 1.4em;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.897);
+  margin-bottom: 7px;
+  opacity: 0.99;
+}
+
+.iconoCard {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 2;
+  width: 50px;
+  opacity: 0.8;
+}
+
+.btnCard {
+  position: absolute;
+  bottom: 5%;
+  z-index: 2;
+  width: 50%;
+  text-align: center;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.451);
+  background-color: #b00b0b;
+  padding: 3px;
+  border-radius: 10px;
+  opacity: 0; /* Invisible por defecto */
+  transition: all 0.3s ease; /* Transición suave para el hover */
+}
+
+.btnCard:hover {
+  color: #c0b8b8fc;
+}
+.articleCard:hover .btnCard {
+  opacity: 0.8;
+}
+.articleCard:hover .overlay {
+  opacity: 1; /* Al hacer hover, el fondo se oscurece */
+}
+
+/* Media query para dispositivos con un ancho máximo de 767px (dispositivos pequeños) */
+@media (max-width: 767px) {
+  .btnCard {
+    opacity: 0.8; /* Muestra el botón de manera predeterminada en dispositivos pequeños */
+  }
+
+  .articleCard:hover .overlay {
+    opacity: 0.15; /* Deshabilita el efecto hover en dispositivos pequeños */
+  }
+}
+
+/* SOBRE NOSOTROS */
+.iconoKayak {
+  font-size: 80px;
+}
+
+/* PAGINA SOBRE NOSOTROS */
+.fondoSobreNosotros {
+  background-image: linear-gradient(rgba(19, 19, 19, 0.8), rgba(137, 0, 0, 0.8)),
+    url("./assets/imagenes/fondoRojoYBlanco.jpg");
+  background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+  background-repeat: no-repeat; /* Evita que se repita la imagen */
+  position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
+  opacity: 0.9; /* Ajusta la opacidad del contenedor */
+  background-attachment: fixed; /* Hace que la imagen de fondo se quede fija */
+}
+.textSobreNosotros {
+  letter-spacing: 0.5px; /* Ajusta el valor según lo necesites */
+}
+
+.tituloSobreNosotros {
+  padding-top: 110px;
+}
+
+/* PAGINA EXCURSIONES */
+
+.fondoExcursiones {
+  background-image: linear-gradient(rgba(19, 19, 19, 0.8), rgba(137, 0, 0, 0.8)),
+    url("./assets/imagenes/fondoRojoYBlanco.jpg");
+  background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+  background-repeat: no-repeat; /* Evita que se repita la imagen */
+  position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
+  opacity: 0.9; /* Ajusta la opacidad del contenedor */
+  background-attachment: fixed; /* Hace que la imagen de fondo se quede fija */
+}
+
+.textTitulo {
+  color: rgba(247, 227, 8, 0.889);
+  text-decoration: underline;
+}
+
+.textSubtitulo {
+  color: rgba(247, 227, 8, 0.889);
+  list-style: none;
+  letter-spacing: 0.5px;
+}
+.contenedorImagenLogo {
+  position: relative;
+}
+.imgExcursionConLogo {
+  position: relative;
+  z-index: 1;
+}
+.logoTkcImg {
+  position: absolute;
+  z-index: 2;
+  bottom: 15px;
+  left: 15px;
+}
+/* Media Query para pantallas más pequeñas, como celulares y tablets */
+@media only screen and (max-width: 768px) {
+  .imgExcursion {
+    height: 250px !important;
+  }
+}
+
+.textExplicacion {
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.imgExcursion {
+  height: 50vh;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* CAROUSEL EXCURSIONES */
+.carouselInicio {
+  height: 50vh;
+}
+
+.imgCarousel {
+  height: 50vh;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* DONDE ENCONTRARNOS */
+.ubicacion,
+.carpaTkc {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 6px 6px 6px rgba(78, 78, 78, 0.632);
+}
+.contenedorCarpaLogo {
+  position: relative;
+}
+.carpaTkc {
+  position: relative;
+  z-index: 1;
+}
+.logoTkcImg {
+  position: absolute; /* Establece posición absoluta para que el logo se pueda posicionar de forma independiente */
+  bottom: 15px; /* Distancia desde el borde inferior */
+  left: 15px; /* Distancia desde el borde izquierdo */
+  width: 70px; /* Ajusta según tus necesidades */
+  height: auto; /* Permite que la altura se ajuste automáticamente según el ancho definido */
+  z-index: 2;
+}
+@media only screen and (max-width: 768px) {
+  .ubicacion,
+  .carpaTkc {
+    height: 230px;
+    margin-bottom: 20px;
+  }
+}
+
+/* CONTACTO */
+.iconoWp,
+.iconoFb,
+.iconoInsta {
+  font-size: 50px;
+}
+
+.iconoContacto {
+  transition: transform 0.3s ease; /* Transición suave para el cambio de tamaño */
+}
+
+.iconoContacto:hover {
+  transform: scale(1.1);
+}
+
+.textRedSocialContacto {
+  font-size: 20px;
+}
+.btn-enviar {
+  background-color: #ffffff;
+  border: 1px solid #d70101;
+  color: rgb(56, 56, 56);
+}
+.btn-enviar:hover {
+  background-color: #d70101;
+  border: 1px solid white;
+}
+
+/* PANEL ADMINISTRACION  */
+.fondoAdmin {
+  background-image: linear-gradient(rgba(19, 19, 19, 0.8), rgba(137, 0, 0, 0.8)),
+    url("./assets/imagenes/fondoRojoYBlanco.jpg");
+  background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+  background-repeat: no-repeat; /* Evita que se repita la imagen */
+  position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
+  opacity: 0.9; /* Ajusta la opacidad del contenedor */
+  background-attachment: fixed; /* Hace que la imagen de fondo se quede fija */
+  min-height: 90vh;
+}
+.col-email {
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.col-mensaje {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.col-nombre,
+.col-fecha {
+  max-width: 100px;
+}
+.textMensajeModal {
+  white-space: normal; /* Permite que el texto salte de línea automáticamente */
+  word-wrap: break-word; /* Divide palabras largas si es necesario */
+}
+/* FOOTER */
+.logotkc-footer {
+  width: 70%;
+}
