@@ -1,3 +1,7 @@
+/* Este fragmento de código es un componente de React llamado "Contacto" que representa una sección de
+contacto de un sitio web. Incluye varios elementos, como íconos de WhatsApp, Facebook e Instagram,
+junto con enlaces a esas plataformas de redes sociales. El componente también incluye un componente
+de formulario `CrearMensaje` para crear un mensaje. */
 import React from 'react';
 import { Container, Row, Col, Nav, Form, Button } from "react-bootstrap"
 import { RiContactsFill } from "react-icons/ri";

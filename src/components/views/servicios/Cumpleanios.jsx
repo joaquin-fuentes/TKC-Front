@@ -1,3 +1,9 @@
+/* El código anterior es un componente de React llamado `Cumpleanios` que muestra información sobre los
+cumpleaños de los niños. Incluye una imagen, una descripción de la experiencia del cumpleaños y una
+galería deslizante de imágenes relacionadas con las celebraciones del cumpleaños. El componente
+también incluye un comportamiento receptivo para ajustar la cantidad de diapositivas mostradas según
+el ancho de la ventana. Además, existe un enlace para enviar un mensaje de WhatsApp para consultas
+sobre cumpleaños infantiles. */
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Nav } from "react-bootstrap"
 import imgCumpleanios from "../../../assets/imagenes/grupo3.png"

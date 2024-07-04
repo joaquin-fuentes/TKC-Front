@@ -1,3 +1,6 @@
+/* Este fragmento de código es un componente funcional de React llamado "Guarderia" que representa una
+sección de un sitio web relacionado con un servicio de almacenamiento de kayak. A continuación se
+muestra un desglose de lo que hace el código: */
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Nav } from "react-bootstrap"
 import imgGuarderia from "../../../assets/imagenes/guarderia3.png"

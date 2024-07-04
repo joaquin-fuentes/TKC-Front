@@ -1,3 +1,6 @@
+/* Este fragmento de código es un componente de React llamado `Escuela`. Es un componente funcional que
+muestra información sobre una escuela de kayak. A continuación se muestra un desglose de lo que hace
+el código: */
 import { Container, Row, Col, Nav } from "react-bootstrap"
 import imgEscuela from "../../../assets/imagenes/portada2.jpg"
 import whatsapp from "../../../assets/imagenes/icons8-whatsapp.svg"

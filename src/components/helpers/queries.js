@@ -1,22 +1,24 @@
+/* Este fragmento de código JavaScript define varias funciones relacionadas con la autenticación de
+usuarios y la gestión de mensajes. Aquí hay un desglose de lo que hace cada parte del código: */
 // llamar a la variable de entorno
 const URL_USUARIO = import.meta.env.VITE_API_USUARIO
-const URL_MENSAJE= import.meta.env.VITE_API_MENSAJE
+const URL_MENSAJE = import.meta.env.VITE_API_MENSAJE
 
 
 
-export const login = async (usuario)=>{
-    
+export const login = async (usuario) => {
+
     console.log(usuario)
     try {
         const respuesta = await fetch(URL_USUARIO);
         const listaUsuarios = await respuesta.json();
         console.log(listaUsuarios)
         //buscar si algun usuario coincide con el que recibi por parametros
-        const usuarioBuscado = listaUsuarios.find((itemUsuario)=>itemUsuario.nombreUsuario === usuario.nombreUsuario);
-        if(usuarioBuscado){
+        const usuarioBuscado = listaUsuarios.find((itemUsuario) => itemUsuario.nombreUsuario === usuario.nombreUsuario);
+        if (usuarioBuscado) {
             console.log("usuario encontrado")
             //verificar el password
-            if(usuarioBuscado.password === usuario.password){
+            if (usuarioBuscado.password === usuario.password) {
                 console.log("encontramos al usuario")
                 return usuarioBuscado
             } else {
@@ -33,59 +35,59 @@ export const login = async (usuario)=>{
     }
 }
 
- export const obtenerMensajes = async ()=>{
-     try {
-         const respuesta = await fetch(URL_MENSAJE)
-         const listaMensajes = await respuesta.json()
-         return listaMensajes
+export const obtenerMensajes = async () => {
+    try {
+        const respuesta = await fetch(URL_MENSAJE)
+        const listaMensajes = await respuesta.json()
+        return listaMensajes
 
-     } catch (error) {
-         console.log(error)
-         return null
-     }
- }
- export const obtenerMensaje = async (id)=>{
-     try {
-         const respuesta = await fetch(`${URL_MENSAJE}/${id}`)
-         const mensajeEditar = await respuesta.json()
-         return mensajeEditar
+    } catch (error) {
+        console.log(error)
+        return null
+    }
+}
+export const obtenerMensaje = async (id) => {
+    try {
+        const respuesta = await fetch(`${URL_MENSAJE}/${id}`)
+        const mensajeEditar = await respuesta.json()
+        return mensajeEditar
 
-     } catch (error) {
-         console.log(error)
-         return null
-     }
- }
+    } catch (error) {
+        console.log(error)
+        return null
+    }
+}
 
- export const consultaBorrarMensaje = async (id)=>{
-     try {
-         const respuesta = await fetch(`${URL_MENSAJE}/${id}` , {
-             method:"DELETE"
-         });
+export const consultaBorrarMensaje = async (id) => {
+    try {
+        const respuesta = await fetch(`${URL_MENSAJE}/${id}`, {
+            method: "DELETE"
+        });
         //  const listaMensajes = await respuesta.json()
-         return respuesta
+        return respuesta
 
-     } catch (error) {
-         console.log(error)
-         return null
-     }
- }
+    } catch (error) {
+        console.log(error)
+        return null
+    }
+}
 
- export const consultaCrearMensaje = async (mensaje)=>{
-     try {
-         const respuesta = await fetch(URL_MENSAJE, {
-             method: "POST",
-             headers: {
-                 "Content-Type":"application/json"
-             },
-             body: JSON.stringify(mensaje)
-         });
-         return respuesta
+export const consultaCrearMensaje = async (mensaje) => {
+    try {
+        const respuesta = await fetch(URL_MENSAJE, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(mensaje)
+        });
+        return respuesta
 
-     } catch (error) {
-         console.log(error)
-         return null
-     }
- }
+    } catch (error) {
+        console.log(error)
+        return null
+    }
+}
 
 // export const consultaEditarProducto = async (producto, id)=>{
 //     try {

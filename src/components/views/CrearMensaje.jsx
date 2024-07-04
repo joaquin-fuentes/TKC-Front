@@ -1,3 +1,5 @@
+/* Este fragmento de código es un componente de React llamado `CrearMensaje` que permite a los usuarios
+crear y enviar mensajes. A continuación se muestra un desglose de lo que hace el código: */
 import { Button, Form, Container, Row, Col, InputGroup } from "react-bootstrap"
 import { useForm } from "react-hook-form";
 import { consultaCrearMensaje } from "../helpers/queries";

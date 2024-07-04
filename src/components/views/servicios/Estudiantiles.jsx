@@ -1,3 +1,6 @@
+/* Este fragmento de código es un componente funcional de React llamado "Estudiantiles". Se está
+ofreciendo una sección para excursiones de grupos de estudiantes. A continuación se muestra un
+desglose de lo que hace el código: */
 import React from 'react';
 import { Container, Row, Col, Nav } from "react-bootstrap"
 import imgEstudiantiles from "../../../assets/imagenes/grupo4.png"

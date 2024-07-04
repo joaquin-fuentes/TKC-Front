@@ -1,3 +1,7 @@
+/* El código anterior es un componente de React llamado Excursiones, que muestra información sobre
+diferentes excursiones o actividades al aire libre. Importa imágenes para cada excursión, como
+kayak, rapel y barranquismo, y utiliza componentes de React Bootstrap como Container, Row, Col y Nav
+para estructurar el diseño. */
 import React from 'react';
 import { Container, Row, Col, Nav } from "react-bootstrap"
 import canyonning from "../../../assets/imagenes/trekking.jpg"
