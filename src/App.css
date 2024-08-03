@@ -116,7 +116,12 @@
   color: #b00b0b !important;
 }
 .icono-header {
-  width: 28px;
+  width: 28px; /* Ajusta el tamaño de los iconos según sea necesario */
+  height: 28px;
+  transition: transform 0.3s ease; /* Cambia el tamaño de la transición y su duración aquí */
+}
+.icono-header:hover {
+  transform: scale(1.5); /* Ajusta el valor de escala para el tamaño deseado */
 }
 .narbarToggle {
   border: none !important;
@@ -138,7 +143,7 @@
 }
 
 /* Media Query para pantallas más pequeñas, como celulares y tablets */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 920px) {
   .contenedorImgHeader {
     display: flex;
     flex-direction: row;
@@ -172,7 +177,7 @@
   .slick-slide:nth-child(3) {
     display: none;
   }
-  .img-galeria{
+  .img-galeria {
     height: 175px;
   }
 }
@@ -521,5 +526,16 @@
 }
 /* FOOTER */
 .logotkc-footer {
-  width: 70%;
+  width: 95%;
+  margin-left: 10px;
+}
+.copyright-text {
+  letter-spacing: 0.1em; /* Ajusta el valor según necesites */
+}
+
+@media only screen and (max-width: 767px) {
+  .logotkc-footer {
+    width: 50%;
+    margin: 0;
+  }
 }

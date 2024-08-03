@@ -24,7 +24,7 @@ const Inicio = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false); // Después de 1.2 segundos, cambia el estado para dejar de mostrar el componente de carga
-    }, 1200); // 1200 ms = 1.2 segundos
+    }, 600); // 1200 ms = 1.2 segundos
 
     // Función de limpieza para asegurarse de que el temporizador se cancela si el componente se desmonta antes
     return () => clearTimeout(timer);

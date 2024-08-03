@@ -10,12 +10,9 @@ import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <Container
-      fluid
-      className="bg-negro text-light p-2 d-flex justify-content-around"
-    >
+    <Container fluid className="bg-negro text-light ">
       <Row>
-        <Col lg="4">
+        <Col md="4" className="d-flex align-items-center justify-content-around">
           <section className="p-1 d-flex flex-column justify-content-center align-items-center">
             <a href="/#inicio" className="text-center">
               <img
@@ -26,7 +23,7 @@ const Footer = () => {
             </a>
           </section>
         </Col>
-        <Col lg="4">
+        <Col md="4" className="d-flex align-items-center justify-content-around">
           <section className="p-3 d-flex flex-column justify-content-center align-items-center">
             <h4>Navegacion</h4>
             <Nav className="d-flex flex-column text-center">
@@ -54,7 +51,7 @@ const Footer = () => {
             </Nav>
           </section>
         </Col>
-        <Col lg="4">
+        <Col md="4" className="d-flex align-items-center justify-content-around">
           <section className="p-3 d-flex flex-column justify-content-center align-items-center">
             <h4>Contacto</h4>
             <Nav className="d-flex flex-column text-center">
@@ -86,6 +83,9 @@ const Footer = () => {
           </section>
         </Col>
       </Row>
+      <h6 className="text-center p-0 m-0 py-3 mt-2 copyright-text">
+        © Todos los derechos reservados.
+      </h6>
     </Container>
   );
 };
