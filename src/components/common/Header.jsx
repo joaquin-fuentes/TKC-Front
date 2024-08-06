@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { useNavigate, useLocation } from "react-router-dom";
 import Swal from "sweetalert2";
-import logoTransparente from "../../assets/logos/logoTransparente.png";
+import logoTransparente from "../../assets/logos/logoTransparente.webp";
 import facebook from "../../assets/imagenes/icons8-facebook.svg";
 import whatsapp from "../../assets/imagenes/icons8-whatsapp.svg";
 import instagram from "../../assets/imagenes/icons8-instagram.svg";

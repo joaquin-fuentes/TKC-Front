@@ -13,12 +13,13 @@ const Nosotros = () => {
         >
           <MdKayaking className="iconoKayak text-rojo mt-3" />{" "}
           {/* Icono de kayak */}
-          <h3 className="text-rojo m-0 p-4 text-center ">
+          <h1 className=" fs-3 text-rojo m-0 p-4 text-center ">
             Somos una empresa de Turismo Aventura ubicada en El Cadillal
-          </h3>{" "}
+          </h1>
           {/* Título */}
           <p className="text-center">
-            Tucumán Kayak Club es una empresa con más de 15 años de experiencia
+            {/* <h1 className="d-inline fs-6">Tucumán Kayak Club</h1> */}
+            Tucumán kayak club es una empresa con más de 15 años de experiencia
             en Turismo Activo y deportes alternativos. Su equipo altamente
             capacitado garantiza experiencias seguras y divertidas, respaldadas
             por certificaciones en primeros auxilios, seguridad y rescate. Con

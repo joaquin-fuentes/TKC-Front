@@ -4,12 +4,12 @@ Row, Col, Nav de 'react-bootstrap'. También importa varias imágenes e íconos 
 componente. */
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Nav } from "react-bootstrap";
-import imgCoaching from "../../../assets/imagenes/juegos.png";
-import img1 from "../../../assets/imagenes/coaching.png";
-import img2 from "../../../assets/imagenes/portada2.jpg";
-import img3 from "../../../assets/imagenes/portada3.png";
-import img4 from "../../../assets/imagenes/juegos.png";
-import img5 from "../../../assets/imagenes/grupo4.png";
+import imgCoaching from "../../../assets/imagenes/juegos.webp";
+import img1 from "../../../assets/imagenes/coaching.webp";
+import img2 from "../../../assets/imagenes/portada2.webp";
+import img3 from "../../../assets/imagenes/portada3.webp";
+import img4 from "../../../assets/imagenes/juegos.webp";
+import img5 from "../../../assets/imagenes/grupo4.webp";
 
 import whatsapp from "../../../assets/imagenes/icons8-whatsapp.svg";
 

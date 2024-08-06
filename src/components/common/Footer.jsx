@@ -3,7 +3,7 @@ una sección de pie de página para un sitio web que utiliza componentes de Reac
 continuación se muestra un desglose de lo que hace el código: */
 import React from "react";
 import { Container, Row, Col, Nav } from "react-bootstrap";
-import logoTransparente from "../../assets/logos/logoTransparente.png";
+import logoTransparente from "../../assets/logos/logoTransparente.webp";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -12,7 +12,10 @@ const Footer = () => {
   return (
     <Container fluid className="bg-negro text-light ">
       <Row>
-        <Col md="4" className="d-flex align-items-center justify-content-around">
+        <Col
+          md="4"
+          className="d-flex align-items-center justify-content-around"
+        >
           <section className="p-1 d-flex flex-column justify-content-center align-items-center">
             <a href="/#inicio" className="text-center">
               <img
@@ -23,7 +26,10 @@ const Footer = () => {
             </a>
           </section>
         </Col>
-        <Col md="4" className="d-flex align-items-center justify-content-around">
+        <Col
+          md="4"
+          className="d-flex align-items-center justify-content-around"
+        >
           <section className="p-3 d-flex flex-column justify-content-center align-items-center">
             <h4>Navegacion</h4>
             <Nav className="d-flex flex-column text-center">
@@ -51,7 +57,10 @@ const Footer = () => {
             </Nav>
           </section>
         </Col>
-        <Col md="4" className="d-flex align-items-center justify-content-around">
+        <Col
+          md="4"
+          className="d-flex align-items-center justify-content-around"
+        >
           <section className="p-3 d-flex flex-column justify-content-center align-items-center">
             <h4>Contacto</h4>
             <Nav className="d-flex flex-column text-center">

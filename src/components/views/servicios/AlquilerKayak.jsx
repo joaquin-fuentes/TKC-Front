@@ -2,12 +2,12 @@
 sobre el alquiler de kayak. A continuación se muestra un desglose de lo que hace el código: */
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Nav } from "react-bootstrap";
-import imgAlquilerKayak from "../../../assets/imagenes/carpatkc.png";
-import img1 from "../../../assets/imagenes/remando.jpg";
-import img2 from "../../../assets/imagenes/grupo2.png";
-import img3 from "../../../assets/imagenes/grupo3.png";
-import img4 from "../../../assets/imagenes/grupo4.png";
-import img5 from "../../../assets/imagenes/carpatkc.png";
+import imgAlquilerKayak from "../../../assets/imagenes/carpatkc.webp";
+import img1 from "../../../assets/imagenes/remando.webp";
+import img2 from "../../../assets/imagenes/grupo2.webp";
+import img3 from "../../../assets/imagenes/grupo3.webp";
+import img4 from "../../../assets/imagenes/grupo4.webp";
+import img5 from "../../../assets/imagenes/carpatkc.webp";
 import whatsapp from "../../../assets/imagenes/icons8-whatsapp.svg";
 
 import Slider from "react-slick";

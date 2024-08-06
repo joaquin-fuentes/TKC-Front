@@ -7,17 +7,17 @@ ajusta según el ancho de la ventana usando los ganchos `useState` y `useEffect`
 import React, { useState, useEffect } from "react";
 
 import { Container, Row, Col, Nav } from "react-bootstrap";
-import imgAlquiler from "../../../assets/imagenes/quincho3.png";
-import imgGaleria from "../../../assets/imagenes/quincho2.png";
-import imgGaleria2 from "../../../assets/imagenes/quincho.png";
-import imgGaleria3 from "../../../assets/imagenes/quincho4.png";
-import imgGaleria4 from "../../../assets/imagenes/quincho5.png";
-import imgGaleria5 from "../../../assets/imagenes/quincho6.png";
-import imgGaleria6 from "../../../assets/imagenes/baño1.png";
-import imgGaleria7 from "../../../assets/imagenes/baño2.png";
-import imgGaleria8 from "../../../assets/imagenes/baño3.png";
-import imgGaleria9 from "../../../assets/imagenes/base.png";
-import imgGaleria10 from "../../../assets/imagenes/base2.png";
+import imgAlquiler from "../../../assets/imagenes/quincho3.webp";
+import imgGaleria from "../../../assets/imagenes/quincho2.webp";
+import imgGaleria2 from "../../../assets/imagenes/quincho.webp";
+import imgGaleria3 from "../../../assets/imagenes/quincho4.webp";
+import imgGaleria4 from "../../../assets/imagenes/quincho5.webp";
+import imgGaleria5 from "../../../assets/imagenes/quincho6.webp";
+import imgGaleria6 from "../../../assets/imagenes/baño1.webp";
+import imgGaleria7 from "../../../assets/imagenes/baño2.webp";
+import imgGaleria8 from "../../../assets/imagenes/baño3.webp";
+import imgGaleria9 from "../../../assets/imagenes/base.webp";
+import imgGaleria10 from "../../../assets/imagenes/base2.webp";
 
 import whatsapp from "../../../assets/imagenes/icons8-whatsapp.svg";
 

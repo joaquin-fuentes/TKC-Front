@@ -184,7 +184,7 @@
 /* ERROR 404 */
 .contenedorPrincipalError {
   background-image: linear-gradient(rgba(19, 19, 19, 0.8), rgba(78, 1, 1, 0.3)),
-    url("./assets/imagenes/fondoError.jpg");
+    url("./assets/imagenes/fondoError.webp");
   background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
   background-position: bottom; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que se repita la imagen */
@@ -196,7 +196,7 @@
 /* LOGIN */
 .contenedorPrincipalLogin {
   background-image: linear-gradient(rgba(19, 19, 19, 0.8), rgba(78, 1, 1, 0.3)),
-    url("./assets/imagenes/fondoError.jpg");
+    url("./assets/imagenes/fondoError.webp");
   background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
   background-position: bottom; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que se repita la imagen */
@@ -222,7 +222,7 @@
       rgba(22, 17, 17, 0.67),
       rgba(182, 3, 3, 0.311)
     ),
-    url("./assets/imagenes/portada.jpg");
+    url("./assets/imagenes/portada.webp");
   background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
   background-position: bottom; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que se repita la imagen */
@@ -353,7 +353,7 @@
 /* PAGINA SOBRE NOSOTROS */
 .fondoSobreNosotros {
   background-image: linear-gradient(rgba(19, 19, 19, 0.8), rgba(137, 0, 0, 0.8)),
-    url("./assets/imagenes/fondoRojoYBlanco.jpg");
+    url("./assets/imagenes/fondoRojoYBlanco.webp");
   background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
   background-repeat: no-repeat; /* Evita que se repita la imagen */
   position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
@@ -372,7 +372,7 @@
 
 .fondoExcursiones {
   background-image: linear-gradient(rgba(19, 19, 19, 0.8), rgba(137, 0, 0, 0.8)),
-    url("./assets/imagenes/fondoRojoYBlanco.jpg");
+    url("./assets/imagenes/fondoRojoYBlanco.webp");
   background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
   background-repeat: no-repeat; /* Evita que se repita la imagen */
   position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */
@@ -494,7 +494,7 @@
 /* PANEL ADMINISTRACION  */
 .fondoAdmin {
   background-image: linear-gradient(rgba(19, 19, 19, 0.8), rgba(137, 0, 0, 0.8)),
-    url("./assets/imagenes/fondoRojoYBlanco.jpg");
+    url("./assets/imagenes/fondoRojoYBlanco.webp");
   background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
   background-repeat: no-repeat; /* Evita que se repita la imagen */
   position: relative; /* Establece el contexto de apilamiento para los elementos secundarios */

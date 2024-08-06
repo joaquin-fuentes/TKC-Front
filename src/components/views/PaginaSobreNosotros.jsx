@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap"; // Importa componentes de Bootstrap
-import equipoTKC from "../../assets/imagenes/equipotkc.jpg"; // Importa imagen del equipo TKC
-import carpaTkc from "../../assets/imagenes/carpatkc.png"; // Importa imagen de la carpa TKC
-import logoTkc from "../../assets/logos/logoTransparente.png"; // Importa logo transparente TKC
+import equipoTKC from "../../assets/imagenes/equipotkc.webp"; // Importa imagen del equipo TKC
+import carpaTkc from "../../assets/imagenes/carpatkc.webp"; // Importa imagen de la carpa TKC
+import logoTkc from "../../assets/logos/logoTransparente.webp"; // Importa logo transparente TKC
 
 const PaginaSobreNosotros = () => {
   return (

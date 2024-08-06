@@ -10,7 +10,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Container, Nav } from "react-bootstrap";
-import logoTransparente from "../../assets/logos/logoTransparente.png";
+import logoTransparente from "../../assets/logos/logoTransparente.webp";
 import Nosotros from "./Nosotros";
 import Servicios from "./Servicios";
 import Contacto from "./Contacto";
@@ -53,7 +53,7 @@ const Inicio = () => {
             className="logoTkcInicio"
           />
           <Nav.Link href={"/#servicios"} className="w-50 p-1 btn btn-rojo mt-3">
-            Servicios
+            Nuestros Servicios
           </Nav.Link>
         </section>
       </Container>

@@ -7,9 +7,9 @@
  * índice activo del carrusel y una función de controlador para actualizar el índice cuando se
  * selecciona un nuevo elemento.
  */
-import kayak1 from "../../../../assets/imagenes/alquilerkayak.jpg";
-import kayak2 from "../../../../assets/imagenes/rappel.jpg";
-import kayak3 from "../../../../assets/imagenes/remando.jpg";
+import kayak1 from "../../../../assets/imagenes/alquilerkayak.webp";
+import kayak2 from "../../../../assets/imagenes/rappel.webp";
+import kayak3 from "../../../../assets/imagenes/remando.webp";
 import { Carousel } from "react-bootstrap";
 import { useState } from "react";
 // import ExampleCarouselImage from 'components/ExampleCarouselImage';
