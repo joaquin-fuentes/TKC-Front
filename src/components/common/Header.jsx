@@ -12,7 +12,7 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation(); 
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +27,7 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
   }, []);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen); 
+    setMenuOpen(!menuOpen);
   };
 
   const logout = () => {
@@ -49,17 +49,23 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
     });
   };
 
-  const isHome = location.pathname === "/" || location.pathname === "/#inicio";
-
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-red-600 shadow-lg' : 'bg-transparent'}`}>
+    <header
+      className={`fixed w-full top-0 z-50 transition-all duration-500 ease-in-out ${
+        isScrolled || menuOpen ? "bg-red-600 shadow-lg" : "bg-transparent"
+      }`}
+    >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <a href="/#inicio" className="flex items-center">
-          <img src={logoTransparente} alt="Logo" className="w-20 filter drop-shadow-md" />
+          <img
+            src={logoTransparente}
+            alt="Logo"
+            className="w-20 filter drop-shadow-md"
+          />
         </a>
 
-        {/* Menu Hamburguesa para móviles */}
+        {/* Menú hamburguesa en móviles */}
         <div className="lg:hidden" onClick={toggleMenu}>
           {menuOpen ? (
             <IoClose className="text-white text-4xl cursor-pointer" />
@@ -68,54 +74,221 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
           )}
         </div>
 
-        {/* Links de navegación */}
-        <nav className={`lg:flex items-center space-x-6 hidden ${menuOpen ? "block" : "hidden"} lg:block`}>
-          <a href="/#inicio" className="text-white hover:text-yellow-400 transition font-medium">Inicio</a>
-          <a href="/#nosotros" className="text-white hover:text-yellow-400 transition font-medium">Nosotros</a>
-          <a href="/#servicios" className="text-white hover:text-yellow-400 transition font-medium">Servicios</a>
-          <a href="/#dondeencontrarnos" className="text-white hover:text-yellow-400 transition font-medium">Dónde encontrarnos</a>
-          <a href="/#contacto" className="text-white hover:text-yellow-400 transition font-medium">Contacto</a>
+        {/* Links de navegación para pantallas grandes */}
+        <nav
+          className={`lg:flex items-center space-x-6 hidden ${
+            menuOpen ? "block" : "hidden"
+          } lg:block`}
+        >
+          <a
+            href="/#inicio"
+            className="text-white hover:text-yellow-400 transition font-medium"
+          >
+            Inicio
+          </a>
+          <a
+            href="/#nosotros"
+            className="text-white hover:text-yellow-400 transition font-medium"
+          >
+            Nosotros
+          </a>
+          <a
+            href="/#servicios"
+            className="text-white hover:text-yellow-400 transition font-medium"
+          >
+            Servicios
+          </a>
+          <a
+            href="/#dondeencontrarnos"
+            className="text-white hover:text-yellow-400 transition font-medium"
+          >
+            Dónde encontrarnos
+          </a>
+          <a
+            href="/#contacto"
+            className="text-white hover:text-yellow-400 transition font-medium"
+          >
+            Contacto
+          </a>
 
           {usuarioLogueado.rol === "administrador" && (
             <>
-              <a href="/administrador" className="text-white hover:text-yellow-400 transition font-medium">Administrador</a>
-              <button onClick={logout} className="text-white hover:text-yellow-400 transition font-medium">Cerrar sesión</button>
+              <a
+                href="/administrador"
+                className="text-white hover:text-yellow-400 transition font-medium"
+              >
+                Administrador
+              </a>
+              <button
+                onClick={logout}
+                className="text-white hover:text-yellow-400 transition font-medium"
+              >
+                Cerrar sesión
+              </button>
             </>
           )}
         </nav>
 
-        {/* Redes sociales */}
-        <div className="flex space-x-4">
-          <a href="https://www.facebook.com/tkcturismoaventura/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition">
-            <img src={facebook} alt="Facebook" className="w-7 h-7 filter drop-shadow-md hover:scale-110 transition duration-200" />
+        {/* Redes sociales en pantallas grandes */}
+        <div className="hidden lg:flex space-x-4">
+          <a
+            href="https://www.facebook.com/tkcturismoaventura/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-yellow-400 transition"
+          >
+            <img
+              src={facebook}
+              alt="Facebook"
+              className="w-7 h-7 filter drop-shadow-md hover:scale-110 transition duration-200"
+            />
           </a>
-          <a href="https://api.whatsapp.com/send?phone=3816097754" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition">
-            <img src={whatsapp} alt="WhatsApp" className="w-7 h-7 filter drop-shadow-md hover:scale-110 transition duration-200" />
+          <a
+            href="https://api.whatsapp.com/send?phone=3816097754"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-yellow-400 transition"
+          >
+            <img
+              src={whatsapp}
+              alt="WhatsApp"
+              className="w-7 h-7 filter drop-shadow-md hover:scale-110 transition duration-200"
+            />
           </a>
-          <a href="https://www.instagram.com/tucumankayakclub/?hl=es" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition">
-            <img src={instagram} alt="Instagram" className="w-7 h-7 filter drop-shadow-md hover:scale-110 transition duration-200" />
+          <a
+            href="https://www.instagram.com/tucumankayakclub/?hl=es"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-yellow-400 transition"
+          >
+            <img
+              src={instagram}
+              alt="Instagram"
+              className="w-7 h-7 filter drop-shadow-md hover:scale-110 transition duration-200"
+            />
           </a>
         </div>
       </div>
 
-      {/* Menú móvil */}
-      {menuOpen && (
-        <nav className="lg:hidden bg-red-600">
-          <ul className="flex flex-col items-center space-y-4 py-4">
-            <li><a href="/#inicio" className="text-white hover:text-yellow-400 transition font-medium" onClick={toggleMenu}>Inicio</a></li>
-            <li><a href="/#nosotros" className="text-white hover:text-yellow-400 transition font-medium" onClick={toggleMenu}>Nosotros</a></li>
-            <li><a href="/#servicios" className="text-white hover:text-yellow-400 transition font-medium" onClick={toggleMenu}>Servicios</a></li>
-            <li><a href="/#dondeencontrarnos" className="text-white hover:text-yellow-400 transition font-medium" onClick={toggleMenu}>Dónde encontrarnos</a></li>
-            <li><a href="/#contacto" className="text-white hover:text-yellow-400 transition font-medium" onClick={toggleMenu}>Contacto</a></li>
-            {usuarioLogueado.rol === "administrador" && (
-              <>
-                <li><a href="/administrador" className="text-white hover:text-yellow-400 transition font-medium" onClick={toggleMenu}>Administrador</a></li>
-                <li><button onClick={logout} className="text-white hover:text-yellow-400 transition font-medium">Cerrar sesión</button></li>
-              </>
-            )}
-          </ul>
-        </nav>
-      )}
+      {/* Menú móvil con enlaces y redes sociales */}
+      <nav
+        className={`lg:hidden bg-red-600 transition-all duration-500 ease-in-out ${
+          menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        } overflow-hidden`}
+        style={{
+          transitionDelay: menuOpen ? "0ms" : "0ms", // Se mantiene sin retraso al cerrar
+        }}
+      >
+        <ul className="flex flex-col items-center space-y-4 py-4">
+          <li>
+            <a
+              href="/#inicio"
+              className="text-white hover:text-yellow-400 transition font-medium"
+              onClick={toggleMenu}
+            >
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a
+              href="/#nosotros"
+              className="text-white hover:text-yellow-400 transition font-medium"
+              onClick={toggleMenu}
+            >
+              Nosotros
+            </a>
+          </li>
+          <li>
+            <a
+              href="/#servicios"
+              className="text-white hover:text-yellow-400 transition font-medium"
+              onClick={toggleMenu}
+            >
+              Servicios
+            </a>
+          </li>
+          <li>
+            <a
+              href="/#dondeencontrarnos"
+              className="text-white hover:text-yellow-400 transition font-medium"
+              onClick={toggleMenu}
+            >
+              Dónde encontrarnos
+            </a>
+          </li>
+          <li>
+            <a
+              href="/#contacto"
+              className="text-white hover:text-yellow-400 transition font-medium"
+              onClick={toggleMenu}
+            >
+              Contacto
+            </a>
+          </li>
+
+          {/* Redes sociales en el menú móvil */}
+          <li className="flex space-x-4">
+            <a
+              href="https://www.facebook.com/tkcturismoaventura/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-yellow-400 transition"
+            >
+              <img
+                src={facebook}
+                alt="Facebook"
+                className="w-7 h-7 filter drop-shadow-md hover:scale-110 transition duration-200"
+              />
+            </a>
+            <a
+              href="https://api.whatsapp.com/send?phone=3816097754"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-yellow-400 transition"
+            >
+              <img
+                src={whatsapp}
+                alt="WhatsApp"
+                className="w-7 h-7 filter drop-shadow-md hover:scale-110 transition duration-200"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/tucumankayakclub/?hl=es"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-yellow-400 transition"
+            >
+              <img
+                src={instagram}
+                alt="Instagram"
+                className="w-7 h-7 filter drop-shadow-md hover:scale-110 transition duration-200"
+              />
+            </a>
+          </li>
+
+          {usuarioLogueado.rol === "administrador" && (
+            <>
+              <li>
+                <a
+                  href="/administrador"
+                  className="text-white hover:text-yellow-400 transition font-medium"
+                  onClick={toggleMenu}
+                >
+                  Administrador
+                </a>
+              </li>
+              <li>
+                <button
+                  onClick={logout}
+                  className="text-white hover:text-yellow-400 transition font-medium"
+                >
+                  Cerrar sesión
+                </button>
+              </li>
+            </>
+          )}
+        </ul>
+      </nav>
     </header>
   );
 };

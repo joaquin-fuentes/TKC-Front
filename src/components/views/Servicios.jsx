@@ -1,6 +1,5 @@
 import React from "react";
-import { Container, Row, Col, NavLink } from "react-bootstrap"; // Importa componentes de Bootstrap
-// import "bootstrap/dist/css/bootstrap.min.css"; // Importa los estilos CSS de Bootstrap
+import { Link } from "react-router-dom";
 
 // Importa las imágenes de los servicios
 import excursiones from "../../assets/imagenes/alquilerkayak.webp";
@@ -12,9 +11,7 @@ import guarderia from "../../assets/imagenes/guarderia2.webp";
 import alquiler from "../../assets/imagenes/grupo2.webp";
 import estudiantiles from "../../assets/imagenes/portada3.webp";
 
-// Importa el logo y los iconos de los servicios
-import logo from "../../assets/logos/logoTransparente.webp";
-import { TbKayak } from "react-icons/tb";
+// Importa los iconos de los servicios
 import iconoAlquiler from "../../assets/iconos/kayakRojo.webp";
 import iconoExcursion from "../../assets/iconos/kayakRojo3.webp";
 import iconoCoaching from "../../assets/iconos/trekkingRojo2.webp";
@@ -25,185 +22,110 @@ import iconoGuarderia from "../../assets/iconos/kayakRojo4.webp";
 import iconoEstudiantiles from "../../assets/iconos/grupoRojo.webp";
 
 const Servicios = () => {
+  const servicios = [
+    {
+      img: alquiler,
+      icono: iconoAlquiler,
+      title: "Alquiler de kayaks",
+      link: "/alquilerkayak",
+    },
+    {
+      img: excursiones,
+      icono: iconoExcursion,
+      title: "Excursiones",
+      link: "/excursiones",
+    },
+    {
+      img: coaching,
+      icono: iconoCoaching,
+      title: "Team Building",
+      link: "/coaching",
+    },
+    {
+      img: escuelita,
+      icono: iconoEscuela,
+      title: "Escuela de kayaks",
+      link: "/escuela",
+    },
+    {
+      img: cumple,
+      icono: iconoCumple,
+      title: "Cumpleaños infantiles",
+      link: "/cumpleaños",
+    },
+    {
+      img: quincho,
+      icono: iconoAsador,
+      title: "Quincho para eventos",
+      link: "/alquilerquincho",
+    },
+    {
+      img: guarderia,
+      icono: iconoGuarderia,
+      title: "Guardería de Kayaks",
+      link: "/guarderia",
+    },
+    {
+      img: estudiantiles,
+      icono: iconoEstudiantiles,
+      title: "Estudiantiles",
+      link: "/estudiantiles",
+    },
+  ];
+
   return (
-    <div className="bg-rojo" id="servicios">
-      <Container>
-        {/* Encabezado con el ícono y título de los servicios */}
-        <div
-          data-aos="fade-up"
-          className="d-flex flex-column justify-content-center align-items-center pt-3"
-        >
-          <TbKayak className="iconoKayak text-light " />
-          <h3 className="text-light m-0 p-4 text-center ">
-            {" "}
-            Nuestros Servicios
-          </h3>
+    <section className="bg-red-600 mt-40 pb-16" id="servicios">
+      <div className="container mx-auto px-6">
+        {/* Encabezado */}
+        <div className="text-center mb-12">
+          <h3 className="text-white text-4xl font-bold">Nuestros Servicios</h3>
         </div>
-        {/* Filas de servicios */}
-        <Row className="pb-4 d-flex justify-content-center">
-          {/* Servicio de Alquiler de kayaks */}
-          <Col md="6" lg="4" className="d-flex justify-content-center">
-            <article data-aos="fade-up" className="articleCard mx-1 my-3">
+
+        {/* Grid de Servicios */}
+        <div className="flex flex-wrap justify-center gap-8">
+          {servicios.map((servicio, index) => (
+            <div
+              key={index}
+              className="relative bg-white rounded-lg shadow-lg overflow-hidden group transition-transform duration-300 transform hover:scale-105 w-full md:w-1/2 lg:w-1/4"
+            >
+              {/* Imagen del servicio */}
               <img
-                src={alquiler}
-                alt="imagen de alquiler de kayaks"
-                className="imgCard"
+                src={servicio.img}
+                alt={`imagen de ${servicio.title}`}
+                className="w-full h-56 object-cover"
               />
-              <div className="overlay"></div>
-              <img
-                src={iconoAlquiler}
-                alt="icono de alquiler de kayaks"
-                className="iconoCard"
-              />
-              <h5 className="textCard">Alquiler de kayaks</h5>
-              <NavLink href="/alquilerkayak" className="btnCard">
-                Ver más
-              </NavLink>
-            </article>
-          </Col>
-          {/* Servicio de Excursiones */}
-          <Col md="6" lg="4" className="d-flex justify-content-center">
-            <article data-aos="fade-up" className="articleCard mx-1 my-3">
-              <img
-                src={excursiones}
-                alt="imagen de excursiones"
-                className="imgCard"
-              />
-              <div className="overlay"></div>
-              <img
-                src={iconoExcursion}
-                alt="icono de excursiones"
-                className="iconoCard"
-              />
-              <h5 className="textCard">Excursiones</h5>
-              <NavLink href="/excursiones" className="btnCard">
-                Ver más
-              </NavLink>
-            </article>
-          </Col>
-          {/* Servicio de Coaching */}
-          <Col md="6" lg="4" className="d-flex justify-content-center">
-            <article data-aos="fade-up" className="articleCard mx-1 my-3">
-              <img
-                src={coaching}
-                alt="imagen de coaching"
-                className="imgCard"
-              />
-              <div className="overlay"></div>
-              <img
-                src={iconoCoaching}
-                alt="icono de coaching"
-                className="iconoCard p-1"
-              />
-              <h5 className="textCard">Team Building</h5>
-              <NavLink href="/coaching" className="btnCard">
-                Ver más
-              </NavLink>
-            </article>
-          </Col>
-          {/* Servicio de Escuela de kayaks */}
-          <Col md="6" lg="4" className="d-flex justify-content-center">
-            <article data-aos="fade-up" className="articleCard mx-1 my-3">
-              <img
-                src={escuelita}
-                alt="imagen de escuela de kayaks"
-                className="imgCard"
-              />
-              <div className="overlay"></div>
-              <img
-                src={iconoEscuela}
-                alt="icono de escuela de kayak"
-                className="iconoCard p-1"
-              />
-              <h5 className="textCard">Escuela de kayaks</h5>
-              <NavLink href="/escuela" className="btnCard">
-                Ver más
-              </NavLink>
-            </article>
-          </Col>
-          {/* Servicio de Cumpleaños infantiles */}
-          <Col md="6" lg="4" className="d-flex justify-content-center">
-            <article data-aos="fade-up" className="articleCard mx-1 my-3">
-              <img
-                src={cumple}
-                alt="imagen de cumpleaños infantiles"
-                className="imgCard"
-              />
-              <div className="overlay"></div>
-              <img
-                src={iconoCumple}
-                alt="icono de cumpleaños"
-                className="iconoCard p-1"
-              />
-              <h5 className="textCard">Cumpleaños infantiles</h5>
-              <NavLink href="/cumpleaños" className="btnCard">
-                Ver más
-              </NavLink>
-            </article>
-          </Col>
-          {/* Servicio de Alquiler de quincho para eventos */}
-          <Col md="6" lg="4" className="d-flex justify-content-center">
-            <article data-aos="fade-up" className="articleCard mx-1 my-3">
-              <img
-                src={quincho}
-                alt="imagen de alquiler de quincho para eventos"
-                className="imgCard"
-              />
-              <div className="overlay"></div>
-              <h5 className="textCard">Quincho para eventos</h5>
-              <img
-                src={iconoAsador}
-                alt="icono de asador"
-                className="iconoCard"
-              />
-              <NavLink href="/alquilerquincho" className="btnCard">
-                Ver más
-              </NavLink>
-            </article>
-          </Col>
-          {/* Servicio de Guardería de kayaks */}
-          <Col md="6" lg="4" className="d-flex justify-content-center">
-            <article data-aos="fade-up" className="articleCard mx-1 my-3">
-              <img
-                src={guarderia}
-                alt="imagen de guardería de kayaks"
-                className="imgCard"
-              />
-              <div className="overlay"></div>
-              <img
-                src={iconoGuarderia}
-                alt="icono de guardería de kayaks"
-                className="iconoCard p-1"
-              />
-              <h5 className="textCard">Guardería de Kayaks</h5>
-              <NavLink href="/guarderia" className="btnCard">
-                Ver más
-              </NavLink>
-            </article>
-          </Col>
-          {/* Servicio de Estudiantiles */}
-          <Col md="6" lg="4" className="d-flex justify-content-center">
-            <article data-aos="fade-up" className="articleCard mx-1 my-3">
-              <img
-                src={estudiantiles}
-                alt="imagen de Estudiantiles"
-                className="imgCard"
-              />
-              <div className="overlay"></div>
-              <img
-                src={iconoEstudiantiles}
-                alt="icono de Estudiantiles"
-                className="iconoCard p-1"
-              />
-              <h5 className="textCard">Estudiantiles</h5>
-              <NavLink href="/estudiantiles" className="btnCard">
-                Ver más
-              </NavLink>
-            </article>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+
+              {/* Overlay oscuro sobre la imagen */}
+              <div className="absolute inset-0 bg-black bg-opacity-25"></div>
+
+              {/* Icono del servicio */}
+              <div className="absolute top-4 left-4 w-12 h-12 flex items-center justify-center bg-white bg-opacity-75 rounded-full">
+                <img
+                  src={servicio.icono}
+                  alt={`icono de ${servicio.title}`}
+                  className="w-8 h-8"
+                />
+              </div>
+
+              {/* Título del servicio */}
+              <h5 className="absolute inset-0 flex justify-center items-center text-white text-xl font-bold">
+                {servicio.title}
+              </h5>
+
+              {/* Botón Ver más */}
+              <div className="absolute bottom-4 left-0 right-0 flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Link
+                  to={servicio.link}
+                  className="inline-block px-6 py-2 bg-red-600 text-white rounded-full hover:bg-red-500 transition duration-300"
+                >
+                  Ver más
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 
