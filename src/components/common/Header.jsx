@@ -1,7 +1,4 @@
-/* Este fragmento de código es un componente funcional de React llamado "Encabezado" que representa una
-barra de navegación para un sitio web. Aquí hay un desglose de lo que hace: */
 import React, { useState, useEffect } from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
 import { useNavigate, useLocation } from "react-router-dom";
 import Swal from "sweetalert2";
 import logoTransparente from "../../assets/logos/logoTransparente.webp";
@@ -15,7 +12,7 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation(); // Obtiene la ruta actual
+  const location = useLocation(); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,8 +27,9 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
   }, []);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen); // Cambia el estado para abrir/cerrar el menú
+    setMenuOpen(!menuOpen); 
   };
+
   const logout = () => {
     Swal.fire({
       title: "¿Estás seguro?",
@@ -43,7 +41,6 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
       confirmButtonText: "Sí",
     }).then((result) => {
       if (result.isConfirmed) {
-        // Navegar a la ruta principal y borrar session storage
         navigate("/");
         sessionStorage.removeItem("usuarioLogueado");
         setUsuarioLogueado({});
@@ -55,93 +52,71 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
   const isHome = location.pathname === "/" || location.pathname === "/#inicio";
 
   return (
-    <Navbar
-      expand="lg"
-      className={`header ${isScrolled ? "scrolled" : ""} ${
-        isHome ? "homeBackground" : "defaultBackground"
-      }`}
-    >
-      <Container>
-        <Navbar.Brand href="/#inicio" className="text-light fw-bold p-1">
-          <img src={logoTransparente} alt="Logo" className="logoMenu me-1" />
-        </Navbar.Brand>
-        <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          className="narbarToggle"
-          onClick={toggleMenu} // Maneja el clic para abrir/cerrar el menú
-          style={{ border: "none" }} // Evita el borde negro
-        >
+    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-red-600 shadow-lg' : 'bg-transparent'}`}>
+      <div className="container mx-auto flex items-center justify-between px-6 py-4">
+        {/* Logo */}
+        <a href="/#inicio" className="flex items-center">
+          <img src={logoTransparente} alt="Logo" className="w-20 filter drop-shadow-md" />
+        </a>
+
+        {/* Menu Hamburguesa para móviles */}
+        <div className="lg:hidden" onClick={toggleMenu}>
           {menuOpen ? (
-            <IoClose className="menuHamburguesaAbierto transitionMenu" />
+            <IoClose className="text-white text-4xl cursor-pointer" />
           ) : (
-            <GiHamburgerMenu className="menuHamburguesaCerrado transitionMenu" />
+            <GiHamburgerMenu className="text-white text-4xl cursor-pointer" />
           )}
-        </Navbar.Toggle>
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="contenedorEnlacesNav">
-            <Nav.Link
-              className="text-light text-header text-right text-md-left"
-              href="/#inicio"
-            >
-              Inicio
-            </Nav.Link>
-            <Nav.Link className="text-light text-header" href="/#nosotros">
-              Nosotros
-            </Nav.Link>
-            <Nav.Link className="text-light text-header" href="/#servicios">
-              Servicios
-            </Nav.Link>
-            <Nav.Link
-              className="text-light text-header"
-              href="/#dondeencontrarnos"
-            >
-              Donde encontrarnos
-            </Nav.Link>
-            <Nav.Link className="text-light text-header" href="/#contacto">
-              Contacto
-            </Nav.Link>
-            {usuarioLogueado.rol === "administrador" ? (
+        </div>
+
+        {/* Links de navegación */}
+        <nav className={`lg:flex items-center space-x-6 hidden ${menuOpen ? "block" : "hidden"} lg:block`}>
+          <a href="/#inicio" className="text-white hover:text-yellow-400 transition font-medium">Inicio</a>
+          <a href="/#nosotros" className="text-white hover:text-yellow-400 transition font-medium">Nosotros</a>
+          <a href="/#servicios" className="text-white hover:text-yellow-400 transition font-medium">Servicios</a>
+          <a href="/#dondeencontrarnos" className="text-white hover:text-yellow-400 transition font-medium">Dónde encontrarnos</a>
+          <a href="/#contacto" className="text-white hover:text-yellow-400 transition font-medium">Contacto</a>
+
+          {usuarioLogueado.rol === "administrador" && (
+            <>
+              <a href="/administrador" className="text-white hover:text-yellow-400 transition font-medium">Administrador</a>
+              <button onClick={logout} className="text-white hover:text-yellow-400 transition font-medium">Cerrar sesión</button>
+            </>
+          )}
+        </nav>
+
+        {/* Redes sociales */}
+        <div className="flex space-x-4">
+          <a href="https://www.facebook.com/tkcturismoaventura/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition">
+            <img src={facebook} alt="Facebook" className="w-7 h-7 filter drop-shadow-md hover:scale-110 transition duration-200" />
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=3816097754" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition">
+            <img src={whatsapp} alt="WhatsApp" className="w-7 h-7 filter drop-shadow-md hover:scale-110 transition duration-200" />
+          </a>
+          <a href="https://www.instagram.com/tucumankayakclub/?hl=es" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition">
+            <img src={instagram} alt="Instagram" className="w-7 h-7 filter drop-shadow-md hover:scale-110 transition duration-200" />
+          </a>
+        </div>
+      </div>
+
+      {/* Menú móvil */}
+      {menuOpen && (
+        <nav className="lg:hidden bg-red-600">
+          <ul className="flex flex-col items-center space-y-4 py-4">
+            <li><a href="/#inicio" className="text-white hover:text-yellow-400 transition font-medium" onClick={toggleMenu}>Inicio</a></li>
+            <li><a href="/#nosotros" className="text-white hover:text-yellow-400 transition font-medium" onClick={toggleMenu}>Nosotros</a></li>
+            <li><a href="/#servicios" className="text-white hover:text-yellow-400 transition font-medium" onClick={toggleMenu}>Servicios</a></li>
+            <li><a href="/#dondeencontrarnos" className="text-white hover:text-yellow-400 transition font-medium" onClick={toggleMenu}>Dónde encontrarnos</a></li>
+            <li><a href="/#contacto" className="text-white hover:text-yellow-400 transition font-medium" onClick={toggleMenu}>Contacto</a></li>
+            {usuarioLogueado.rol === "administrador" && (
               <>
-                <Nav.Link
-                  className="text-light text-header"
-                  href="/administrador"
-                >
-                  Administrador
-                </Nav.Link>
-                <Nav.Link className="text-light text-header" onClick={logout}>
-                  Cerrar sesion
-                </Nav.Link>
+                <li><a href="/administrador" className="text-white hover:text-yellow-400 transition font-medium" onClick={toggleMenu}>Administrador</a></li>
+                <li><button onClick={logout} className="text-white hover:text-yellow-400 transition font-medium">Cerrar sesión</button></li>
               </>
-            ) : (
-              <></>
             )}
-          </Nav>
-          <Nav className="ms-auto contenedorImgHeader">
-            <Nav.Link
-              className="text-light me-1 text-header"
-              target="_blank"
-              href="https://www.facebook.com/tkcturismoaventura/"
-            >
-              <img src={facebook} className="icono-header" alt="facebook" />
-            </Nav.Link>
-            <Nav.Link
-              className="text-light me-1 text-header"
-              target="_blank"
-              href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre los servicios de Tucuman Kayak Club"
-            >
-              <img src={whatsapp} className="icono-header" alt="whatsapp" />
-            </Nav.Link>
-            <Nav.Link
-              className="text-light me-1 text-header"
-              target="_blank"
-              href="https://www.instagram.com/tucumankayakclub/?hl=es"
-            >
-              <img src={instagram} className="icono-header" alt="instagram" />
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+          </ul>
+        </nav>
+      )}
+    </header>
   );
 };
 

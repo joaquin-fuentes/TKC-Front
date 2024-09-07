@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importa los estilos CSS de Bootstrap
+// import 'bootstrap/dist/css/bootstrap.min.css'; // Importa los estilos CSS de Bootstrap
 import { BrowserRouter, Routes, Route } from "react-router-dom"; // Importa componentes de React Router
 import Inicio from './components/views/Inicio'; // Importa el componente Inicio
 import PaginaSobreNosotros from "./components/views/PaginaSobreNosotros"; // Importa el componente PaginaSobreNosotros

@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, NavLink } from "react-bootstrap"; // Importa componentes de Bootstrap
-import "bootstrap/dist/css/bootstrap.min.css"; // Importa los estilos CSS de Bootstrap
+// import "bootstrap/dist/css/bootstrap.min.css"; // Importa los estilos CSS de Bootstrap
 
 // Importa las imágenes de los servicios
 import excursiones from "../../assets/imagenes/alquilerkayak.webp";
