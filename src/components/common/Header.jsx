@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import logoTransparente from "../../assets/logos/logoTransparente.webp";
 import facebook from "../../assets/imagenes/icons8-facebook.svg";
@@ -7,16 +7,17 @@ import whatsapp from "../../assets/imagenes/icons8-whatsapp.svg";
 import instagram from "../../assets/imagenes/icons8-instagram.svg";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
+import useHandleSmoothScroll from "../hooks/useHandleSmoothScroll"; // Importamos el hook personalizado
 
 const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation();
+  const handleSmoothScroll = useHandleSmoothScroll(); // Usamos el hook para scroll suave
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 50); // Cambia a rojo si se hace scroll
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -49,17 +50,18 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
     });
   };
 
-  const isHome = location.pathname === "/" || location.pathname === "/#inicio";
-
   return (
     <header
-      className={`fixed w-full top-0 z-50 transition-all duration-500 ease-in-out ${
-        isScrolled || menuOpen ? "bg-red-600 shadow-lg" : "bg-transparent"
-      }`}
+      className={`fixed w-full top-0 z-50 transition-all duration-500 ease-in-out 
+        ${
+          isScrolled
+            ? "bg-red-600 shadow-lg"
+            : "lg:bg-transparent bg-red-600 lg:shadow-none"
+        }`} // Rojo en móviles por defecto, transparente en grandes hasta que se haga scroll
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <a href="/#inicio" className="flex items-center">
+        <a href="/#inicio" onClick={(e) => handleSmoothScroll(e, "inicio")}>
           <img
             src={logoTransparente}
             alt="Logo"
@@ -84,30 +86,35 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
         >
           <a
             href="/#inicio"
+            onClick={(e) => handleSmoothScroll(e, "inicio")}
             className="text-white hover:text-yellow-400 transition font-medium"
           >
             Inicio
           </a>
           <a
             href="/#nosotros"
+            onClick={(e) => handleSmoothScroll(e, "nosotros")}
             className="text-white hover:text-yellow-400 transition font-medium"
           >
             Nosotros
           </a>
           <a
             href="/#servicios"
+            onClick={(e) => handleSmoothScroll(e, "servicios")}
             className="text-white hover:text-yellow-400 transition font-medium"
           >
             Servicios
           </a>
           <a
             href="/#dondeencontrarnos"
+            onClick={(e) => handleSmoothScroll(e, "dondeencontrarnos")}
             className="text-white hover:text-yellow-400 transition font-medium"
           >
             Dónde encontrarnos
           </a>
           <a
             href="/#contacto"
+            onClick={(e) => handleSmoothScroll(e, "contacto")}
             className="text-white hover:text-yellow-400 transition font-medium"
           >
             Contacto
@@ -177,14 +184,13 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
         className={`lg:hidden bg-red-600 transition-all duration-500 ease-in-out ${
           menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         } overflow-hidden`}
-        style={{ transitionDelay: "100ms" }}
       >
         <ul className="flex flex-col items-center space-y-4 py-4">
           <li>
             <a
               href="/#inicio"
+              onClick={(e) => handleSmoothScroll(e, "inicio")}
               className="text-white hover:text-yellow-400 transition font-medium"
-              onClick={toggleMenu}
             >
               Inicio
             </a>
@@ -192,8 +198,8 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
           <li>
             <a
               href="/#nosotros"
+              onClick={(e) => handleSmoothScroll(e, "nosotros")}
               className="text-white hover:text-yellow-400 transition font-medium"
-              onClick={toggleMenu}
             >
               Nosotros
             </a>
@@ -201,8 +207,8 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
           <li>
             <a
               href="/#servicios"
+              onClick={(e) => handleSmoothScroll(e, "servicios")}
               className="text-white hover:text-yellow-400 transition font-medium"
-              onClick={toggleMenu}
             >
               Servicios
             </a>
@@ -210,8 +216,8 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
           <li>
             <a
               href="/#dondeencontrarnos"
+              onClick={(e) => handleSmoothScroll(e, "dondeencontrarnos")}
               className="text-white hover:text-yellow-400 transition font-medium"
-              onClick={toggleMenu}
             >
               Dónde encontrarnos
             </a>
@@ -219,14 +225,13 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
           <li>
             <a
               href="/#contacto"
+              onClick={(e) => handleSmoothScroll(e, "contacto")}
               className="text-white hover:text-yellow-400 transition font-medium"
-              onClick={toggleMenu}
             >
               Contacto
             </a>
           </li>
-
-          {/* Redes sociales en el menú móvil */}
+          {/* Redes sociales */}
           <li className="flex space-x-4">
             <a
               href="https://www.facebook.com/tkcturismoaventura/"
