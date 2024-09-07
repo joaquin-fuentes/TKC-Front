@@ -49,6 +49,8 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
     });
   };
 
+  const isHome = location.pathname === "/" || location.pathname === "/#inicio";
+
   return (
     <header
       className={`fixed w-full top-0 z-50 transition-all duration-500 ease-in-out ${
@@ -175,9 +177,7 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
         className={`lg:hidden bg-red-600 transition-all duration-500 ease-in-out ${
           menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         } overflow-hidden`}
-        style={{
-          transitionDelay: menuOpen ? "0ms" : "0ms", // Se mantiene sin retraso al cerrar
-        }}
+        style={{ transitionDelay: "100ms" }}
       >
         <ul className="flex flex-col items-center space-y-4 py-4">
           <li>
