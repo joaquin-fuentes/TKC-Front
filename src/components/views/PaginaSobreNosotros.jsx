@@ -1,66 +1,68 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap"; // Importa componentes de Bootstrap
-import equipoTKC from "../../assets/imagenes/equipotkc.webp"; // Importa imagen del equipo TKC
-import carpaTkc from "../../assets/imagenes/carpatkc.webp"; // Importa imagen de la carpa TKC
-import logoTkc from "../../assets/logos/logoTransparente.webp"; // Importa logo transparente TKC
+import React, { useEffect } from "react";
+import equipoTKC from "../../assets/imagenes/equipotkc.webp"; // Imagen del equipo TKC
+import useScrollToTop from "../hooks/useScrollToTop";
 
 const PaginaSobreNosotros = () => {
+  useScrollToTop(); // Llama al hook para hacer scroll al inicio
+
   return (
-    <div className="fondoSobreNosotros text-light">
-      <Container>
+    <section className="bg-red-700 text-white py-12 pt-24" id="sobre-nosotros">
+      <div className="container mx-auto px-6">
         {/* Título de la página */}
-        <h2 data-aos="fade-up" className="text-center tituloSobreNosotros mb-4">
-          Sobre Nosotros
-        </h2>
-        {/* Línea separadora */}
-        <hr data-aos="fade-up" className="m-0 text-light my-4" />
-        <Row>
-          {/* Columna para la imagen del equipo TKC */}
-          <Col md={6}>
-            <article data-aos="fade-up">
-              <img
-                src={equipoTKC}
-                alt="imagen equipo tkc"
-                className="w-100 rounded p-3"
-              />
-            </article>
-          </Col>
-          {/* Columna para el contenido informativo */}
-          <Col md={6}>
-            <article data-aos="fade-up" className="p-3 text-center">
-              {/* Párrafo con información sobre TKC */}
-              <p className="textSobreNosotros">
-                ¡Bienvenidos a Tucumán Kayak Club (TKC), donde convertimos
-                simples momentos en emocionantes aventuras! Con más de 15 años
-                de experiencia en el Turismo Activo y los deportes alternativos,
-                en TKC nos enorgullece ofrecer experiencias seguras y llenas de
-                diversión para todos nuestros clientes. <br />
-                Nuestro equipo está conformado por profesionales con
-                conocimientos especializados y una pasión inigualable por lo que
-                hacemos. Hemos invertido tiempo en capacitaciones tanto a nivel
-                nacional como internacional, obteniendo certificaciones en
-                primeros auxilios, seguridad y rescate, tanto en aguas blancas
-                como en entornos agrestes. Además, nuestra amplia experiencia en
-                el manejo de grupos nos permite garantizar una atención
-                personalizada y adaptada a las necesidades de cada individuo.{" "}
-                <br />
-                Contamos con una flota de 30 kayaks dobles, cada uno equipado
-                con chalecos salvavidas y remos de alta calidad y homologados.
-                También disponemos de todo el equipo necesario para la práctica
-                de Rapel, incluyendo cuerdas, arneses, mosquetones y más. <br />
-                Nos enorgullece informar que contamos con la habilitación
-                correspondiente emitida por el Ente Autárquico Tucumán Turismo
-                para realizar nuestras excursiones, y cumplimos con todos los
-                requisitos legales, seguros e inscripciones necesarias. <br />
-                En TKC, estamos comprometidos con la seguridad, la diversión y
-                la excelencia en cada una de nuestras actividades. ¡Únete a
-                nosotros y descubre un mundo de aventuras emocionantes!
-              </p>
-            </article>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+        <header className="text-center mb-8">
+          <h1
+            data-aos="fade-up"
+            className="text-3xl md:text-4xl font-bold mb-4"
+          >
+            Sobre Nosotros
+          </h1>
+          <hr className="border-t-2 border-white w-24 mx-auto" />
+        </header>
+
+        {/* Contenido principal */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          {/* Imagen del equipo TKC */}
+          <article data-aos="fade-up">
+            <img
+              src={equipoTKC}
+              alt="Equipo de Tucumán Kayak Club"
+              className="w-full rounded-lg shadow-lg"
+            />
+          </article>
+
+          {/* Información textual */}
+          <article data-aos="fade-up" className="leading-relaxed self-start">
+            <p className="mb-6 text-white text-center md:text-start">
+              ¡Bienvenidos a Tucumán Kayak Club (TKC), donde convertimos simples
+              momentos en emocionantes aventuras! Con más de 15 años de
+              experiencia en el Turismo Activo y los deportes alternativos, en
+              TKC nos enorgullece ofrecer experiencias seguras y llenas de
+              diversión para todos nuestros clientes.
+            </p>
+            <p className="mb-6 text-white text-center md:text-start">
+              Nuestro equipo está conformado por profesionales con conocimientos
+              especializados y una pasión inigualable por lo que hacemos. Hemos
+              obtenido certificaciones en primeros auxilios, seguridad y
+              rescate, tanto en aguas blancas como en entornos agrestes.
+              También, contamos con una amplia experiencia en el manejo de
+              grupos, garantizando una atención personalizada y adaptada.
+            </p>
+            <p className="mb-6 text-white text-center md:text-start">
+              Contamos con una flota de 30 kayaks dobles, equipados con chalecos
+              salvavidas y remos homologados. También disponemos del equipo
+              necesario para la práctica de Rapel, como cuerdas, arneses y
+              mosquetones.
+            </p>
+            <p className="text-white text-center md:text-start">
+              Estamos habilitados por el Ente Autárquico Tucumán Turismo para
+              realizar nuestras excursiones, cumpliendo con todos los requisitos
+              legales, seguros e inscripciones necesarias. ¡Únete a nosotros y
+              descubre un mundo de aventuras emocionantes!
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
   );
 };
 

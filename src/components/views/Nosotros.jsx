@@ -1,24 +1,32 @@
 import React from "react";
-import { Container, Nav } from "react-bootstrap"; // Importa componentes de Bootstrap
-import { MdKayaking } from "react-icons/md"; // Importa el icono de kayak de React Icons
+import { Link } from "react-router-dom"; // Importamos Link de react-router-dom
+import { MdKayaking } from "react-icons/md"; // Icono de kayak de React Icons
 
 const Nosotros = () => {
   return (
-    <div className="divSobreNosotros" id="nosotros">
-      <Container>
+    <section className="bg-gray-100 pt-8" id="nosotros">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
         {/* Contenido principal */}
-        <article
-          data-aos="fade-up"
-          className="d-flex flex-column justify-content-center align-items-center mb-4"
-        >
-          <MdKayaking className="iconoKayak text-rojo mt-3" />{" "}
+        <article className="text-center flex flex-col items-center mb-4">
           {/* Icono de kayak */}
-          <h1 className=" fs-3 text-rojo m-0 p-4 text-center ">
+          <MdKayaking
+            data-aos="fade-up"
+            className="text-red-600 text-6xl mb-4"
+          />
+
+          {/* Título principal */}
+          <h2
+            data-aos="fade-up"
+            className="text-red-600 text-3xl md:text-4xl font-bold mb-6"
+          >
             Somos una empresa de Turismo Aventura ubicada en El Cadillal
-          </h1>
-          {/* Título */}
-          <p className="text-center">
-            {/* <h1 className="d-inline fs-6">Tucumán Kayak Club</h1> */}
+          </h2>
+
+          {/* Texto descriptivo */}
+          <p
+            data-aos="fade-up"
+            className="text-gray-700 text-base md:text-lg leading-relaxed max-w-3xl mx-auto"
+          >
             Tucumán kayak club es una empresa con más de 15 años de experiencia
             en Turismo Activo y deportes alternativos. Su equipo altamente
             capacitado garantiza experiencias seguras y divertidas, respaldadas
@@ -28,15 +36,19 @@ const Nosotros = () => {
             Ente Autárquico Tucumán Turismo, asegurando excursiones con todos
             los permisos y seguros necesarios. ¡Ven y únete a nosotros para
             vivir una experiencia inolvidable en la naturaleza!
-          </p>{" "}
-          {/* Texto informativo */}
-          <Nav.Link href="/sobrenosotros" className="btn outline-rojo">
+          </p>
+
+          {/* Botón con react-router-dom Link */}
+          <Link
+            data-aos="fade-up"
+            to="/sobrenosotros"
+            className="mt-6 w-full md:w-auto px-4 py-3 text-red-600 border-2 border-red-600 rounded-full hover:bg-red-600 hover:text-white transition duration-300 font-semibold text-center"
+          >
             Sobre nosotros
-          </Nav.Link>{" "}
-          {/* Botón para ir a la página "Sobre nosotros" */}
+          </Link>
         </article>
-      </Container>
-    </div>
+      </div>
+    </section>
   );
 };
 

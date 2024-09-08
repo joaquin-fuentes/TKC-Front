@@ -1,9 +1,4 @@
-/* El código anterior es un componente de React llamado Excursiones, que muestra información sobre
-diferentes excursiones o actividades al aire libre. Importa imágenes para cada excursión, como
-kayak, rapel y barranquismo, y utiliza componentes de React Bootstrap como Container, Row, Col y Nav
-para estructurar el diseño. */
 import React from "react";
-import { Container, Row, Col, Nav } from "react-bootstrap";
 import canyonning from "../../../assets/imagenes/trekking.webp";
 import kayakrio from "../../../assets/imagenes/fondokayak2.webp";
 import kayakdique from "../../../assets/imagenes/remando.webp";
@@ -11,392 +6,168 @@ import rappeldique from "../../../assets/imagenes/rappel.webp";
 import rappelaguaschiquitas from "../../../assets/imagenes/rappelac.webp";
 import viaducto from "../../../assets/imagenes/viaducto2.webp";
 import whatsapp from "../../../assets/imagenes/icons8-whatsapp.svg";
+import useScrollToTop from "../../hooks/useScrollToTop";
 
 const Excursiones = () => {
+  useScrollToTop(); // Hook para hacer scroll al inicio
+
+  const excursions = [
+    {
+      title: "Kayak en el Río Loro",
+      imgSrc: kayakrio,
+      description:
+        "Nos encontramos en el Cadillal donde se encuentra el río Loro, ideal para iniciarse en este deporte. El río cuenta con una serie de rápidos clase 1 que nos ofrecerán adrenalina, pero al mismo tiempo, seguridad. Comenzaremos con un mini-curso instructivo a orillas del río para luego hacer un descenso de aproximadamente 1 y ½ hs.",
+      horario: "09:00 o 14:00hs",
+      incluye: "Guía, mini-curso instructivo, snack, todo el equipo necesario.",
+      recorrido: "5km de río",
+      duracion: "4hs",
+      whatsappMsg: "KAYAK EN EL RIO LORO",
+    },
+    {
+      title: "Kayak en el Dique",
+      imgSrc: kayakdique,
+      description:
+        "Nos encontramos en El Cadillal para llegar a su gran espejo de agua, donde después de un curso instructivo remaremos en las mansas aguas del dique haciendo un recorrido por sus bahías y conociendo su hermosa naturaleza.",
+      horario: "09:00 o 14:00hs",
+      incluye: "Guía, curso instructivo, snack y todo el equipo necesario.",
+      recorrido: "4km",
+      duracion: "3hs",
+      whatsappMsg: "KAYAK EN EL DIQUE",
+    },
+    {
+      title: "Kayak en el Dique + Rappel",
+      imgSrc: rappeldique,
+      description:
+        "Remaremos en las mansas aguas del dique haciendo un recorrido por sus bahías. Al llegar a la tercera, descenderemos una pared de 15 mts. de alto con sogas y arneses para sumarle adrenalina a nuestra aventura.",
+      horario: "09:00 o 14:00hs",
+      incluye: "Guía, curso instructivo, snack y todo el equipo necesario.",
+      recorrido: "4km",
+      duracion: "4hs",
+      whatsappMsg: "KAYAK EN EL DIQUE + RAPPEL",
+    },
+    {
+      title: "Canyoning en la Reserva Aguas Chiquitas",
+      imgSrc: canyonning,
+      description:
+        "Comenzamos con un trekking ascendiendo por el cerro Medina hasta llegar al cañón de Aguas Chiquitas, donde cruzaremos piletones de agua, escalaremos rocas y conviviremos con un paisaje natural impresionante hasta llegar a una cascada de 50 mts. de alto.",
+      horario: "09:00",
+      incluye: "Guía, curso instructivo, snack y todo el equipo necesario.",
+      recorrido: "8km en el río",
+      duracion: "6hs",
+      whatsappMsg: "CANYONING EN LA RESERVA AGUAS CHIQUITAS",
+    },
+    {
+      title: "Canyoning Aguas Chiquitas + Rappel",
+      imgSrc: rappelaguaschiquitas,
+      description:
+        "Después del trekking por el cañón de Aguas Chiquitas, subimos a una cascada de 50 mts y la descendemos en rappel para una experiencia más intensa y aventurera.",
+      horario: "09:00",
+      incluye: "Guía, curso instructivo, snack y todo el equipo necesario.",
+      recorrido: "9km",
+      duracion: "7hs",
+      whatsappMsg: "CANYONING AGUAS CHIQUITAS + RAPPEL",
+    },
+    {
+      title: "Rappel aéreo en el Viaducto El Saladillo",
+      imgSrc: viaducto,
+      description:
+        "Desciende en rappel desde el Viaducto El Saladillo, una estructura imponente y moderna. Una experiencia emocionante y llena de adrenalina.",
+      horario: "09:00 o 14:00hs",
+      incluye: "Guía, curso instructivo, snack y todo el equipo necesario.",
+      recorrido: "25 mts en descenso",
+      duracion: "2hs",
+      whatsappMsg: "RAPPEL AÉREO EN EL VIADUCTO EL SALADILLO",
+    },
+  ];
+
   return (
-    <div>
-      <div className="fondoExcursiones">
-        <Container>
-          <h2
+    <section className="bg-red-700 text-white py-12 pt-24" id="excursiones">
+      <div className="container mx-auto px-6">
+        {/* Título de la sección */}
+        <header className="text-center mb-8 md:mb-16">
+          <h1
             data-aos="fade-up"
-            className="text-center text-light tituloSobreNosotros mb-4"
+            className="text-3xl md:text-4xl font-bold mb-4"
           >
             Excursiones
-          </h2>
-          <hr data-aos="fade-up" className="m-0 text-light my-4" />
-          {/* kAYAK RIO LORO */}
-          <Row>
-            <Col md={6}>
-              <article data-aos="fade-up">
+          </h1>
+          <hr
+            data-aos="fade-up"
+            className="border-t-2 border-white w-24 mx-auto"
+          />
+        </header>
+
+        {/* Excursiones List */}
+        {excursions.map((excursion, index) => (
+          <div key={index} className="mb-12">
+            {/* Título */}
+            <h5
+              data-aos="fade-up"
+              className="text-2xl font-bold text-center mb-6"
+            >
+              {excursion.title}
+            </h5>
+
+            {/* Contenido: en dispositivos pequeños todo en una columna, en grandes dos columnas con imagen a la izquierda o derecha */}
+            <div
+              className={`grid grid-cols-1 md:grid-cols-2 gap-8 items-center ${
+                index % 2 === 1 ? "md:flex-row-reverse" : ""
+              }`}
+            >
+              {/* Imagen de la excursión */}
+              <article data-aos="fade-up" className="flex items-start">
                 <img
-                  src={kayakrio}
-                  alt="imagen de kayak en rio"
-                  className="imgExcursion"
+                  src={excursion.imgSrc}
+                  alt={`Imagen de ${excursion.title}`}
+                  className="w-full h-64 md:h-80 object-fill rounded-lg shadow-lg"
                 />
               </article>
-            </Col>
-            <Col md={6}>
-              <article data-aos="fade-up" className="p-3 text-center">
-                <h5 className="textTitulo">Kayak en el Río Loro</h5>
-                <ul className="p-0 m-0">
-                  <li className="textSubtitulo">
-                    Horario de salida:{" "}
-                    <span className="textExplicacion">09:00 o 14:00hs</span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Descripcion:{" "}
-                    <span className="textExplicacion">
-                      Nos encontramos en el Cadillal donde se encuentra el río
-                      Loro, ideal para iniciarse en este deporte. El río cuenta
-                      con una serie de rápidos clase 1 que nos ofrecerán
-                      adrenalina, pero al mismo tiempo, seguridad. Comenzaremos
-                      con un mini-curso instructivo a orillas del río para luego
-                      hacer un descenso de aproximadamente 1 y ½ hs.{" "}
-                    </span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Incluye:{" "}
-                    <span className="textExplicacion">
-                      Guía, mini-curso instructivo, snack, todo el equipo
-                      necesario.
-                    </span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Recorrido:{" "}
-                    <span className="textExplicacion">5km de río</span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Duración total: <span className="textExplicacion">4hs</span>
-                  </li>
-                  <Nav.Link
-                    className="text-light mt-2 fs-5 d-flex justify-content-center align-items-center"
-                    target="_blank"
-                    href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre la excursion de KAYAK EN EL RIO LORO"
-                  >
-                    <img
-                      src={whatsapp}
-                      className="icono-header mx-1"
-                      alt="whatsapp"
-                    />
-                    Enviar Mensaje
-                  </Nav.Link>
-                </ul>
+
+              {/* Detalles de la excursión */}
+              <article
+                data-aos="fade-up"
+                className="flex flex-col items-center md:items-start justify-start leading-relaxed space-y-6 text-center md:text-start"
+              >
+                <p>{excursion.description}</p>
+                <p>
+                  <span className="font-bold">Horario de salida:</span>{" "}
+                  {excursion.horario}
+                </p>
+                <p>
+                  <span className="font-bold">Incluye:</span>{" "}
+                  {excursion.incluye}
+                </p>
+                <p>
+                  <span className="font-bold">Recorrido:</span>{" "}
+                  {excursion.recorrido}
+                </p>
+                <p>
+                  <span className="font-bold">Duración total:</span>{" "}
+                  {excursion.duracion}
+                </p>
+                <a
+                  href={`https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre la excursion de ${excursion.whatsappMsg}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+                >
+                  <img src={whatsapp} alt="WhatsApp" className="w-5 h-5 mr-2" />
+                  Enviar Mensaje
+                </a>
               </article>
-            </Col>
-          </Row>
-          <hr data-aos="fade-up" className="m-0 text-light my-4" />
-          {/* KAYAK DIQUE */}
-          <Row className="py-4 d-flex flex-row-reverse">
-            <Col md={6}>
-              <article data-aos="fade-up">
-                <img
-                  src={kayakdique}
-                  alt="imagen de kayak en dique"
-                  className="imgExcursion"
-                />
-              </article>
-            </Col>
-            <Col md={6}>
-              <article data-aos="fade-up" className="p-3 text-center">
-                <h5 className="textTitulo">Kayak en el Dique</h5>
-                <ul className="p-0 m-0">
-                  <li className="textSubtitulo">
-                    Horario de salida:{" "}
-                    <span className="textExplicacion">09:00 o 14:00hs</span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Descripcion:{" "}
-                    <span className="textExplicacion">
-                      Nos encontramos en El Cadillal para llegar a su gran
-                      espejo de agua, donde después de un curso instructivo
-                      remaremos en las mansas aguas del dique haciendo un
-                      recorrido por sus bahías y conociendo su hermosa
-                      naturaleza.{" "}
-                    </span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Incluye:{" "}
-                    <span className="textExplicacion">
-                      Guía, curso instructivo, snack y todo el equipo necesario.
-                    </span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Recorrido: <span className="textExplicacion">4km</span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Duración total: <span className="textExplicacion">3hs</span>
-                  </li>
-                  <Nav.Link
-                    className="text-light mt-2 fs-5 d-flex justify-content-center align-items-center"
-                    target="_blank"
-                    href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre la excursion de KAYAK EN EL DIQUE"
-                  >
-                    <img
-                      src={whatsapp}
-                      className="icono-header mx-1"
-                      alt="whatsapp"
-                    />
-                    Enviar Mensaje
-                  </Nav.Link>
-                </ul>
-              </article>
-            </Col>
-          </Row>
-          <hr data-aos="fade-up" className="m-0 text-light my-4" />
-          {/* KAYAK EN EL DIQUE + RAPPEL */}
-          <Row className="py-4 ">
-            <Col md={6}>
-              <article data-aos="fade-up">
-                <img
-                  src={rappeldique}
-                  alt="imagen de rappel en el dique"
-                  className="imgExcursion"
-                />
-              </article>
-            </Col>
-            <Col md={6}>
-              <article data-aos="fade-up" className="p-3 text-center">
-                <h5 className="textTitulo">Kayak en el Dique + Rappel</h5>
-                <ul className="p-0 m-0">
-                  <li className="textSubtitulo">
-                    Horario de salida:{" "}
-                    <span className="textExplicacion">09:00 o 14:00hs</span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Descripcion:{" "}
-                    <span className="textExplicacion">
-                      Nos encontramos en El Cadillal para llegar a su gran
-                      espejo de agua, donde después de un curso instructivo
-                      remaremos en las mansas aguas del dique haciendo un
-                      recorrido por sus bahías, al llegar a la tercera,
-                      descenderemos una pared de 15 mts. de alto con sogas y
-                      arneses para sumarle adrenalina a nuestra aventura.{" "}
-                    </span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Incluye:{" "}
-                    <span className="textExplicacion">
-                      Guía, curso instructivo, snack y todo el equipo necesario.
-                    </span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Recorrido: <span className="textExplicacion">4km</span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Duración total: <span className="textExplicacion">4hs</span>
-                  </li>
-                  <Nav.Link
-                    className="text-light mt-2 fs-5 d-flex justify-content-center align-items-center"
-                    target="_blank"
-                    href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre la excursion de KAYAK EN EL DIQUE + RAPPEL"
-                  >
-                    <img
-                      src={whatsapp}
-                      className="icono-header mx-1"
-                      alt="whatsapp"
-                    />
-                    Enviar Mensaje
-                  </Nav.Link>
-                </ul>
-              </article>
-            </Col>
-          </Row>
-          <hr data-aos="fade-up" className="m-0 text-light my-4" />
-          {/* Canyoning en la Reserva Aguas Chiquitas*/}
-          <Row className="py-4 d-flex flex-row-reverse">
-            <Col md={6}>
-              <article data-aos="fade-up">
-                <img
-                  src={canyonning}
-                  alt="imagen de canyonning en aguas chiquitas"
-                  className="imgExcursion"
-                />
-              </article>
-            </Col>
-            <Col md={6}>
-              <article data-aos="fade-up" className="p-3 text-center">
-                <h5 className="textTitulo">
-                  Canyoning en la Reserva Aguas Chiquitas
-                </h5>
-                <ul className="p-0 m-0">
-                  <li className="textSubtitulo">
-                    Horario de salida:{" "}
-                    <span className="textExplicacion">09:00</span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Descripcion:{" "}
-                    <span className="textExplicacion">
-                      Comenzamos con un trekking ascendiendo por el cerro Medina
-                      hasta llegar al cañón de Aguas Chiquitas, donde iniciamos
-                      la subida por el mismo. Durante todo el recorrido
-                      cruzaremos piletones de agua, escalaremos rocas y
-                      conviviremos con un paisaje de espesas arboledas y
-                      abundante vida silvestre, hasta llegar a una cascada de 50
-                      mts. de alto.{" "}
-                    </span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Incluye:{" "}
-                    <span className="textExplicacion">
-                      Guía, curso instructivo, snack y todo el equipo necesario.
-                    </span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Recorrido:{" "}
-                    <span className="textExplicacion">8km en el río</span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Duración total: <span className="textExplicacion">6hs</span>
-                  </li>
-                  <Nav.Link
-                    className="text-light mt-2 fs-5 d-flex justify-content-center align-items-center"
-                    target="_blank"
-                    href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre la excursion de CANYONING EN LA RESERVA AGUAS CHIQUITAS"
-                  >
-                    <img
-                      src={whatsapp}
-                      className="icono-header mx-1"
-                      alt="whatsapp"
-                    />
-                    Enviar Mensaje
-                  </Nav.Link>
-                </ul>
-              </article>
-            </Col>
-          </Row>
-          <hr data-aos="fade-up" className="m-0 text-light my-4" />
-          {/* Canyoning Aguas Chiquitas + Rappel */}
-          <Row className="py-4 ">
-            <Col md={6}>
-              <article data-aos="fade-up">
-                <img
-                  src={rappelaguaschiquitas}
-                  alt="imagen de rappel en aguas chiquitas"
-                  className="imgExcursion"
-                />
-              </article>
-            </Col>
-            <Col md={6}>
-              <article data-aos="fade-up" className="p-3 text-center">
-                <h5 className="textTitulo">
-                  Canyoning Aguas Chiquitas + Rappel
-                </h5>
-                <ul className="p-0 m-0">
-                  <li className="textSubtitulo">
-                    Horario de salida:{" "}
-                    <span className="textExplicacion">09:00</span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Descripcion:{" "}
-                    <span className="textExplicacion">
-                      Comenzamos con un trekking ascendiendo por el cerro Medina
-                      hasta llegar al cañón de Aguas Chiquitas, donde iniciamos
-                      la subida por el mismo. Durante todo el recorrido
-                      cruzaremos piletones de agua, escalaremos rocas y
-                      conviviremos con un paisaje de espesas arboledas y
-                      abundante vida silvestre, hasta llegar a una cascada de 50
-                      mts. de alto. Luego subiremos a conocer la segunda cascada
-                      de 25 mts. para luego descender por la primera cascada con
-                      cuerdas utilizando la técnica de rappel. La vuelta la
-                      hacemos por el rio, disfrutando de un paisaje y
-                      experiencias distintas.{" "}
-                    </span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Incluye:{" "}
-                    <span className="textExplicacion">
-                      Guía, curso instructivo, snack y todo el equipo necesario.
-                    </span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Recorrido: <span className="textExplicacion">9km</span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Duración total: <span className="textExplicacion">7hs</span>
-                  </li>
-                  <Nav.Link
-                    className="text-light mt-2 fs-5 d-flex justify-content-center align-items-center"
-                    target="_blank"
-                    href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre la excursion de CANYONING AGUAS CHIQUITAS + RAPPEL"
-                  >
-                    <img
-                      src={whatsapp}
-                      className="icono-header mx-1"
-                      alt="whatsapp"
-                    />
-                    Enviar Mensaje
-                  </Nav.Link>
-                </ul>
-              </article>
-            </Col>
-          </Row>
-          <hr data-aos="fade-up" className="m-0 text-light my-4" />
-          {/*Rappel aéreo en el Viaducto El Saladillo*/}
-          <Row className="py-4 d-flex flex-row-reverse">
-            <Col md={6}>
-              <article data-aos="fade-up">
-                <img
-                  src={viaducto}
-                  alt="imagen de rappel en el viaducto"
-                  className="imgExcursion"
-                />
-              </article>
-            </Col>
-            <Col md={6}>
-              <article data-aos="fade-up" className="p-3 text-center">
-                <h5 className="textTitulo">
-                  Rappel aéreo en el Viaducto El Saladillo
-                </h5>
-                <ul className="p-0 m-0">
-                  <li className="textSubtitulo">
-                    Horario de salida:{" "}
-                    <span className="textExplicacion">09:00 o 14:00hs</span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Descripcion:{" "}
-                    <span className="textExplicacion">
-                      Nos encontramos en el Cadillal, para partir con destino a
-                      el Viaducto El Saladillo, donde apreciaremos esta
-                      imponente obra de arquitectura contemporánea. Realizaremos
-                      un pequeño ascenso para llegar a la parte superior del
-                      puente, donde haremos un anclaje para así, poder realizar
-                      el descenso aéreo en rappel.{" "}
-                    </span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Incluye:{" "}
-                    <span className="textExplicacion">
-                      Guía, curso instructivo, snack y todo el equipo necesario.
-                    </span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Recorrido:{" "}
-                    <span className="textExplicacion">
-                      25 mts. en descenso.
-                    </span>
-                  </li>
-                  <li className="textSubtitulo">
-                    Duración total: <span className="textExplicacion">2hs</span>
-                  </li>
-                  <Nav.Link
-                    className="text-light mt-2 fs-5 d-flex justify-content-center align-items-center"
-                    target="_blank"
-                    href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre la excursion de RAPPEL AÉREO EN EL VIADUCTO EL SALADILLO"
-                  >
-                    <img
-                      src={whatsapp}
-                      className="icono-header mx-1"
-                      alt="whatsapp"
-                    />
-                    Enviar Mensaje
-                  </Nav.Link>
-                </ul>
-              </article>
-            </Col>
-          </Row>
-        </Container>
+            </div>
+
+            {/* Añadir un <hr> excepto en la última excursión */}
+            {index !== excursions.length - 1 && (
+              <hr
+                data-aos="fade-up"
+                className="border-t-2 border-white w-full my-8"
+              />
+            )}
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 

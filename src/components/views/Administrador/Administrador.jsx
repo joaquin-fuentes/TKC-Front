@@ -1,11 +1,9 @@
-/* Este fragmento de código es un componente de React llamado "Administrador". Aquí hay un desglose de
-lo que hace: */
-import { Container, Row, Col, Button, Nav, Table } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Table, Button } from "react-bootstrap";
 import { obtenerMensajes } from "../../helpers/queries";
 import Swal from "sweetalert2";
 import { useEffect, useState } from "react";
 import ItemMensaje from "./ItemMensaje";
+
 
 const Administrador = () => {
   const [mensajes, setMensajes] = useState([]);
@@ -21,64 +19,66 @@ const Administrador = () => {
   }, []);
 
   return (
-    <div>
-      <div className="fondoAdmin">
-        <Container className="pb-4">
-          <h2
+    <main className="min-h-screen bg-red-900 py-24 z-50">
+      <section className="container mx-auto px-6 bg-white rounded-lg shadow-lg p-8">
+        {/* Título del panel de administrador */}
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-800">
+          Panel de Administrador
+        </h2>
+        <hr className="mb-6 border-gray-300" />
+
+        {/* Botones de opciones */}
+        <div className="flex flex-wrap justify-center gap-4 mb-6">
+          <Button
             data-aos="fade-up"
-            className="text-center text-light tituloSobreNosotros mb-4"
+            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Panel de administrador
-          </h2>
-          <hr data-aos="fade-up" className="m-0 text-light mb-4" />
-          <Button data-aos="fade-up" className="mb-3 me-3" variant="primary">
             Comentarios
           </Button>
           <Button
             data-aos="fade-up"
-            className="mb-3 me-3"
-            variant="outline-success"
+            className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
           >
             Usuarios
           </Button>
           <Button
             data-aos="fade-up"
-            className="mb-3 me-3"
-            variant="outline-warning"
+            className="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600 transition-colors"
           >
             Servicios
           </Button>
           <Button
             data-aos="fade-up"
-            className="mb-3 me-3"
-            variant="outline-secondary"
+            className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
           >
             Novedades
           </Button>
+        </div>
+
+        {/* Tabla de mensajes */}
+        <div className="overflow-x-auto">
           <Table
-            data-aos="fade-up"
             striped
             bordered
             hover
-            responsive
+            responsive="sm"
             size="sm"
             variant="dark"
-            className="m-0"
+            className="min-w-full"
           >
             <thead>
               <tr>
-                {/* <th>#</th> */}
-                <th className="email-col">Nombre</th>
-                <th className="email-col">Email</th>
-                <th className="mensaje-col">Mensaje</th>
-                <th className="fecha-col">Fecha</th>
-                <th>Opciones</th>
+                <th className="px-4 py-2 text-left">Nombre</th>
+                <th className="px-4 py-2 text-left">Email</th>
+                <th className="px-4 py-2 text-left">Mensaje</th>
+                <th className="px-4 py-2 text-left">Fecha</th>
+                <th className="px-4 py-2 text-left">Opciones</th>
               </tr>
             </thead>
             <tbody>
               {mensajes.length === 0 ? (
                 <tr>
-                  <td colSpan="6" className="text-center">
+                  <td colSpan="5" className="text-center py-4">
                     Aún no hay mensajes disponibles.
                   </td>
                 </tr>
@@ -93,9 +93,9 @@ const Administrador = () => {
               )}
             </tbody>
           </Table>
-        </Container>
-      </div>
-    </div>
+        </div>
+      </section>
+    </main>
   );
 };
 

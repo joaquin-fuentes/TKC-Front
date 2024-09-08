@@ -1,14 +1,10 @@
-/* Este fragmento de código es un componente de React llamado "Iniciar sesión". Es un componente de
-formulario que permite a los usuarios iniciar sesión con un nombre de usuario y contraseña. A
-continuación se muestra un desglose de lo que hace el código: */
 import { Container, Form, Button } from "react-bootstrap";
 import { login } from "../../helpers/queries.js";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useState, useEffect } from "react";
-import Swal from "sweetalert2";
 import { FaUser } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
+import Swal from "sweetalert2";
 
 const Login = ({ setUsuarioLogueado }) => {
   const {
@@ -18,7 +14,7 @@ const Login = ({ setUsuarioLogueado }) => {
     reset,
   } = useForm();
 
-  const navegacion = useNavigate();
+  const navigate = useNavigate();
 
   const onSubmit = (data) => {
     if (data.nombreUsuario === "admin") {
@@ -26,106 +22,98 @@ const Login = ({ setUsuarioLogueado }) => {
     } else {
       data.rol = "mozo";
     }
-    console.log(data);
     login(data).then((respuesta) => {
       if (respuesta) {
         sessionStorage.setItem("usuarioLogueado", JSON.stringify(respuesta));
         setUsuarioLogueado(respuesta);
         Swal.fire("Bienvenido", "Ha ingresado correctamente", "success");
-        navegacion("/administrador");
+        navigate("/administrador");
       } else {
-        Swal.fire("Error", "Email o contraseña incorrecto", "error");
+        Swal.fire("Error", "Usuario o contraseña incorrecto", "error");
       }
     });
   };
 
   return (
-    <div className="contenedorPrincipalLogin">
-      <Container>
-        <Form
-          onSubmit={handleSubmit(onSubmit)}
-          data-aos="fade-up"
-          className="text-light d-flex justify-content-center flex-column align-items-center"
-        >
-          <h3>Iniciar sesion</h3>
-          <hr className="m-0 text-light my-4" />
-          <Form.Group
-            className="mb-3 w-50 formLogin"
-            controlId="formBasicEmail"
-          >
-            <Form.Label className="d-flex align-items-center">
-              <FaUser />
-              <p className="m-0 ms-1">Usuario:</p>
+    <main className="min-h-screen bg-red-800 flex items-center justify-center">
+      <section className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+        <h2 className="text-2xl font-bold text-center mb-6 text-gray-900">
+          Iniciar Sesión
+        </h2>
+        <Form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          {/* Nombre de usuario */}
+          <Form.Group controlId="formBasicEmail" className="space-y-2">
+            <Form.Label className="flex items-center text-gray-900">
+              <FaUser className="mr-2" />
+              Usuario:
             </Form.Label>
             <Form.Control
               type="text"
               placeholder="Ingrese su nombre de usuario"
-              maxLength={40}
+              className={`w-full border ${
+                errors.nombreUsuario ? "border-red-500" : "border-gray-300"
+              } rounded-lg p-3 focus:ring-2 focus:ring-red-500`}
               {...register("nombreUsuario", {
-                required: "El Usuario es obligatorio",
+                required: "El usuario es obligatorio",
                 minLength: {
                   value: 4,
-                  message: "El usuario debe contener por lo menos 4 caracteres",
+                  message: "Debe tener al menos 4 caracteres",
                 },
                 maxLength: {
                   value: 30,
-                  message: "El usuario debe contener como maximo 30 caracteres",
-                },
-                pattern: {
-                  vaue: /^.{4,30}$/,
-                  message:
-                    "El nombre de usuario debe contener entre 4 y 30 caracteres.",
+                  message: "No puede exceder los 30 caracteres",
                 },
               })}
             />
-            <Form.Text className="text-danger">
-              {errors.nombreUsuario?.message}
-            </Form.Text>
+            {errors.nombreUsuario && (
+              <p className="text-red-500 text-sm mt-1">
+                {errors.nombreUsuario.message}
+              </p>
+            )}
           </Form.Group>
 
-          <Form.Group
-            className="mb-3 w-50 formLogin"
-            controlId="formBasicPassword"
-          >
-            <Form.Label className="d-flex align-items-center">
-              <RiLockPasswordFill />
-              <p className="m-0 ms-1">Contraseña:</p>
+          {/* Contraseña */}
+          <Form.Group controlId="formBasicPassword" className="space-y-2">
+            <Form.Label className="flex items-center text-gray-900">
+              <RiLockPasswordFill className="mr-2" />
+              Contraseña:
             </Form.Label>
             <Form.Control
               type="password"
-              placeholder="Ingrese aquí su contraseña"
-              maxLength={20}
+              placeholder="Ingrese su contraseña"
+              className={`w-full border ${
+                errors.password ? "border-red-500" : "border-gray-300"
+              } rounded-lg p-3 focus:ring-2 focus:ring-red-500`}
               {...register("password", {
                 required: "La contraseña es obligatoria",
                 minLength: {
                   value: 6,
-                  message: "El password contener por lo menos 6 caracteres",
+                  message: "Debe tener al menos 6 caracteres",
                 },
                 maxLength: {
                   value: 20,
-                  message:
-                    "El password debe contener como maximo 20 caracteres",
-                },
-                pattern: {
-                  value: /^.{6,20}$/,
-                  message: "El password debe tener entre 6 y 20 caracteres",
+                  message: "No puede exceder los 20 caracteres",
                 },
               })}
             />
-            <Form.Text className="text-danger">
-              {errors.password?.message}
-            </Form.Text>
+            {errors.password && (
+              <p className="text-red-500 text-sm mt-1">
+                {errors.password.message}
+              </p>
+            )}
           </Form.Group>
+
+          {/* Botón de inicio de sesión */}
           <Button
             variant="danger"
             type="submit"
-            className="w-50 formLogin mt-4"
+            className="w-full py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition"
           >
             Ingresar
           </Button>
         </Form>
-      </Container>
-    </div>
+      </section>
+    </main>
   );
 };
 
