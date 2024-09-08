@@ -44,23 +44,31 @@ const DondeEncontrarnos = () => {
           {/* Fila con dos columnas (mapa e imagen) */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Mapa de Google Maps */}
-            <div className="flex justify-center" data-aos="fade-up">
+            <div
+              className="flex justify-center lg:justify-center mx-auto w-full"
+              data-aos="fade-up"
+            >
               <iframe
                 title="Ubicación de Tucumán Kayak Club"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20176.22637576159!2d-65.2160793826423!3d-26.626489869886584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942265fafc14b407%3A0xab872a32ac3e22b4!2sTucum%C3%A1n%20Kayak%20Club%20(TKC)!5e0!3m2!1ses!2sar!4v1713450891823!5m2!1ses!2sar"
                 allowFullScreen=""
                 loading="lazy"
+                width={400}
                 referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-64 md:h-96 rounded-lg shadow-lg max-w-lg"
+                className=" rounded-lg shadow-lg"
               ></iframe>
             </div>
 
             {/* Imagen representativa */}
-            <div className="flex justify-center" data-aos="fade-up">
+            <div
+              className="flex justify-center lg:justify-center mx-auto w-full"
+              data-aos="fade-up"
+            >
               <img
                 src={carpatkc}
+                width={400}
                 alt="Carpa de Tucumán Kayak Club en el dique"
-                className="rounded-lg shadow-lg w-full object-cover h-64 md:h-96 max-w-lg"
+                className="rounded-lg shadow-lg  object-cover"
               />
             </div>
           </div>
