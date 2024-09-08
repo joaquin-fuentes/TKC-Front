@@ -94,7 +94,7 @@ const Servicios = () => {
               <img
                 src={servicio.img}
                 alt={`imagen de ${servicio.title}`}
-                className="w-full h-56 object-cover"
+                className="w-full h-56 object-fill"
               />
 
               {/* Overlay oscuro sobre la imagen */}

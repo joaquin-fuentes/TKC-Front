@@ -6,7 +6,7 @@ const PaginaSobreNosotros = () => {
   useScrollToTop(); // Llama al hook para hacer scroll al inicio
 
   return (
-    <section className="bg-red-600 text-white py-12 pt-24" id="sobre-nosotros">
+    <section className="bg-red-700 text-white py-12 pt-24" id="sobre-nosotros">
       <div className="container mx-auto px-6">
         {/* Título de la página */}
         <header className="text-center mb-8">

@@ -39,7 +39,7 @@ const Escuela = () => {
   };
 
   return (
-    <section className="bg-red-600 text-white py-12 pt-24" id="escuela-kayak">
+    <section className="bg-red-700 text-white py-12 pt-24" id="escuela-kayak">
       <div className="container mx-auto px-6">
         {/* Título de la sección */}
         <header className="text-center mb-8 md:mb-16">
@@ -59,7 +59,7 @@ const Escuela = () => {
             <img
               src={imgEscuela}
               alt="Imagen de la escuela de kayak"
-              className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+              className="w-full h-64 md:h-80 object-fill rounded-lg shadow-lg"
             />
           </article>
 
@@ -107,7 +107,7 @@ const Escuela = () => {
                 <img
                   src={img}
                   alt={`Imagen ${index + 1} de la escuela`}
-                  className="w-full h-64 object-cover rounded-lg shadow-lg max-w-md"
+                  className="w-full h-64 object-fill rounded-lg shadow-lg max-w-md"
                 />
               </div>
             ))}

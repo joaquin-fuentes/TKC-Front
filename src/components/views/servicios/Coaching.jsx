@@ -41,7 +41,7 @@ const Coaching = () => {
   };
 
   return (
-    <section className="bg-red-600 text-white py-12 pt-24" id="team-building">
+    <section className="bg-red-700 text-white py-12 pt-24" id="team-building">
       <div className="container mx-auto px-6">
         {/* Título de la sección */}
         <header className="text-center mb-8 md:mb-16">
@@ -61,7 +61,7 @@ const Coaching = () => {
             <img
               src={imgCoaching}
               alt="Imagen de team building"
-              className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+              className="w-full h-64 md:h-80 object-fill rounded-lg shadow-lg"
             />
           </article>
 
@@ -113,7 +113,7 @@ const Coaching = () => {
                 <img
                   src={img}
                   alt={`Imagen ${index + 1} de team building`}
-                  className="w-full h-64 object-cover rounded-lg shadow-lg max-w-md"
+                  className="w-full h-64 object-fill rounded-lg shadow-lg max-w-md"
                 />
               </div>
             ))}

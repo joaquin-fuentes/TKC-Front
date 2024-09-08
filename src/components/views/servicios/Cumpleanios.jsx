@@ -49,7 +49,7 @@ const Cumpleanios = () => {
   };
 
   return (
-    <section className="bg-red-600 text-white py-12 pt-24" id="cumpleanios-infantiles">
+    <section className="bg-red-700 text-white py-12 pt-24" id="cumpleanios-infantiles">
       <div className="container mx-auto px-6">
         {/* Título de la sección */}
         <header className="text-center mb-8 md:mb-16">
@@ -66,7 +66,7 @@ const Cumpleanios = () => {
             <img
               src={imgCumpleanios}
               alt="Imagen de cumpleaños infantiles"
-              className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+              className="w-full h-64 md:h-80 object-fill rounded-lg shadow-lg"
             />
           </article>
 
@@ -106,7 +106,7 @@ const Cumpleanios = () => {
                 <img
                   src={img}
                   alt={`Imagen ${index + 1} de cumpleaños`}
-                  className="w-full h-64 object-cover rounded-lg shadow-lg max-w-md"
+                  className="w-full h-64 object-fill rounded-lg shadow-lg max-w-md"
                 />
               </div>
             ))}

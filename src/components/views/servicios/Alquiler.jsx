@@ -46,7 +46,7 @@ const Alquiler = () => {
   };
 
   return (
-    <section className="bg-red-600 text-white py-12 pt-24" id="alquiler-quincho">
+    <section className="bg-red-700 text-white py-12 pt-24" id="alquiler-quincho">
       <div className="container mx-auto px-6">
         {/* Título de la sección */}
         <header className="text-center mb-8 md:mb-16">
@@ -63,7 +63,7 @@ const Alquiler = () => {
             <img
               src={imgAlquiler}
               alt="Imagen del quincho para eventos"
-              className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+              className="w-full h-64 md:h-80 object-fill rounded-lg shadow-lg"
             />
           </article>
 
@@ -99,7 +99,7 @@ const Alquiler = () => {
                 <img
                   src={img}
                   alt={`Imagen ${index + 1} del quincho`}
-                  className="w-full h-64 object-cover rounded-lg shadow-lg max-w-md"
+                  className="w-full h-64 object-fill rounded-lg shadow-lg max-w-md"
                 />
               </div>
             ))}
