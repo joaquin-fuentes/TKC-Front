@@ -7,9 +7,12 @@ import img4 from "../../../assets/imagenes/grupo4.webp";
 import img5 from "../../../assets/imagenes/carpatkc.webp";
 import whatsapp from "../../../assets/imagenes/icons8-whatsapp.svg";
 import Slider from "react-slick";
+import useScrollToTop from "../../hooks/useScrollToTop";
 
 const AlquilerKayak = () => {
   const [slidesToShow, setSlidesToShow] = useState(3);
+  useScrollToTop(); // Llama al hook para hacer scroll al inicio
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -59,7 +62,7 @@ const AlquilerKayak = () => {
             <img
               src={imgAlquilerKayak}
               alt="Imagen de alquiler de kayaks"
-              className="w-full rounded-lg shadow-lg"
+              className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
             />
           </article>
 

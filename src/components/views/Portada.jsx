@@ -1,8 +1,11 @@
 import React from "react";
 import logoTransparente from "../../assets/logos/logoTransparente.webp";
 import portada from "../../assets/imagenes/portada.webp";
+import useHandleSmoothScroll from "../hooks/useHandleSmoothScroll";
 
 const Portada = () => {
+  const handleSmoothScroll = useHandleSmoothScroll(); // Usamos el hook para scroll suave
+
   return (
     <header
       className="relative h-screen w-full bg-cover bg-bottom flex flex-col justify-center items-center"
@@ -29,6 +32,7 @@ const Portada = () => {
         {/* Botón con descripción accesible */}
         <a
           href="/#servicios"
+          onClick={(e) => handleSmoothScroll(e, "servicios", "/")}
           className="px-6 py-3 bg-red-600 text-white rounded-full hover:bg-red-500 transition duration-300 font-bold text-lg"
           aria-label="Ver nuestros servicios"
         >

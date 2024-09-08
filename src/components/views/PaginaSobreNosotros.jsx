@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
 import equipoTKC from "../../assets/imagenes/equipotkc.webp"; // Imagen del equipo TKC
+import useScrollToTop from "../hooks/useScrollToTop";
 
 const PaginaSobreNosotros = () => {
-  // Hook para hacer scroll hacia arriba cuando el componente se carga
-  useEffect(() => {
-    window.scrollTo(0, 0); // Esto desplaza la página al inicio
-  }, []); // El array vacío asegura que esto solo ocurra cuando el componente se monta (inicializa)
+  useScrollToTop(); // Llama al hook para hacer scroll al inicio
 
   return (
     <section className="bg-red-600 text-white py-12 pt-24" id="sobre-nosotros">
