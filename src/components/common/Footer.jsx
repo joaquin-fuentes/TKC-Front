@@ -1,44 +1,132 @@
-import React from 'react';
-import { Container, Row, Col, Nav } from "react-bootstrap"
-import logoTransparente from "../../assets/logos/logoTransparente.png"
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-
+import React from "react";
+import { Link } from "react-router-dom";
+import logoTransparente from "../../assets/logos/logoTransparente.webp";
+import { FaFacebookSquare, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import useHandleSmoothScroll from "../hooks/useHandleSmoothScroll"; // Importamos el hook personalizado
 
 const Footer = () => {
-    return (
-        <Container fluid className='bg-negro text-light p-2 d-flex justify-content-around'>
-            <Row>
-                <Col lg="4">
-                    <section className='p-1 d-flex flex-column justify-content-center align-items-center'>
-                        <a href="/#inicio" className='text-center'><img src={logoTransparente} alt="logo tkc" className='logotkc-footer' /></a>
-                    </section>
-                </Col>
-                <Col lg="4">
-                    <section className='p-3 d-flex flex-column justify-content-center align-items-center'>
-                        <h4>Navegacion</h4>
-                        <Nav className="d-flex flex-column text-center">
-                            <Nav.Link className="text-light text-header p-1" href="/#inicio">Inicio</Nav.Link>
-                            <Nav.Link className="text-light text-header p-1" href="/#nosotros">Nosotros</Nav.Link>
-                            <Nav.Link className="text-light text-header p-1" href="/#servicios">Servicios</Nav.Link>
-                            <Nav.Link className="text-light text-header p-1" href="/#contacto">Contacto</Nav.Link>
-                        </Nav>
-                    </section>
-                </Col>
-                <Col lg="4">
-                    <section className='p-3 d-flex flex-column justify-content-center align-items-center'>
-                        <h4>Contacto</h4>
-                        <Nav className="d-flex flex-column text-center">
-                            <Nav.Link className="text-light me-1 text-header"target='_blank' href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre los servicios de Tucuman Kayak Club"><FaWhatsapp className='me-1 fs-4' />3816097754</Nav.Link>
-                            <Nav.Link className="text-light me-1 text-header"  target='_blank' href="https://www.facebook.com/tkcturismoaventura/"><FaFacebookSquare className='me-1 fs-4'/>Tucumán Kayak Club</Nav.Link>
-                            <Nav.Link className="text-light me-1 text-header"  target='_blank' href="https://www.instagram.com/tucumankayakclub/?hl=es"><FaInstagram className='me-1 fs-4' />@TucumánKayakClub</Nav.Link>
-                        </Nav>
-                    </section>
-                </Col>
-            </Row>
-        </Container>
-    );
+  const handleSmoothScroll = useHandleSmoothScroll(); // Usamos el hook para scroll suave
+
+  return (
+    <footer className="bg-gray-900 text-white py-8">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Logo */}
+          <section className="flex flex-col items-center justify-center">
+            <Link
+              to="/#inicio"
+              aria-label="Volver al inicio"
+              onClick={(e) => handleSmoothScroll(e, "inicio", "/")}
+            >
+              <img
+                src={logoTransparente}
+                alt="Logo Tucumán Kayak Club"
+                className="w-32 mb-4"
+              />
+            </Link>
+          </section>
+
+          {/* Navegación */}
+          <nav className="flex flex-col items-center justify-center text-center">
+            <h4 className="text-lg font-semibold mb-4">Navegación</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/#inicio"
+                  onClick={(e) => handleSmoothScroll(e, "inicio", "/")}
+                  title="Ir a la sección Inicio"
+                  className="text-white hover:text-yellow-400 transition-colors"
+                >
+                  Inicio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/#nosotros"
+                  onClick={(e) => handleSmoothScroll(e, "nosotros", "/")}
+                  title="Ir a la sección Nosotros"
+                  className="text-white hover:text-yellow-400 transition-colors"
+                >
+                  Nosotros
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/#servicios"
+                  onClick={(e) => handleSmoothScroll(e, "servicios", "/")}
+                  title="Ir a la sección Servicios"
+                  className="text-white hover:text-yellow-400 transition-colors"
+                >
+                  Servicios
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/#contacto"
+                  onClick={(e) => handleSmoothScroll(e, "contacto", "/")}
+                  title="Ir a la sección Contacto"
+                  className="text-white hover:text-yellow-400 transition-colors"
+                >
+                  Contacto
+                </Link>
+              </li>
+            </ul>
+          </nav>
+
+          {/* Contacto */}
+          <section className="flex flex-col items-center justify-center">
+            <h4 className="text-lg font-semibold mb-4">Contacto</h4>
+            <ul className="space-y-3 text-center">
+              <li className="flex justify-center">
+                <a
+                  href="https://api.whatsapp.com/send?phone=3816097754"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Enviar mensaje por WhatsApp"
+                  className="flex items-center space-x-2 text-white hover:text-yellow-400 transition-colors"
+                >
+                  <FaWhatsapp className="text-xl" />
+                  <span>3816097754</span>
+                </a>
+              </li>
+              <li className="flex justify-center">
+                <a
+                  href="https://www.facebook.com/tkcturismoaventura/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visítanos en Facebook"
+                  className="flex items-center space-x-2 text-white hover:text-yellow-400 transition-colors"
+                >
+                  <FaFacebookSquare className="text-xl" />
+                  <span>Tucumán Kayak Club</span>
+                </a>
+              </li>
+              <li className="flex justify-center">
+                <a
+                  href="https://www.instagram.com/tucumankayakclub/?hl=es"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visítanos en Instagram"
+                  className="flex items-center space-x-2 text-white hover:text-yellow-400 transition-colors"
+                >
+                  <FaInstagram className="text-xl" />
+                  <span>@TucumánKayakClub</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        {/* Política y derechos */}
+        <div className="mt-8 text-center border-t border-gray-700 pt-4">
+          <p className="text-sm text-gray-400">
+            © {new Date().getFullYear()} Tucumán Kayak Club. Todos los derechos
+            reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

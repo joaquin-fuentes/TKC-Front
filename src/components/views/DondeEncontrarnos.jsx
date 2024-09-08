@@ -1,36 +1,83 @@
-import React from 'react';
+import React from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import { Container, Row, Col } from "react-bootstrap"
-import carpatkc from "../../assets/imagenes/base.png"
+import carpatkc from "../../assets/imagenes/base.webp";
 
-
-
+/**
+ * Componente funcional que muestra la ubicación de Tucumán Kayak Club (TKC) y proporciona instrucciones para llegar.
+ * Incluye un mapa interactivo de Google Maps y una imagen representativa.
+ */
 const DondeEncontrarnos = () => {
-    return (
-        <div className='mb-3'>
-            <Container >
-                <div className='d-flex flex-column justify-content-center align-items-center pt-3 text-rojo' id='dondeencontrarnos'>
-                    <div data-aos="fade-up">
-                        <FaMapMarkerAlt className='iconoKayak ' />
-                    </div>
-                    <h3 data-aos="fade-up" className=' m-0 p-4 text-center '> Donde encontrarnos</h3>
-                    <Row data-aos="fade-up">
-                        <p className='p-2 text-center'>Nuestra ubicación se encuentra en El Cadillal, a tan solo 20 km al norte de San Miguel de Tucumán, específicamente en el dique Celestino Gelsi. Para llegar, desde la rotonda del Cadillal, deben tomar el primer desvío a la izquierda y luego, a 50 metros, girar a la derecha, por la calle que bordea un amplio espacio verde y una cancha de rugby. Al final de esta calle, encontrarán las playas del dique Celestino Gelsi y nuestra base operativa. ¡Los esperamos con ansias para vivir una experiencia inolvidable! <br /></p>
-                        <Col md={6}>
-                            <img src={carpatkc} alt="carpa tkc" className='carpaTkc ' />
-                        </Col>
-                        <Col md={6}>
-                            <div className='mb-3 w-100 h-100 '>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20176.22637576159!2d-65.2160793826423!3d-26.626489869886584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942265fafc14b407%3A0xab872a32ac3e22b4!2sTucum%C3%A1n%20Kayak%20Club%20(TKC)!5e0!3m2!1ses!2sar!4v1713450891823!5m2!1ses!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className='ubicacion'></iframe>
-                            </div>
-                        </Col>
-                    </Row>
-                </div>
-            </Container>
+  return (
+    <section className="pb-12 pt-8 bg-gray-100" id="dondeencontrarnos">
+      <div className="container mx-auto px-4">
+        {/* Encabezado con icono y título */}
+        <article
+          className="text-center flex flex-col items-center mb-4"
+          data-aos="fade-up"
+        >
+          {/* Icono de ubicación */}
+          <FaMapMarkerAlt className="text-red-600 text-6xl mb-4" />
+          <h2 className="text-red-600 text-3xl md:text-4xl font-bold mb-6">
+            Dónde encontrarnos
+          </h2>
+        </article>
 
+        {/* Contenido principal */}
+        <div className="grid grid-cols-1 gap-12 items-start ">
+          {/* Fila de texto descriptivo */}
+          <div
+            className="mb-2 text-center lg:text-left lg:col-span-2"
+            data-aos="fade-up"
+          >
+            <p className="text-gray-700 text-center md:text-lg leading-relaxed">
+              Nuestra ubicación se encuentra en El Cadillal, a tan solo 20 km al
+              norte de San Miguel de Tucumán, específicamente en el dique
+              Celestino Gelsi. Para llegar, desde la rotonda del Cadillal, deben
+              tomar el primer desvío a la izquierda y luego, a 50 metros, girar
+              a la derecha, por la calle que bordea un amplio espacio verde y
+              una cancha de rugby. Al final de esta calle, encontrarán las
+              playas del dique Celestino Gelsi y nuestra base operativa. ¡Los
+              esperamos con ansias para vivir una experiencia inolvidable!
+            </p>
+          </div>
+
+          {/* Fila con dos columnas (mapa e imagen) */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Mapa de Google Maps */}
+            <div
+              className="flex justify-center lg:justify-center mx-auto md:ms-8 w-full h-full"
+              data-aos="fade-up"
+            >
+              <iframe
+                title="Ubicación de Tucumán Kayak Club"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20176.22637576159!2d-65.2160793826423!3d-26.626489869886584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942265fafc14b407%3A0xab872a32ac3e22b4!2sTucum%C3%A1n%20Kayak%20Club%20(TKC)!5e0!3m2!1ses!2sar!4v1713450891823!5m2!1ses!2sar"
+                allowFullScreen=""
+                loading="lazy"
+                width={400}
+                height={220}
+                referrerPolicy="no-referrer-when-downgrade"
+                className=" rounded-lg shadow-lg md:h-full"
+              ></iframe>
+            </div>
+
+            {/* Imagen representativa */}
+            <div
+              className="flex justify-center lg:justify-center mx-auto w-full"
+              data-aos="fade-up"
+            >
+              <img
+                src={carpatkc}
+                width={400}
+                height={220}
+                alt="Carpa de Tucumán Kayak Club en el dique"
+                className="rounded-lg shadow-lg  object-cover md:h-full"
+              />
+            </div>
+          </div>
         </div>
-
-    );
+      </div>
+    </section>
+  );
 };
 
 export default DondeEncontrarnos;
