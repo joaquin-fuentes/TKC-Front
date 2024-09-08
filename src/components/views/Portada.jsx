@@ -5,7 +5,7 @@ import portada from "../../assets/imagenes/portada.webp";
 const Portada = () => {
   return (
     <header
-      className="relative h-screen w-full bg-cover bg-center flex flex-col justify-center items-center"
+      className="relative h-screen w-full bg-cover bg-bottom flex flex-col justify-center items-center"
       style={{
         backgroundImage: `url(${portada})`, // Ruta de la imagen
       }}

@@ -113,7 +113,7 @@ const Servicios = () => {
               </h5>
 
               {/* Botón Ver más */}
-              <div className="absolute bottom-4 left-0 right-0 flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-4 left-0 right-0 flex justify-center opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
                 <Link
                   to={servicio.link}
                   className="inline-block px-6 py-2 bg-red-600 text-white rounded-full hover:bg-red-500 transition duration-300"
