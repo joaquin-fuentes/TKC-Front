@@ -232,7 +232,7 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
             </a>
           </li>
           {/* Redes sociales */}
-          <li className="flex space-x-4">
+          <li className="flex space-x-4 pt-4">
             <a
               href="https://www.facebook.com/tkcturismoaventura/"
               target="_blank"

@@ -75,11 +75,11 @@ const Servicios = () => {
   ];
 
   return (
-    <section className="bg-red-600 pb-8 md:pb-4" id="servicios">
-      <div className="container mx-auto px-6">
+    <section className="bg-red-600 pb-12 md:pb-4" id="servicios">
+      <div className="container mx-auto px-4">
         {/* Encabezado */}
-        <div className="text-center pt-3 pb-8">
-          <TbKayak className="iconoKayak text-light " />
+        <div className="flex flex-col justify-center items-center text-center pt-3 pb-8">
+          <TbKayak className="text-white text-6xl mb-4" />
           <h3 className="text-white text-4xl font-bold">Nuestros Servicios</h3>
         </div>
 

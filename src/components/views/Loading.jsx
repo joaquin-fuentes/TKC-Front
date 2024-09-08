@@ -3,7 +3,7 @@ import logoTransparente from "../../assets/logos/logoTransparente.webp"; // Impo
 
 const Loading = () => {
   return (
-    <div className="flex justify-center items-center h-screen bg-red-600">
+    <div className="flex justify-center items-center h-screen bg-red-600 z-100">
       <head>
         <title>Cargando...</title> {/* Meta tags para SEO */}
         <meta
@@ -21,7 +21,7 @@ const Loading = () => {
           className="w-40 h-auto mx-auto animate-spin-slow" // Ajusta el tamaño y añade animación suave
         />
         {/* Mensaje de carga */}
-        <p className="text-white text-lg mt-4 animate-pulse">Cargando...</p>
+        {/* <p className="text-white text-lg mt-4 animate-pulse">Cargando...</p> */}
       </div>
     </div>
   );

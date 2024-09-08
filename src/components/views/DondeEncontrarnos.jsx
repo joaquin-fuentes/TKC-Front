@@ -8,11 +8,11 @@ import carpatkc from "../../assets/imagenes/base.webp";
  */
 const DondeEncontrarnos = () => {
   return (
-    <section className="py-12 bg-gray-100" id="dondeencontrarnos">
-      <div className="container mx-auto px-6">
+    <section className="pb-12 pt-8 bg-gray-100" id="dondeencontrarnos">
+      <div className="container mx-auto px-4">
         {/* Encabezado con icono y título */}
         <article
-          className="text-center flex flex-col items-center mb-12"
+          className="text-center flex flex-col items-center mb-4"
           data-aos="fade-up"
         >
           {/* Icono de ubicación */}
@@ -26,7 +26,7 @@ const DondeEncontrarnos = () => {
         <div className="grid grid-cols-1 gap-12 items-start ">
           {/* Fila de texto descriptivo */}
           <div
-            className="mb-8 text-center lg:text-left lg:col-span-2"
+            className="mb-2 text-center lg:text-left lg:col-span-2"
             data-aos="fade-up"
           >
             <p className="text-gray-700 text-center md:text-lg leading-relaxed">
