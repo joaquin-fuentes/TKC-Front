@@ -10,6 +10,7 @@ import quincho from "../../assets/imagenes/quincho6.webp";
 import guarderia from "../../assets/imagenes/guarderia2.webp";
 import alquiler from "../../assets/imagenes/grupo2.webp";
 import estudiantiles from "../../assets/imagenes/portada3.webp";
+import { TbKayak } from "react-icons/tb";
 
 // Importa los iconos de los servicios
 import iconoAlquiler from "../../assets/iconos/kayakRojo.webp";
@@ -74,10 +75,11 @@ const Servicios = () => {
   ];
 
   return (
-    <section className="bg-red-600 mt-40 pb-16" id="servicios">
+    <section className="bg-red-600 pb-8 md:pb-4" id="servicios">
       <div className="container mx-auto px-6">
         {/* Encabezado */}
-        <div className="text-center mb-12">
+        <div className="text-center pt-3 pb-8">
+          <TbKayak className="iconoKayak text-light " />
           <h3 className="text-white text-4xl font-bold">Nuestros Servicios</h3>
         </div>
 

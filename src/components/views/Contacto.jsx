@@ -10,7 +10,7 @@ import CrearMensaje from "./CrearMensaje";
 
 const Contacto = () => {
   return (
-    <section className="bg-red-600 py-12" id="contacto">
+    <section className="bg-red-600 py-4" id="contacto">
       <div className="container mx-auto px-6">
         {/* Título principal */}
         <h1 className="sr-only">Contacto - Tucumán Kayak Club</h1>

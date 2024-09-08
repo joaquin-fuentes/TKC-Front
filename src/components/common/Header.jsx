@@ -61,7 +61,7 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <a href="/#inicio" onClick={(e) => handleSmoothScroll(e, "inicio")}>
+        <a href="/#inicio" onClick={(e) => handleSmoothScroll(e, "inicio", "/")}>
           <img
             src={logoTransparente}
             alt="Logo"
@@ -86,35 +86,35 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
         >
           <a
             href="/#inicio"
-            onClick={(e) => handleSmoothScroll(e, "inicio")}
+            onClick={(e) => handleSmoothScroll(e, "inicio", "/")}
             className="text-white hover:text-yellow-400 transition font-medium"
           >
             Inicio
           </a>
           <a
             href="/#nosotros"
-            onClick={(e) => handleSmoothScroll(e, "nosotros")}
+            onClick={(e) => handleSmoothScroll(e, "nosotros", "/")}
             className="text-white hover:text-yellow-400 transition font-medium"
           >
             Nosotros
           </a>
           <a
             href="/#servicios"
-            onClick={(e) => handleSmoothScroll(e, "servicios")}
+            onClick={(e) => handleSmoothScroll(e, "servicios", "/")}
             className="text-white hover:text-yellow-400 transition font-medium"
           >
             Servicios
           </a>
           <a
             href="/#dondeencontrarnos"
-            onClick={(e) => handleSmoothScroll(e, "dondeencontrarnos")}
+            onClick={(e) => handleSmoothScroll(e, "dondeencontrarnos", "/")}
             className="text-white hover:text-yellow-400 transition font-medium"
           >
             Dónde encontrarnos
           </a>
           <a
             href="/#contacto"
-            onClick={(e) => handleSmoothScroll(e, "contacto")}
+            onClick={(e) => handleSmoothScroll(e, "contacto", "/")}
             className="text-white hover:text-yellow-400 transition font-medium"
           >
             Contacto
@@ -189,7 +189,7 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
           <li>
             <a
               href="/#inicio"
-              onClick={(e) => handleSmoothScroll(e, "inicio")}
+              onClick={(e) => handleSmoothScroll(e, "inicio", "/")}
               className="text-white hover:text-yellow-400 transition font-medium"
             >
               Inicio
@@ -198,7 +198,7 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
           <li>
             <a
               href="/#nosotros"
-              onClick={(e) => handleSmoothScroll(e, "nosotros")}
+              onClick={(e) => handleSmoothScroll(e, "nosotros", "/")}
               className="text-white hover:text-yellow-400 transition font-medium"
             >
               Nosotros
@@ -207,7 +207,7 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
           <li>
             <a
               href="/#servicios"
-              onClick={(e) => handleSmoothScroll(e, "servicios")}
+              onClick={(e) => handleSmoothScroll(e, "servicios", "/")}
               className="text-white hover:text-yellow-400 transition font-medium"
             >
               Servicios
@@ -216,7 +216,7 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
           <li>
             <a
               href="/#dondeencontrarnos"
-              onClick={(e) => handleSmoothScroll(e, "dondeencontrarnos")}
+              onClick={(e) => handleSmoothScroll(e, "dondeencontrarnos", "/")}
               className="text-white hover:text-yellow-400 transition font-medium"
             >
               Dónde encontrarnos
@@ -225,7 +225,7 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
           <li>
             <a
               href="/#contacto"
-              onClick={(e) => handleSmoothScroll(e, "contacto")}
+              onClick={(e) => handleSmoothScroll(e, "contacto", "/")}
               className="text-white hover:text-yellow-400 transition font-medium"
             >
               Contacto
@@ -255,7 +255,7 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
                 src={whatsapp}
                 alt="WhatsApp"
                 className="w-7 h-7 filter drop-shadow-md hover:scale-110 transition duration-200"
-              />
+            />
             </a>
             <a
               href="https://www.instagram.com/tucumankayakclub/?hl=es"
@@ -267,7 +267,7 @@ const Header = ({ usuarioLogueado, setUsuarioLogueado }) => {
                 src={instagram}
                 alt="Instagram"
                 className="w-7 h-7 filter drop-shadow-md hover:scale-110 transition duration-200"
-              />
+            />
             </a>
           </li>
 

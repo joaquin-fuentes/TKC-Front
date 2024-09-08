@@ -2,15 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logoTransparente from "../../assets/logos/logoTransparente.webp";
 import { FaFacebookSquare, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import useHandleSmoothScroll from "../hooks/useHandleSmoothScroll"; // Importamos el hook personalizado
 
 const Footer = () => {
+  const handleSmoothScroll = useHandleSmoothScroll(); // Usamos el hook para scroll suave
+
   return (
-    <footer className="bg-gray-900 text-white py-8 pt-40">
+    <footer className="bg-gray-900 text-white py-8">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo */}
           <section className="flex flex-col items-center justify-center">
-            <Link to="/#inicio" aria-label="Volver al inicio">
+            <Link
+              to="/#inicio"
+              aria-label="Volver al inicio"
+              onClick={(e) => handleSmoothScroll(e, "inicio", "/")}
+            >
               <img
                 src={logoTransparente}
                 alt="Logo Tucumán Kayak Club"
@@ -26,6 +33,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/#inicio"
+                  onClick={(e) => handleSmoothScroll(e, "inicio", "/")}
                   title="Ir a la sección Inicio"
                   className="text-white hover:text-yellow-400 transition-colors"
                 >
@@ -35,6 +43,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/#nosotros"
+                  onClick={(e) => handleSmoothScroll(e, "nosotros", "/")}
                   title="Ir a la sección Nosotros"
                   className="text-white hover:text-yellow-400 transition-colors"
                 >
@@ -44,6 +53,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/#servicios"
+                  onClick={(e) => handleSmoothScroll(e, "servicios", "/")}
                   title="Ir a la sección Servicios"
                   className="text-white hover:text-yellow-400 transition-colors"
                 >
@@ -53,6 +63,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/#contacto"
+                  onClick={(e) => handleSmoothScroll(e, "contacto", "/")}
                   title="Ir a la sección Contacto"
                   className="text-white hover:text-yellow-400 transition-colors"
                 >
@@ -112,22 +123,6 @@ const Footer = () => {
             © {new Date().getFullYear()} Tucumán Kayak Club. Todos los derechos
             reservados.
           </p>
-          {/* <nav className="mt-2">
-            <Link
-              to="/privacidad"
-              title="Ver nuestra Política de Privacidad"
-              className="text-gray-400 hover:text-yellow-400 mx-2"
-            >
-              Política de Privacidad
-            </Link>
-            <Link
-              to="/terminos"
-              title="Ver nuestros Términos de Uso"
-              className="text-gray-400 hover:text-yellow-400 mx-2"
-            >
-              Términos de Uso
-            </Link>
-          </nav> */}
         </div>
       </div>
     </footer>

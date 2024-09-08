@@ -34,7 +34,7 @@ const CrearMensaje = () => {
   };
 
   return (
-    <section className="py-12 bg-red-600 text-white" id="contacto">
+    <section className="pt-4  bg-red-600 text-white" id="contacto">
       <div className="container mx-auto px-6">
         {/* Título */}
         <h2 className="text-3xl font-bold text-center mb-6">¡Déjanos tu mensaje!</h2>
@@ -109,7 +109,7 @@ const CrearMensaje = () => {
           <div className="text-center">
             <button
               type="submit"
-              className="bg-white text-red-600 px-6 py-3 rounded-full hover:bg-red-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all"
+              className=" bg-white text-red-600 px-6 py-3 rounded-full hover:bg-red-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all"
             >
               Enviar
             </button>

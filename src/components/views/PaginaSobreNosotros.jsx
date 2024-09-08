@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import equipoTKC from "../../assets/imagenes/equipotkc.webp"; // Imagen del equipo TKC
 
 const PaginaSobreNosotros = () => {
+  // Hook para hacer scroll hacia arriba cuando el componente se carga
+  useEffect(() => {
+    window.scrollTo(0, 0); // Esto desplaza la página al inicio
+  }, []); // El array vacío asegura que esto solo ocurra cuando el componente se monta (inicializa)
+
   return (
     <section className="bg-red-600 text-white py-12 pt-24" id="sobre-nosotros">
       <div className="container mx-auto px-6">
@@ -28,10 +33,7 @@ const PaginaSobreNosotros = () => {
           </article>
 
           {/* Información textual */}
-          <article
-            data-aos="fade-up"
-            className="leading-relaxed self-start"
-          >
+          <article data-aos="fade-up" className="leading-relaxed self-start">
             <p className="mb-6 text-white text-center md:text-start">
               ¡Bienvenidos a Tucumán Kayak Club (TKC), donde convertimos simples
               momentos en emocionantes aventuras! Con más de 15 años de

@@ -4,12 +4,12 @@ import { MdKayaking } from "react-icons/md"; // Icono de kayak de React Icons
 
 const Nosotros = () => {
   return (
-    <section className="bg-gray-100 py-8" id="nosotros">
+    <section className="bg-gray-100 pt-8" id="nosotros">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         {/* Contenido principal */}
         <article
           data-aos="fade-up"
-          className="text-center flex flex-col items-center mb-8"
+          className="text-center flex flex-col items-center mb-4"
         >
           {/* Icono de kayak */}
           <MdKayaking className="text-red-600 text-6xl mb-4" />
