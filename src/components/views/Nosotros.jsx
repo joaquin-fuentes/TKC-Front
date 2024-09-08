@@ -35,7 +35,7 @@ const Nosotros = () => {
           {/* Botón con react-router-dom Link */}
           <Link
             to="/sobrenosotros"
-            className="mt-6 px-4 py-3 text-red-600 border-2 border-red-600 rounded-full hover:bg-red-600 hover:text-white transition duration-300 font-semibold"
+            className="mt-6 w-full md:w-auto px-4 py-3 text-red-600 border-2 border-red-600 rounded-full hover:bg-red-600 hover:text-white transition duration-300 font-semibold text-center"
           >
             Sobre nosotros
           </Link>

@@ -45,7 +45,7 @@ const DondeEncontrarnos = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Mapa de Google Maps */}
             <div
-              className="flex justify-center lg:justify-center mx-auto w-full"
+              className="flex justify-center lg:justify-center mx-auto md:ms-8 w-full h-full"
               data-aos="fade-up"
             >
               <iframe
@@ -54,8 +54,9 @@ const DondeEncontrarnos = () => {
                 allowFullScreen=""
                 loading="lazy"
                 width={400}
+                height={220}
                 referrerPolicy="no-referrer-when-downgrade"
-                className=" rounded-lg shadow-lg"
+                className=" rounded-lg shadow-lg md:h-full"
               ></iframe>
             </div>
 
@@ -67,8 +68,9 @@ const DondeEncontrarnos = () => {
               <img
                 src={carpatkc}
                 width={400}
+                height={220}
                 alt="Carpa de Tucumán Kayak Club en el dique"
-                className="rounded-lg shadow-lg  object-cover"
+                className="rounded-lg shadow-lg  object-cover md:h-full"
               />
             </div>
           </div>
