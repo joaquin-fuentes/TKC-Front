@@ -1,54 +1,87 @@
-/* Este fragmento de código es un componente de React llamado "Contacto" que representa una sección de
-contacto de un sitio web. Incluye varios elementos, como íconos de WhatsApp, Facebook e Instagram,
-junto con enlaces a esas plataformas de redes sociales. El componente también incluye un componente
-de formulario `CrearMensaje` para crear un mensaje. */
-import React from 'react';
-import { Container, Row, Col, Nav, Form, Button } from "react-bootstrap"
+import React from "react";
+import {
+  FaWhatsapp,
+  FaFacebook,
+  FaInstagram,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 import { RiContactsFill } from "react-icons/ri";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaMapMarkerAlt } from "react-icons/fa";
-import CrearMensaje from './CrearMensaje';
-
-
-
-
+import CrearMensaje from "./CrearMensaje";
 
 const Contacto = () => {
-    return (
-        <div className='bg-rojo'>
-            <Container>
-                <div className='d-flex flex-column justify-content-center align-items-center pt-3' id='dondeencontrarnos'>
-                    <Row data-aos="fade-up" id='contacto' className='py-3'>
-                        <RiContactsFill data-aos="fade-up" className='iconoKayak ' />
-                        <h3 data-aos="fade-up" className=' m-0 p-4 text-center '>Cómo contactarte con nosotros?</h3>
-                        <p data-aos="fade-up" className='text-center '> Podes contactarte con nosotros por whatsapp o por cualquiera de nuestras redes sociales dando click en los siguientes iconos</p>
-                        <Col md={4}>
-                            <Nav.Link data-aos="fade-up" target='_blank' href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaria hacer una consulta sobre los servicios de Tucuman Kayak Club" className='d-flex flex-column justify-content-center align-items-center p-3 text-center'>
-                                <FaWhatsapp className='iconoWp iconoContacto' />
-                                <p className='textRedSocialContacto'>3813097754</p>
-                            </Nav.Link>
-                        </Col>
-                        <Col md={4}>
-                            <Nav.Link data-aos="fade-up" target='_blank' href="https://www.facebook.com/tkcturismoaventura/" className='d-flex flex-column justify-content-center align-items-center p-3 text-center'>
-                                <FaFacebook className='iconoFb iconoContacto' />
-                                <p className='textRedSocialContacto'>Tucuman kayak club</p>
-                            </Nav.Link>
-                        </Col>
-                        <Col md={4} className='mb-4'>
-                            <Nav.Link data-aos="fade-up" target='_blank' href="https://www.instagram.com/tucumankayakclub/?hl=es" className='d-flex flex-column justify-content-center align-items-center p-3 text-center'>
-                                <FaInstagram className='iconoFb iconoContacto' />
-                                <p className='textRedSocialContacto'>@TucumankayakClub</p>
-                            </Nav.Link>
-                        </Col>
+  return (
+    <section className="bg-red-600 py-12" id="contacto">
+      <div className="container mx-auto px-6">
+        {/* Título principal */}
+        <h1 className="sr-only">Contacto - Tucumán Kayak Club</h1>
 
-                        <CrearMensaje></CrearMensaje>
-                    </Row>
-                </div>
-            </Container>
+        {/* Encabezado con icono y título */}
+        <div
+          className="text-center flex flex-col items-center mb-8"
+          data-aos="fade-up"
+        >
+          <RiContactsFill
+            className="text-white text-6xl mb-4"
+            aria-hidden="true"
+          />
+          <h2 className="text-white text-3xl md:text-4xl font-bold mb-4">
+            Cómo contactarte con nosotros?
+          </h2>
+          <p className="text-white text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+            Puedes contactarte con nosotros por WhatsApp o cualquiera de
+            nuestras redes sociales haciendo clic en los siguientes íconos.
+          </p>
         </div>
-    );
+
+        {/* Redes sociales */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          {/* WhatsApp */}
+          <a
+            href="https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! me gustaría hacer una consulta sobre los servicios de Tucumán Kayak Club"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center text-white hover:text-yellow-400 transition"
+            data-aos="fade-up"
+            aria-label="Contactar por WhatsApp"
+          >
+            <FaWhatsapp className="text-6xl mb-2" aria-hidden="true" />
+            <span className="text-lg">3816097754</span>
+          </a>
+
+          {/* Facebook */}
+          <a
+            href="https://www.facebook.com/tkcturismoaventura/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center text-white hover:text-yellow-400 transition"
+            data-aos="fade-up"
+            aria-label="Visitar Facebook"
+          >
+            <FaFacebook className="text-6xl mb-2" aria-hidden="true" />
+            <span className="text-lg">Tucumán Kayak Club</span>
+          </a>
+
+          {/* Instagram */}
+          <a
+            href="https://www.instagram.com/tucumankayakclub/?hl=es"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center text-white hover:text-yellow-400 transition"
+            data-aos="fade-up"
+            aria-label="Visitar Instagram"
+          >
+            <FaInstagram className="text-6xl mb-2" aria-hidden="true" />
+            <span className="text-lg">@TucumanKayakClub</span>
+          </a>
+        </div>
+
+        {/* Crear mensaje (formulario) */}
+        <div className="mt-12" data-aos="fade-up">
+          <CrearMensaje />
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Contacto;
