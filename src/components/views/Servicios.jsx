@@ -78,7 +78,10 @@ const Servicios = () => {
     <section className="bg-red-600 pb-12 md:pb-4" id="servicios">
       <div className="container mx-auto px-4">
         {/* Encabezado */}
-        <div className="flex flex-col justify-center items-center text-center pt-3 pb-8">
+        <div
+          data-aos="fade-up"
+          className="flex flex-col justify-center items-center text-center pt-3 pb-8"
+        >
           <TbKayak className="text-white text-6xl mb-4" />
           <h3 className="text-white text-4xl font-bold">Nuestros Servicios</h3>
         </div>
@@ -87,6 +90,7 @@ const Servicios = () => {
         <div className="flex flex-wrap justify-center gap-8">
           {servicios.map((servicio, index) => (
             <div
+              data-aos="fade-up"
               key={index}
               className="relative bg-white rounded-lg shadow-lg overflow-hidden group transition-transform duration-300 transform hover:scale-105 w-full md:w-1/2 lg:w-1/4"
             >

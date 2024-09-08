@@ -91,14 +91,20 @@ const Excursiones = () => {
           >
             Excursiones
           </h1>
-          <hr className="border-t-2 border-white w-24 mx-auto" />
+          <hr
+            data-aos="fade-up"
+            className="border-t-2 border-white w-24 mx-auto"
+          />
         </header>
 
         {/* Excursiones List */}
         {excursions.map((excursion, index) => (
           <div key={index} className="mb-12">
             {/* Título */}
-            <h5 className="text-2xl font-bold text-center mb-6">
+            <h5
+              data-aos="fade-up"
+              className="text-2xl font-bold text-center mb-6"
+            >
               {excursion.title}
             </h5>
 
@@ -124,9 +130,7 @@ const Excursiones = () => {
               >
                 <p>{excursion.description}</p>
                 <p>
-                  <span className="font-bold">
-                    Horario de salida:
-                  </span>{" "}
+                  <span className="font-bold">Horario de salida:</span>{" "}
                   {excursion.horario}
                 </p>
                 <p>
@@ -138,9 +142,7 @@ const Excursiones = () => {
                   {excursion.recorrido}
                 </p>
                 <p>
-                  <span className="font-bold">
-                    Duración total:
-                  </span>{" "}
+                  <span className="font-bold">Duración total:</span>{" "}
                   {excursion.duracion}
                 </p>
                 <a
@@ -157,7 +159,10 @@ const Excursiones = () => {
 
             {/* Añadir un <hr> excepto en la última excursión */}
             {index !== excursions.length - 1 && (
-              <hr className="border-t-2 border-white w-full my-8" />
+              <hr
+                data-aos="fade-up"
+                className="border-t-2 border-white w-full my-8"
+              />
             )}
           </div>
         ))}

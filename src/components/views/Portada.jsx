@@ -24,6 +24,7 @@ const Portada = () => {
 
         {/* Logo de la empresa */}
         <img
+          data-aos="fade-up"
           src={logoTransparente}
           alt="Logo de Tucumán Kayak Club"
           className="w-64 mx-auto mb-8 drop-shadow-xl"
@@ -31,6 +32,7 @@ const Portada = () => {
 
         {/* Botón con descripción accesible */}
         <a
+          data-aos="fade-up"
           href="/#servicios"
           onClick={(e) => handleSmoothScroll(e, "servicios", "/")}
           className="px-6 py-3 bg-red-600 text-white rounded-full hover:bg-red-500 transition duration-300 font-bold text-lg"
